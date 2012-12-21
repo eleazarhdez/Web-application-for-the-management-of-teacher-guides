@@ -1,0 +1,94 @@
+<%= form_for(@asignatura) do |f| %>
+  <% if @asignatura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@asignatura.errors.count, "error") %> prohibited this asignatura from being saved:</h2>
+
+      <ul>
+      <% @asignatura.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :titulacion %><br />
+    <%= f.text_field :titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :rama %><br />
+    <%= f.text_field :rama %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerario %><br />
+    <%= f.text_field :itinerario %>
+  </div>
+  <div class="field">
+    <%= f.label :departamento %><br />
+    <%= f.text_field :departamento %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :curso %><br />
+    <%= f.number_field :curso %>
+  </div>
+  <div class="field">
+    <%= f.label :caracter %><br />
+    <%= f.text_field :caracter %>
+  </div>
+  <div class="field">
+    <%= f.label :duracion %><br />
+    <%= f.text_field :duracion %>
+  </div>
+  <div class="field">
+    <%= f.label :creditos %><br />
+    <%= f.number_field :creditos %>
+  </div>
+  <div class="field">
+    <%= f.label :horario %><br />
+    <%= f.text_field :horario %>
+  </div>
+  <div class="field">
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma %><br />
+    <%= f.text_field :idioma %>
+  </div>
+  <div class="field">
+    <%= f.label :bloque %><br />
+    <%= f.text_field :bloque %>
+  </div>
+  <div class="field">
+    <%= f.label :perfil %><br />
+    <%= f.text_field :perfil %>
+  </div>
+  <div class="field">
+    <%= f.label :bibliografia %><br />
+    <%= f.text_area :bibliografia %>
+  </div>
+  <div class="field">
+   <label for= :resultados ><b>Resultados</b></label>
+
+   <select name= :resultados class="comboBox">
+      <option value="Bueno">Bueno</option>
+      <option value="Regular">Regular</option>
+      <option value="Malo">Malo</option>
+  </select>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
