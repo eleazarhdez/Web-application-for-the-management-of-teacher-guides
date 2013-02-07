@@ -1,0 +1,57 @@
+class AsignaturasController < ApplicationController
+  def index
+    @asignaturas = Asignatura.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @asignaturas }
+    end
+    
+  end
+
+  def show
+    @asignatura = Asignatura.find(params[:id])
+  end
+
+  def new
+    @asignatura = Asignatura.new
+    
+      respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @asignatura }
+    end
+  end
+
+  def create
+    @asignatura = Asignatura.new(params[:asignatura])
+    
+    respond_to do |format|
+      if @asignatura.save
+        format.html { redirect_to @asignatura, notice: 'Asignatura was successfully created.' }
+        format.json { render json: @asignatura, status: :created, location: @asignatura }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @asignatura.errors, status: :unprocessable_entity }
+      end
+    end 
+  end
+
+  def edit
+    @asignatura = Asignatura.find(params[:id])
+  end
+
+  def update
+    @asignatura = Asignatura.find(params[:id])
+    if @asignatura.update_attributes(params[:asignatura])
+      redirect_to @asignatura, :notice  => "Successfully updated Asignatura."
+    else
+      render :action => 'edit'
+    end
+  end
+
+  def destroy
+    @asignatura = Asignatura.find(params[:id])
+    @asignatura.destroy
+    redirect_to Asignaturas_url, :notice => "Successfully destroyed Asignatura."
+  end
+end

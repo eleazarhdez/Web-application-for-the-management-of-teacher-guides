@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
+
   <div class="field">
     <%= f.label :codigo %><br />
     <%= f.text_field :codigo %>
+    <%= a = :codigo %>
   </div>
   <div class="field">
     <%= f.label :nombre %><br />
@@ -23,6 +25,41 @@
     <%= f.label :titulacion %><br />
     <%= f.text_field :titulacion %>
   </div>
+  <div>
+    <%= f.label :profesor_tokens, "Profesores" %><br />  
+    <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>  
+  </div>
+  
+    <div class="actions">
+    <%= f.submit "Crear asignatura" %>
+  </div>
+  
+   <%#= fields_for @profesor_pertenece_asignatura do |fa| %>
+      <%#=fa.label :profesor %>
+      <%#= fa.collection_select :profesor, Profesore.find(:all),:name, :name, :prompt => "Elige a un profesor" %>
+      <%#= fa.select :rol, options_for_select([["Administrador", "1"], ["Profesor", "2"],["Revisor", "3"]]) %>
+      <%#= fa.instance_values  %>
+      <%#=ProfesorPerteneceAsignatura.new(:rol => "profesor")%>
+      <%#= fa.class.instance_methods.inspect %>
+      <%#= ProfesorPerteneceAsignatura.instance_methods.select {|x| x=~ /rol/}.inspect %>
+      <%#= a = ProfesorPerteneceAsignatura.find(:all)
+          a.inspect
+          a.each do |p|
+            p.rol = "profesor"
+            p.save
+          end
+          a.inspect
+          
+      %>
+    
+      <%#= fa.submit "Crear pertenencia" %>      
+   <%# end %>
+  
+<!--   <div class="field">
+   <!%= f.label "combo de profesores"%><br /> 
+  <!-- f.collection_select :nombre, Profesore.find(:all),:nombre, :nombre, :prompt => "Elige a un profesor" --> 
+<!-->  </div> -->
+  
   <div class="field">
     <%= f.label :rama %><br />
     <%= f.text_field :rama %>
@@ -40,8 +77,8 @@
     <%= f.text_field :area %>
   </div>
   <div class="field">
-    <%= f.label :curso %><br />
-    <%= f.number_field :curso %>
+    <%= f.label :Curso %><br />
+   <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]]) %>
   </div>
   <div class="field">
     <%= f.label :caracter %><br />
@@ -80,15 +117,20 @@
     <%= f.text_area :bibliografia %>
   </div>
   <div class="field">
-   <label for= :resultados ><b>Resultados</b></label>
-
-   <select name= :resultados class="comboBox">
-      <option value="Bueno">Bueno</option>
-      <option value="Regular">Regular</option>
-      <option value="Malo">Malo</option>
-  </select>
+    <%= f.label :resultados %>
+    <%= f.text_area :resultados %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <div class="actions">
+    <%= f.submit "Crear asignatura" %>
+  </div>
+  
+  
 <% end %>
+
+
+
+
+

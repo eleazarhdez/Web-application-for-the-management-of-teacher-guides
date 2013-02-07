@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function () {  
+  $('#asignatura_profesor_tokens').tokenInput('/profesores.json', { crossDomain: false,
+                                                              prePopulate: $('asignatura_profesor_tokens').data('pre')
+  });  
+});  

@@ -1,0 +1,51 @@
+<%= form_for(@profesore) do |f| %>
+  <% if @profesore.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profesore.errors.count, "error") %> prohibited this profesore from being saved:</h2>
+
+      <ul>
+      <% @profesore.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :departamento %><br />
+    <%= f.text_field :departamento %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :lugar_tutoria %><br />
+    <%= f.text_field :lugar_tutoria %>
+  </div>
+  <div class="field">
+    <%= f.label :horario_tutoria %><br />
+    <%= f.text_field :horario_tutoria %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.number_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :mail %><br />
+    <%= f.text_field :mail %>
+  </div>
+  <div class="field">
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </div>
+ 
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

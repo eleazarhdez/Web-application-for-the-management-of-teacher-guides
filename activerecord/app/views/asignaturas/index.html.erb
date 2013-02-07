@@ -1,11 +1,12 @@
-<h1>Listing asignaturas</h1>
+<h1>Listado de asignaturas</h1>
 
-<table>
+
+<table border="1">
   <tr>
-    <th>Codigo</th>
-    <th>Nombre</th>
-    <th>Titulacion</th>
-    <th>Rama</th>
+    <th text-align="left">Código</th>
+    <th text-align="left">Nombre</th>
+    <th text-align="left">Titulación</th>
+<!--    <th>Rama</th>
     <th>Itinerario</th>
     <th>Departamento</th>
     <th>Area</th>
@@ -19,7 +20,7 @@
     <th>Bloque</th>
     <th>Perfil</th>
     <th>Bibliografia</th>
-    <th>Resultados</th>
+    <th>Resultados</th> -->
     <th></th>
     <th></th>
     <th></th>
@@ -27,10 +28,10 @@
 
 <% @asignaturas.each do |asignatura| %>
   <tr>
-    <td><%= asignatura.codigo %></td>
+    <td border="1"><%= asignatura.codigo %></td>
     <td><%= asignatura.nombre %></td>
     <td><%= asignatura.titulacion %></td>
-    <td><%= asignatura.rama %></td>
+<!--    <td><%= asignatura.rama %></td>
     <td><%= asignatura.itinerario %></td>
     <td><%= asignatura.departamento %></td>
     <td><%= asignatura.area %></td>
@@ -44,10 +45,10 @@
     <td><%= asignatura.bloque %></td>
     <td><%= asignatura.perfil %></td>
     <td><%= asignatura.bibliografia %></td>
-    <td><%= asignatura.resultados %></td>
-    <td><%= link_to 'Mostrar', asignatura %></td>
-    <td><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
-    <td><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+    <td><%= asignatura.resultados %></td> -->
+    <td align="right"><%= link_to 'Mostrar', asignatura %></td>
+    <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+    <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
   </tr>
 <% end %>
 </table>
@@ -55,3 +56,4 @@
 <br />
 
 <%= link_to 'Nueva Asignatura', new_asignatura_path %>
+<%= link_to 'home', root_path %>

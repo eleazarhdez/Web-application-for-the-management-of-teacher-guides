@@ -1,0 +1,7 @@
+--- 
+open_files: 
+  - app/views/profesores/index.html.erb
+  - app/controllers/profesor_pertenece_asignaturas_controller.rb
+  - app/controllers/profesores_controller.rb
+  - app/controllers/asignaturas_controller.rb
+  - app/models/asignatura.rb

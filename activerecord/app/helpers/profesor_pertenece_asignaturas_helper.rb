@@ -1,0 +1,2 @@
+module ProfesorPerteneceAsignaturasHelper
+end

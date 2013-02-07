@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @profesore.name %>
+</p>
+
+<p>
+  <b>Departamento:</b>
+  <%= @profesore.departamento %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @profesore.area %>
+</p>
+
+<p>
+  <b>Lugar tutoria:</b>
+  <%= @profesore.lugar_tutoria %>
+</p>
+
+<p>
+  <b>Horario tutoria:</b>
+  <%= @profesore.horario_tutoria %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%= @profesore.telefono %>
+</p>
+
+<p>
+  <b>Mail:</b>
+  <%= @profesore.mail %>
+</p>
+
+<p>
+  <b>Web:</b>
+  <%= @profesore.web %>
+</p>
+
+
+<%= link_to 'Edit', edit_profesore_path(@profesore) %> |
+<%= link_to 'Back', profesores_path %>

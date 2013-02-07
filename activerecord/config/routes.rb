@@ -1,4 +1,7 @@
 Activerecord::Application.routes.draw do
+  resources :profesor_pertenece_asignaturas
+
+  resources :profesores
   resources :asignaturas
 
   get "home/index"

@@ -1,0 +1,28 @@
+<h1>Listing profesor_pertenece_asignaturas</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Profesor</th>
+    <th>Rol</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
+  <tr>
+    <td><%= profesor_pertenece_asignatura.asignatura_id %></td>
+    <td><%= profesor_pertenece_asignatura.profesore_id %></td>
+    <td><%= profesor_pertenece_asignatura.rol %></td>
+    <td><%= link_to 'Show', profesor_pertenece_asignatura %></td>
+    <td><%= link_to 'Edit', edit_profesor_pertenece_asignatura_path(profesor_pertenece_asignatura) %></td>
+    <td><%= link_to 'Destroy', profesor_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profesor pertenece asignatura', new_profesor_pertenece_asignatura_path %>
+<%= link_to 'home', root_path %>
