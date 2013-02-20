@@ -1,7 +1,9 @@
 --- 
 open_files: 
-  - app/views/profesores/index.html.erb
-  - app/controllers/profesor_pertenece_asignaturas_controller.rb
-  - app/controllers/profesores_controller.rb
-  - app/controllers/asignaturas_controller.rb
+  - db/schema.rb
+  - app/controllers/competency_pertenece_asignaturas_controller.rb
+  - app/views/home/index.html.erb
+  - config/routes.rb
+  - app/views/asignaturas/_form.html.erb
+  - app/assets/javascripts/application.js
   - app/models/asignatura.rb

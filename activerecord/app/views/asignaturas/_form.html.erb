@@ -29,6 +29,11 @@
     <%= f.label :profesor_tokens, "Profesores" %><br />  
     <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>  
   </div>
+    <div>
+    <%= f.label :competencia_tokens, "Competencias" %><br />  
+    <%= f.text_field :competencia_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>  
+  </div>
+  
   
     <div class="actions">
     <%= f.submit "Crear asignatura" %>

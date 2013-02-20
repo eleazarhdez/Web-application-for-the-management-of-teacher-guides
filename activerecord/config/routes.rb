@@ -1,4 +1,9 @@
 Activerecord::Application.routes.draw do
+
+  resources :competency_pertenece_asignaturas
+
+  resources :competencies
+
   resources :profesor_pertenece_asignaturas
 
   resources :profesores

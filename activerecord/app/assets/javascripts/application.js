@@ -16,6 +16,11 @@
 
 $(function () {  
   $('#asignatura_profesor_tokens').tokenInput('/profesores.json', { crossDomain: false,
-                                                              prePopulate: $('asignatura_profesor_tokens').data('pre')
+                                                              prePopulate: $('#asignatura_profesor_tokens').data('pre'),
+                                                              theme: 'facebook'
   });  
+  $('#asignatura_competencia_tokens').tokenInput('/competencies.json', { crossDomain: false,
+                                                              prePopulate: $('#asignatura_competencia_tokens').data('pre'),
+                                                              theme: 'facebook'
+  }); 
 });  
