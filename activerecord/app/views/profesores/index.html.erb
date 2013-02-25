@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Nombre</th>
     <th>Departamento</th>
     <th>Area</th>
@@ -17,6 +18,7 @@
 
 <% @profesore.each do |profesore| %>
   <tr>
+    <td><%= profesore.id %></td>
     <td><%= profesore.name %></td>
     <td><%= profesore.departamento %></td>
     <td><%= profesore.area %></td>

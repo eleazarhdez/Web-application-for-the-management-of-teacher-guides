@@ -1,0 +1,68 @@
+<h2>1.Datos Descriptivos de la Asignatura</h2> 
+<p>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+    <%= a = :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :centro %><br />
+    <%= f.text_field :centro %>
+  </div>
+  <div class="field">
+    <%= f.label :titulacion %><br />
+    <%= f.text_field :titulacion %>
+  </div>
+  <div class="field">
+    <%= f.label :plan %><br />
+    <%= f.text_field :plan %>
+  </div>
+  <div class="field">
+    <%= f.label :rama %><br />
+    <%= f.text_field :rama %>
+  </div>
+  <div class="field">
+    <%= f.label :itinerario %><br />
+    <%= f.text_field :itinerario %>
+  </div>
+  <div class="field">
+    <%= f.label :departamento %><br />
+    <%= f.text_field :departamento %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :Curso %><br />
+   <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :caracter %><br />
+    <%= f.text_field :caracter %>
+  </div>
+  <div class="field">
+    <%= f.label :duracion %><br />
+    <%= f.text_field :duracion %>
+  </div>
+  <div class="field">
+    <%= f.label :creditos %><br />
+    <%= f.number_field :creditos %>
+  </div>
+  <div class="field">
+    <%= f.label :horario %><br />
+    <%= f.text_field :horario %>
+  </div>
+  <div class="field">
+    <%= f.label :web %><br />
+    <%= f.text_field :web %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma %><br />
+    <%= f.text_field :idioma %>
+  </div>
+</p>

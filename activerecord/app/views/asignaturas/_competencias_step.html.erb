@@ -1,0 +1,7 @@
+ <h2>5.Competencias</h2>
+ <p>
+    <div>
+    <%= f.label :competencia_tokens, "Competencias" %><br />  
+    <%= f.text_field :competencia_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>  
+  </div>
+</p>

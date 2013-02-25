@@ -1,5 +1,8 @@
 Activerecord::Application.routes.draw do
 
+  resources :evaluations
+
+
   resources :competency_pertenece_asignaturas
 
   resources :competencies

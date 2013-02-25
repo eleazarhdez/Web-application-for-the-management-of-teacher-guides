@@ -76,17 +76,9 @@ cursor_positions:
   - :path: app/assets/stylesheets/token-input-facebook.css
     :cursor_offset: 0
     :timestamp: 2011-08-07 15:58:20 +01:00
-  - :path: Gemfile
-    :cursor_offset: 141
-    :timestamp: 2013-01-31 17:36:14 +00:00
-    :selection_offset: 288
-    :block_selection_mode: false
   - :path: app/controllers/profesor_pertenece_asignaturas_controller.rb
     :cursor_offset: 1255
     :timestamp: 2013-02-05 10:37:53 +00:00
-  - :path: app/views/profesores/index.html.erb
-    :cursor_offset: 285
-    :timestamp: 2013-02-04 13:03:15 +00:00
   - :path: app/views/profesores/new.html.erb
     :cursor_offset: 0
     :timestamp: 2013-01-25 11:23:23 +00:00
@@ -138,9 +130,6 @@ cursor_positions:
   - :path: db/migrate/add_type_to_competencies.rb
     :cursor_offset: 106
     :timestamp: 2013-02-19 11:12:54 +00:00
-  - :path: app/views/competencies/index.html.erb
-    :cursor_offset: 101
-    :timestamp: 2013-02-19 11:24:43 +00:00
   - :path: app/views/competencies/edit.html.erb
     :cursor_offset: 0
     :timestamp: 2013-02-19 10:20:15 +00:00
@@ -197,14 +186,6 @@ cursor_positions:
   - :path: app/models/competencia_pertenece_asignatura.rb
     :cursor_offset: 103
     :timestamp: 2013-02-19 12:38:09 +00:00
-  - :path: app/models/competency_pertenece_asignatura.rb
-    :cursor_offset: 155
-    :timestamp: 2013-02-19 16:09:29 +00:00
-  - :path: app/models/profesor_pertenece_asignatura.rb
-    :cursor_offset: 111
-    :timestamp: 2013-02-05 12:35:49 +00:00
-    :selection_offset: 157
-    :block_selection_mode: false
   - :path: app/views/competency_pertenece_asignaturas/edit.html.erb
     :cursor_offset: 0
     :timestamp: 2013-02-19 16:08:51 +00:00
@@ -223,25 +204,43 @@ cursor_positions:
   - :path: app/controllers/competency_pertenece_asignaturas_controller.rb
     :cursor_offset: 0
     :timestamp: 2013-02-19 16:08:51 +00:00
-  - :path: app/views/home/index.html.erb
-    :cursor_offset: 384
-    :timestamp: 2013-02-19 16:16:07 +00:00
   - :path: config/routes.rb
     :cursor_offset: 114
     :timestamp: 2013-02-19 16:12:29 +00:00
-  - :path: app/views/asignaturas/_form.html.erb
-    :cursor_offset: 1022
-    :timestamp: 2013-02-19 12:48:27 +00:00
   - :path: app/assets/javascripts/application.js
     :cursor_offset: 1151
     :timestamp: 2013-02-19 12:24:17 +00:00
-  - :path: app/models/asignatura.rb
-    :cursor_offset: 485
-    :timestamp: 2013-02-19 16:29:31 +00:00
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 125
     :timestamp: 2013-02-15 11:51:42 +00:00
   - :path: app/controllers/application_controller.rb
     :cursor_offset: 0
     :timestamp: 2012-11-02 10:31:58 +00:00
+  - :path: app/views/asignaturas/_form.html.erb
+    :cursor_offset: 1022
+    :timestamp: 2013-02-19 12:48:27 +00:00
+  - :path: app/views/home/index.html.erb
+    :cursor_offset: 384
+    :timestamp: 2013-02-19 16:16:07 +00:00
+  - :path: app/models/asignatura.rb
+    :cursor_offset: 533
+    :timestamp: 2013-02-20 12:32:13 +00:00
+  - :path: app/models/competency_pertenece_asignatura.rb
+    :cursor_offset: 142
+    :timestamp: 2013-02-20 10:27:33 +00:00
+  - :path: Gemfile
+    :cursor_offset: 0
+    :timestamp: 2013-02-20 12:01:09 +00:00
+  - :path: app/views/profesores/index.html.erb
+    :cursor_offset: 54
+    :timestamp: 2013-02-20 12:10:58 +00:00
+  - :path: app/views/competencies/index.html.erb
+    :cursor_offset: 56
+    :timestamp: 2013-02-20 12:25:09 +00:00
+  - :path: app/models/profesor_pertenece_asignatura.rb
+    :cursor_offset: 510
+    :timestamp: 2013-02-20 12:29:12 +00:00
+  - :path: app/models/evaluation.rb
+    :cursor_offset: 32
+    :timestamp: 2013-02-20 12:48:22 +00:00
 files_to_retain: 0

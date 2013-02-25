@@ -10,34 +10,18 @@
       </ul>
     </div>
   <% end %>
-
-
-  <div class="field">
-    <%= f.label :codigo %><br />
-    <%= f.text_field :codigo %>
-    <%= a = :codigo %>
-  </div>
-  <div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :titulacion %><br />
-    <%= f.text_field :titulacion %>
-  </div>
-  <div>
-    <%= f.label :profesor_tokens, "Profesores" %><br />  
-    <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>  
-  </div>
-    <div>
-    <%= f.label :competencia_tokens, "Competencias" %><br />  
-    <%= f.text_field :competencia_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>  
-  </div>
+  <%= render "#{@asignatura.current_step}_step", :f => f %> 
+  <%#= render 'descripcion_step', :f => f %>
+  <%#= render 'profesorado_step', :f => f %>
+  <%#= render 'contextualizacion_step', :f => f %>
+  <%#= render 'competencias_step', :f => f %>
+  <%#= render 'bibliografia_step', :f => f %>
+  <%#= render 'resultados_step', :f => f %>
+  <%#= @asignatura.class.instance_methods.select {|x| x=~ /record/}.inspect %>
+  <p><%= f.submit "Siquiente" %></p>  
+  <p><%= f.submit "Anterior", :name => "back_button" unless @asignatura.first_step? %></p>  
   
-  
-    <div class="actions">
-    <%= f.submit "Crear asignatura" %>
-  </div>
+    
   
    <%#= fields_for @profesor_pertenece_asignatura do |fa| %>
       <%#=fa.label :profesor %>
@@ -65,72 +49,12 @@
   <!-- f.collection_select :nombre, Profesore.find(:all),:nombre, :nombre, :prompt => "Elige a un profesor" --> 
 <!-->  </div> -->
   
-  <div class="field">
-    <%= f.label :rama %><br />
-    <%= f.text_field :rama %>
-  </div>
-  <div class="field">
-    <%= f.label :itinerario %><br />
-    <%= f.text_field :itinerario %>
-  </div>
-  <div class="field">
-    <%= f.label :departamento %><br />
-    <%= f.text_field :departamento %>
-  </div>
-  <div class="field">
-    <%= f.label :area %><br />
-    <%= f.text_field :area %>
-  </div>
-  <div class="field">
-    <%= f.label :Curso %><br />
-   <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]]) %>
-  </div>
-  <div class="field">
-    <%= f.label :caracter %><br />
-    <%= f.text_field :caracter %>
-  </div>
-  <div class="field">
-    <%= f.label :duracion %><br />
-    <%= f.text_field :duracion %>
-  </div>
-  <div class="field">
-    <%= f.label :creditos %><br />
-    <%= f.number_field :creditos %>
-  </div>
-  <div class="field">
-    <%= f.label :horario %><br />
-    <%= f.text_field :horario %>
-  </div>
-  <div class="field">
-    <%= f.label :web %><br />
-    <%= f.text_field :web %>
-  </div>
-  <div class="field">
-    <%= f.label :idioma %><br />
-    <%= f.text_field :idioma %>
-  </div>
-  <div class="field">
-    <%= f.label :bloque %><br />
-    <%= f.text_field :bloque %>
-  </div>
-  <div class="field">
-    <%= f.label :perfil %><br />
-    <%= f.text_field :perfil %>
-  </div>
-  <div class="field">
-    <%= f.label :bibliografia %><br />
-    <%= f.text_area :bibliografia %>
-  </div>
-  <div class="field">
-    <%= f.label :resultados %>
-    <%= f.text_area :resultados %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Crear asignatura" %>
-  </div>
+
+
+
+  <!--<div class="actions">
+    <%#= f.submit "Crear asignatura" %>
+  </div> -->
   
   
 <% end %>

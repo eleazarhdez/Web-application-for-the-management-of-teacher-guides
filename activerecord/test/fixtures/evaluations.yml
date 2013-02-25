@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipoprueba: MyString
+  asignatura_id: 1
+  criterios: MyText
+  ponderacion: 
+  descripcion: MyText
+
+two:
+  tipoprueba: MyString
+  asignatura_id: 1
+  criterios: MyText
+  ponderacion: 
+  descripcion: MyText
