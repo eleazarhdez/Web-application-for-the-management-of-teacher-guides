@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+//IMPORTANTE lo que está detrás del primer guión tiene que llamarse igual que el método en el modelo.
+
 $(function () {  
   $('#asignatura_profesor_tokens').tokenInput('/profesores.json', { crossDomain: false,
                                                               prePopulate: $('#asignatura_profesor_tokens').data('pre'),
@@ -22,5 +24,11 @@ $(function () {
   $('#asignatura_competencia_tokens').tokenInput('/competencies.json', { crossDomain: false,
                                                               prePopulate: $('#asignatura_competencia_tokens').data('pre'),
                                                               theme: 'facebook'
+  });  
+}); 
+$(function () { 
+  $('#evaluation_competenciaevaluacion_tokens').tokenInput('/competencies.json', { crossDomain: false,
+                                                              prePopulate: $('#evaluation_competenciaevaluacion_tokens').data('pre'),
+                                                              theme: 'facebook'
   }); 
-});  
+});

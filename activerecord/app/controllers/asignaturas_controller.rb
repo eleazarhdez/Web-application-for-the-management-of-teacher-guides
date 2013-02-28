@@ -2,6 +2,7 @@ class AsignaturasController < ApplicationController
   # GET /asignaturas
   # GET /asignaturas.json
   def index
+    session[:asignatura_step] = session[:asignatura_params] = nil #nos asegura que no se mezclan las sesiones
     @asignaturas = Asignatura.all
 
     respond_to do |format|
@@ -27,9 +28,10 @@ class AsignaturasController < ApplicationController
     puts "-------EntrANDO POR METODO NEW------------------------------------"
     session[:asignatura_params] ||= {}
     @asignatura = Asignatura.new(session[:asignatura_params])
+    1.times {@asignatura.evaluations.build}
     @asignatura.current_step = session[:asignatura_step]  
     puts "-------SALIENDO POR METODO NEW------------------------------------"
-   
+     
     #respond_to do |format|
      # format.html # new.html.erb
       #format.json { render json: @asignatura }
@@ -107,7 +109,7 @@ class AsignaturasController < ApplicationController
     puts "flag = " + flag.inspect
     #puts "los metodos de @asignatura son:" + @asignatura.class.instance_methods.inspect
 
-    if  flag == 0   
+    if  flag == 0   #Aquí se comprueba si llegamos al final, no hay método como en create
       render 'edit'  
     else
       puts "-------ESTOY PASANDO POR EL else------------------------------------"  

@@ -18,6 +18,22 @@
   <%#= render 'bibliografia_step', :f => f %>
   <%#= render 'resultados_step', :f => f %>
   <%#= @asignatura.class.instance_methods.select {|x| x=~ /record/}.inspect %>
+   <%#= f.fields_for :evaluations do |builder| %>
+   <%#= render 'evaluacion_step', f: builder %>
+  <p>
+    <%#= builder.label :tipoprueba %>
+    <%#= builder.text_field :tipoprueba %>
+
+    <%#= builder.label :ponderacion %>
+    <%#= builder.text_field :ponderacion %>
+
+    <%#= builder.label :descripcion %>
+    <%#= builder.text_area :descripcion %>
+
+    <%#= builder.label :criterios %>
+    <%#= builder.text_area :criterios %>
+  </p>
+<%# end %>
   <p><%= f.submit "Siquiente" %></p>  
   <p><%= f.submit "Anterior", :name => "back_button" unless @asignatura.first_step? %></p>  
   

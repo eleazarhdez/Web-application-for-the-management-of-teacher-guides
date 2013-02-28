@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Asignatura</th>
     <th>Competency</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @competency_pertenece_asignaturas.each do |competency_pertenece_asignatura| %>
   <tr>
+    <td><%= competency_pertenece_asignatura.id %></td>
     <td><%= competency_pertenece_asignatura.asignatura_id %></td>
     <td><%= competency_pertenece_asignatura.competency_id %></td>
     <td><%= link_to 'Show', competency_pertenece_asignatura %></td>

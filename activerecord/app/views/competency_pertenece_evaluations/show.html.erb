@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Evaluation:</b>
+  <%= @competency_pertenece_evaluation.evaluation_id %>
+</p>
+
+<p>
+  <b>Competency:</b>
+  <%= @competency_pertenece_evaluation.competency_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_competency_pertenece_evaluation_path(@competency_pertenece_evaluation) %> |
+<%= link_to 'Back', competency_pertenece_evaluations_path %>

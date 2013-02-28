@@ -1,4 +1,4 @@
-class Asignatura < ActiveRecord::Base
+  class Asignatura < ActiveRecord::Base
   attr_accessible :area, :bibliografia, :bloque, :caracter, :centro, :codigo, :creditos, :curso, :departamento, :duracion, :horario, :idioma, 
   :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens
   
@@ -7,7 +7,8 @@ class Asignatura < ActiveRecord::Base
   has_many :competencyPerteneceAsignaturas
   has_many :competencies, :through => :competencyPerteneceAsignaturas
   
-  has_many :evaluations
+  has_many :evaluations #con claves dobles (tipoprueba, asignatura)
+  accepts_nested_attributes_for :evaluations, :allow_destroy => true
   
   attr_reader :profesor_tokens, :competencia_tokens 
   attr_writer :current_step 
@@ -32,7 +33,7 @@ class Asignatura < ActiveRecord::Base
     end  
     
     def steps  
-      %w[descripcion profesorado contextualizacion competencias bibliografia resultados]  
+      %w[descripcion profesorado contextualizacion competencias bibliografia evaluacion resultados]  
     end
 
     def next_step  
