@@ -10,7 +10,9 @@
       </ul>
     </div>
   <% end %>
+
   <%= render "#{@asignatura.current_step}_step", :f => f %> 
+  <%# = @asignatura.class.instance_methods.inspect %>
   <%#= render 'descripcion_step', :f => f %>
   <%#= render 'profesorado_step', :f => f %>
   <%#= render 'contextualizacion_step', :f => f %>
@@ -36,10 +38,12 @@
 <%# end %>
   <p><%= f.submit "Siquiente" %></p>  
   <p><%= f.submit "Anterior", :name => "back_button" unless @asignatura.first_step? %></p>  
-  
-    
-  
-   <%#= fields_for @profesor_pertenece_asignatura do |fa| %>
+  <%#= @evaluation.class.instance_methods.inspect %>
+  <%#= "tonto" + @asignatura.evaluations.inspect %>
+  <%#= @asignatura.class.instance_methods.inspect %>    
+
+
+   <%#= fields_for :profesor_pertenece_asignatura do |fa| %>
       <%#=fa.label :profesor %>
       <%#= fa.collection_select :profesor, Profesore.find(:all),:name, :name, :prompt => "Elige a un profesor" %>
       <%#= fa.select :rol, options_for_select([["Administrador", "1"], ["Profesor", "2"],["Revisor", "3"]]) %>
@@ -50,7 +54,7 @@
       <%#= a = ProfesorPerteneceAsignatura.find(:all)
           a.inspect
           a.each do |p|
-            p.rol = "profesor"
+            p.rol = "profesorSGGA-ULL"
             p.save
           end
           a.inspect
@@ -58,6 +62,11 @@
       %>
     
       <%#= fa.submit "Crear pertenencia" %>      
+   <%# end %>
+   <%#= fields_for :evaluation do |fe| %>
+      <%#= fe.label :competenciaevaluacion_tokens, "Competencias" %><br />  
+      <%#= fe.text_field :competenciaevaluacion_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+
    <%# end %>
   
 <!--   <div class="field">

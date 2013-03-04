@@ -28,9 +28,18 @@ class AsignaturasController < ApplicationController
     puts "-------EntrANDO POR METODO NEW------------------------------------"
     session[:asignatura_params] ||= {}
     @asignatura = Asignatura.new(session[:asignatura_params])
-    1.times {@asignatura.evaluations.build}
+    puts @asignatura.inspect + "ESTO ES LO QUE TIENE ASIGNATURA"
+    #@evaluation = @asignatura.evaluations.build(params[:evaluation])
+    #@asignatura.evaluations.build = Evaluation.new
+    #1.times {@asignatura.evaluations.build}
     @asignatura.current_step = session[:asignatura_step]  
     puts "-------SALIENDO POR METODO NEW------------------------------------"
+    #@evaluation = Evaluation.new
+    puts @asignatura.class.instance_methods.inspect + "ESTO ES LO QUE TIENE LA CLASE ASIGNATURA"
+    puts @asignatura.inspect + "ESTO ES LO QUE TIENE ASIGNATURA"
+    puts @asignatura.evaluations.inspect + "ESTO ES LO QUE QUIERO SABER"
+    puts @evaluation.class.instance_methods.inspect + "EEEEEEEEEEEOOOOOOOOOOOOOOEEEEEEEEEEOOOOOO"
+
      
     #respond_to do |format|
      # format.html # new.html.erb
@@ -53,6 +62,8 @@ class AsignaturasController < ApplicationController
   def create
     session[:asignatura_params].deep_merge!(params[:asignatura]) if params[:asignatura]
     @asignatura = Asignatura.new(session[:asignatura_params])
+    @evaluation = @asignatura.evaluations.build(params[:evaluation])
+    #session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
     @asignatura.current_step = session[:asignatura_step]
     
     if params[:back_button]  
@@ -61,7 +72,11 @@ class AsignaturasController < ApplicationController
       @asignatura.save  
     else  
       puts "-------ESTOY PASANDO POR EL PASO SIGUIENTE------------------------------------"
+      puts session.inspect + "------------------------------------------------------------"
       @asignatura.next_step  
+    end  
+    if @asignatura.current_step == "evaluacion_step"
+      @evaluation.save
     end  
     session[:asignatura_step] = @asignatura.current_step
     

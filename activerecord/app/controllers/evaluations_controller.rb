@@ -40,6 +40,7 @@ class EvaluationsController < ApplicationController
   # POST /evaluations
   # POST /evaluations.json
   def create
+    session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
     @evaluation = Evaluation.new(params[:evaluation])
 
     respond_to do |format|

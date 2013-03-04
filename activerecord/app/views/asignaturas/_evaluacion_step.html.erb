@@ -1,24 +1,26 @@
  <h2>9.Sistema de Evaluación y Calificación</h2>
-<%= f.fields_for :evaluations_atributtes do |builder| %>
+ <%= f.fields_for :evaluation_attributes do |builder| %>
   <%= builder.label :descripcion %>
   <%= builder.text_area :descripcion %> 
 
 <fieldset>
   <p>
-    <%#= builder.label :tipoprueba %>
-    <%#= builder.text_field :tipoprueba %>
+    <%= builder.label :tipoprueba %>
+    <%= builder.text_field :tipoprueba %>
 
     <%= builder.label :competenciaevaluacion_tokens, "Competencias" %><br />  
-    <%= builder.text_field :competenciaevaluacion_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
-   <p> <%= @evaluation.inspect %></p>
-    <p><%= @asignatura.class.instance_methods.inspect %></p>
-    <p><%= @evaluation.class.instance_methods.inspect %></p>
-    <p><%= @evaluation.instance_values %></p>
-    <p> <%= @evaluation.class.inspect %> </p>
-    <p> <%= @asignatura.class.inspect %> </p>
-    <p> <%= builder.class.instance_methods.inspect %> </p>
-    <%#= builder.label :ponderacion %>
-    <%#= builder.text_field :ponderacion %>
+    <%= builder.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
+   <p> <%="LOS DE EVALUATION: " + @asignatura.evaluations.inspect %></p>
+   <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
+    <p><%#= @asignatura.class.instance_methods.inspect %></p>
+    <p><%= @evaluation.inspect %></p>
+    <p><%#= @evaluation.instance_values %></p>
+    <p> <%#= @evaluation.class.inspect %> </p>
+    <p> <%#= @asignatura.class.inspect %> </p>
+    <p> <%#= builder.class.instance_methods.inspect %> </p>
+    
+    <%= builder.label :ponderacion %>
+    <%= builder.text_field :ponderacion %>
   </p>
     <%= builder.label :criterios %>
     <%= builder.text_area :criterios %>

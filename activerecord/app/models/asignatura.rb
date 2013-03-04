@@ -1,6 +1,6 @@
   class Asignatura < ActiveRecord::Base
   attr_accessible :area, :bibliografia, :bloque, :caracter, :centro, :codigo, :creditos, :curso, :departamento, :duracion, :horario, :idioma, 
-  :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens
+  :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens, :evaluations_attributes
   
   has_many :profesorPerteneceAsignaturas 
   has_many :profesores, :through => :profesorPerteneceAsignaturas
@@ -11,7 +11,7 @@
   accepts_nested_attributes_for :evaluations, :allow_destroy => true
   
   attr_reader :profesor_tokens, :competencia_tokens 
-  attr_writer :current_step 
+  attr_writer :current_step, :evaluations_attributes 
 
   #validates_presence_of :codigo, :if => lambda { |o| o.current_step == "codigo" }
   #validates_presence_of :nombre, :if => lambda { |o| o.current_step == "nombre" }
