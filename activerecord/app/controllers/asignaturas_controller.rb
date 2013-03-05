@@ -29,22 +29,14 @@ class AsignaturasController < ApplicationController
     session[:asignatura_params] ||= {}
     @asignatura = Asignatura.new(session[:asignatura_params])
     puts @asignatura.inspect + "ESTO ES LO QUE TIENE ASIGNATURA"
-    #@evaluation = @asignatura.evaluations.build(params[:evaluation])
-    #@asignatura.evaluations.build = Evaluation.new
+    @evaluation = @asignatura.evaluations.build(params[:evaluation])
     #1.times {@asignatura.evaluations.build}
     @asignatura.current_step = session[:asignatura_step]  
     puts "-------SALIENDO POR METODO NEW------------------------------------"
-    #@evaluation = Evaluation.new
     puts @asignatura.class.instance_methods.inspect + "ESTO ES LO QUE TIENE LA CLASE ASIGNATURA"
     puts @asignatura.inspect + "ESTO ES LO QUE TIENE ASIGNATURA"
     puts @asignatura.evaluations.inspect + "ESTO ES LO QUE QUIERO SABER"
     puts @evaluation.class.instance_methods.inspect + "EEEEEEEEEEEOOOOOOOOOOOOOOEEEEEEEEEEOOOOOO"
-
-     
-    #respond_to do |format|
-     # format.html # new.html.erb
-      #format.json { render json: @asignatura }
-    #end
   end
 
   # GET /asignaturas/1/edit
@@ -61,6 +53,8 @@ class AsignaturasController < ApplicationController
   # POST /asignaturas.json
   def create
     session[:asignatura_params].deep_merge!(params[:asignatura]) if params[:asignatura]
+    session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
+    puts session.inspect + "-------------esto es la sesion-----------------------------------------------"
     @asignatura = Asignatura.new(session[:asignatura_params])
     @evaluation = @asignatura.evaluations.build(params[:evaluation])
     #session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
@@ -75,8 +69,9 @@ class AsignaturasController < ApplicationController
       puts session.inspect + "------------------------------------------------------------"
       @asignatura.next_step  
     end  
-    if @asignatura.current_step == "evaluacion_step"
-      @evaluation.save
+    if @asignatura.current_step == "resultados"
+      puts "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEENTRANDOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO"
+      #@evaluation.save #ESTO FUNCIONA, DESCOMENTARLO SI PROCEDE
     end  
     session[:asignatura_step] = @asignatura.current_step
     
