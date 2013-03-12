@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>evalution id</th>
     <th>ID</th>
     <th>Tipoprueba</th>
     <th>Asignatura</th>
@@ -15,6 +16,7 @@
 
 <% @evaluations.each do |evaluation| %>
   <tr>
+    <td><%= evaluation.evaluation_id %></td>
     <td><%= evaluation.id %></td>
     <td><%= evaluation.tipoprueba %></td>
     <td><%= evaluation.asignatura_id %></td>

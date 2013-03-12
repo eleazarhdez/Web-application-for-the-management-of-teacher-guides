@@ -2,7 +2,7 @@ class AsignaturasController < ApplicationController
   # GET /asignaturas
   # GET /asignaturas.json
   def index
-    session[:asignatura_step] = session[:asignatura_params] = nil #nos asegura que no se mezclan las sesiones
+    session[:asignatura_step] = session[:asignatura_params] = session[:eval_params] = nil #nos asegura que no se mezclan las sesiones
     @asignaturas = Asignatura.all
 
     respond_to do |format|
@@ -27,9 +27,10 @@ class AsignaturasController < ApplicationController
   def new
     puts "-------EntrANDO POR METODO NEW------------------------------------"
     session[:asignatura_params] ||= {}
+    session[:eval_params] ||= {}
     @asignatura = Asignatura.new(session[:asignatura_params])
     puts @asignatura.inspect + "ESTO ES LO QUE TIENE ASIGNATURA"
-    @evaluation = @asignatura.evaluations.build(params[:evaluation])
+    @evaluation = @asignatura.evaluations.build(session[:eval_params])
     #1.times {@asignatura.evaluations.build}
     @asignatura.current_step = session[:asignatura_step]  
     puts "-------SALIENDO POR METODO NEW------------------------------------"
@@ -43,7 +44,13 @@ class AsignaturasController < ApplicationController
   def edit
     puts "-------EntrANDO POR METODO EDIT------------------------------------"
     session[:asignatura_params] ||= {}
+    session[:eval_params] ||= {}
     @asignatura = Asignatura.find(params[:id])
+    puts @asignatura.evaluations.inspect + "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    @evaluation = @asignatura.evaluations[0] #coge el primer elemento del array
+    @evaluation = Evaluation.find(@evaluation.id) 
+    #puts @evaluation.params[:id].inspect + "EL ERROOORRRRRRRRRRRRRRRRRRR"
+    
     @asignatura.current_step = session[:asignatura_step]
     puts session.inspect + "------------------------------------------------------------"
     puts "-------SALIENDO POR METODO edit------------------------------------"
@@ -53,10 +60,13 @@ class AsignaturasController < ApplicationController
   # POST /asignaturas.json
   def create
     session[:asignatura_params].deep_merge!(params[:asignatura]) if params[:asignatura]
-    session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
+    session[:eval_params].deep_merge!(params[:evaluation]) if params[:evaluation]
+    
     puts session.inspect + "-------------esto es la sesion-----------------------------------------------"
+    puts session[:eval_params].inspect + "AQUI DEBE ESTAR LA VORaGINE DE ESTE ROLLO"
     @asignatura = Asignatura.new(session[:asignatura_params])
-    @evaluation = @asignatura.evaluations.build(params[:evaluation])
+    
+    @evaluation = @asignatura.evaluations.build(session[:eval_params])
     #session[:asignatura_params].deep_merge!(params[:evaluation]) if params[:evaluation]
     @asignatura.current_step = session[:asignatura_step]
     
@@ -79,7 +89,7 @@ class AsignaturasController < ApplicationController
       puts "-------ESTOY PASANDO POR EL render new------------------------------------" 
       render 'new'  
     else  
-      session[:asignatura_step] = session[:asignatura_params] = nil 
+      session[:asignatura_step] = session[:asignatura_params] = session[:eval_params] = nil 
       flash[:notice] = "Asignatura saved."  
       redirect_to @asignatura 
     end  
@@ -100,6 +110,7 @@ class AsignaturasController < ApplicationController
   def update
     flag = 0
     session[:asignatura_params].deep_merge!(params[:asignatura]) if params[:asignatura]
+    session[:eval_params].deep_merge!(params[:evaluation]) if params[:evaluation]
     @asignatura = Asignatura.find(params[:id])
     @asignatura.current_step = session[:asignatura_step]
 
@@ -110,6 +121,7 @@ class AsignaturasController < ApplicationController
       puts "-------ENTRO POR LO DEL ULTIMO PASO------------------------------------"
       flag = 1
       @asignatura.update_attributes(session[:asignatura_params]) #puede que no sea así
+      @asignatura.evaluations.update_attributes(session[:eval_params])
     else  
       puts "-------ESTOY PASANDO POR EL PASO SIGUIENTE------------------------------------"
       @asignatura.next_step  
@@ -123,7 +135,7 @@ class AsignaturasController < ApplicationController
       render 'edit'  
     else
       puts "-------ESTOY PASANDO POR EL else------------------------------------"  
-      session[:asignatura_step] = session[:asignatura_params] = nil 
+      session[:asignatura_step] = session[:asignatura_params] = session[:eval_params] = nil 
       flash[:notice] = "Asignatura was successfully updated."  
       redirect_to @asignatura
       flag = 0 

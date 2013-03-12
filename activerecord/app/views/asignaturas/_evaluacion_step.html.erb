@@ -1,15 +1,17 @@
  <h2>9.Sistema de Evaluación y Calificación</h2>
- <%= fields_for :evaluation do |builder| %>
-  <%= builder.label :descripcion %>
-  <%= builder.text_area :descripcion %> 
+ <!--Si ponemos f.fields_for, no sale lo de las competencias -->
+ <%= fields_for :evaluation do |builder| %> 
+  
 
 <fieldset>
   <p>
     <%= builder.label :tipoprueba %>
     <%= builder.text_field :tipoprueba %>
+    <%= builder.label :descripcion %>
+  <%= builder.text_area :descripcion %> 
 
     <%= builder.label :competenciaevaluacion_tokens, "Competencias" %><br />  
-    <%#= builder.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
+    <%= builder.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
    <p> <%="LOS DE EVALUATION: " + @asignatura.evaluations.inspect %></p>
    <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
     <p><%#= @asignatura.class.instance_methods.inspect %></p>
