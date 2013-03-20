@@ -5,8 +5,8 @@
     <ignored path="activerecord.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/_form_html.erb.html.back" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363708864561" ignored="false" />
-    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363724377231" ignored="false" />
-    <file path="/asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363724085321" ignored="false" />
+    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363807648852" ignored="false" />
+    <file path="/asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363811484051" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +23,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="230" column="7" selection-start="8194" selection-end="8194" vertical-scroll-proportion="6.858847">
+            <state line="61" column="37" selection-start="2989" selection-end="2989" vertical-scroll-proportion="-38.125">
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -34,10 +34,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asignaturas_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="formToWizard.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/formToWizard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="60" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="2" selection-start="262" selection-end="284" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="asignaturas_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="12" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.0">
+            <state line="47" column="60" selection-start="1794" selection-end="1794" vertical-scroll-proportion="-4.438389">
               <folding />
             </state>
           </provider>
@@ -46,7 +66,7 @@
       <file leaf-file-name="_form_html.erb.html.back" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form_html.erb.html.back">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="0" selection-start="2912" selection-end="2912" vertical-scroll-proportion="-15.041667">
+            <state line="91" column="0" selection-start="2912" selection-end="2912" vertical-scroll-proportion="-9.625">
               <folding />
             </state>
           </provider>
@@ -55,7 +75,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="88" selection-start="58" selection-end="142" vertical-scroll-proportion="-2.5">
+            <state line="4" column="88" selection-start="58" selection-end="142" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,8 +136,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,6 +153,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="activerecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -331,7 +365,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
       <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSRemoteDebuggerConfigurationSettings>
       <method />
@@ -458,25 +492,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="1284" height="996" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22285251" sideWeight="0.67812145" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22690438" sideWeight="0.55568314" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.018327607" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32187858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.017221585" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44431686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -535,98 +569,101 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_descripcion_step.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="32" selection-start="1115" selection-end="1698" vertical-scroll-proportion="0.8697271">
+        <state line="4" column="88" selection-start="58" selection-end="142" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_descripcion_step.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="32" selection-start="1115" selection-end="1698" vertical-scroll-proportion="0.8697271" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_contextualizacion_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="63" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="0" column="4" selection-start="4" selection-end="63" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_profesorado_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="49" selection-start="0" selection-end="49" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
+        <state line="0" column="49" selection-start="0" selection-end="49" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_competencias_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="32" selection-end="223" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
+        <state line="2" column="2" selection-start="32" selection-end="223" vertical-scroll-proportion="-1.25" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_evaluacion_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="19" selection-start="115" selection-end="1172" vertical-scroll-proportion="0.5739796">
-          <folding />
-        </state>
+        <state line="30" column="19" selection-start="115" selection-end="1172" vertical-scroll-proportion="0.5739796" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_bibliografia_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="46" selection-end="151" vertical-scroll-proportion="0.037220843">
-          <folding />
-        </state>
+        <state line="2" column="1" selection-start="46" selection-end="151" vertical-scroll-proportion="0.037220843" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_resultados_step.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="47" selection-end="142" vertical-scroll-proportion="0.038265307">
-          <folding />
-        </state>
+        <state line="2" column="1" selection-start="47" selection-end="142" vertical-scroll-proportion="0.038265307" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="88" selection-start="58" selection-end="142" vertical-scroll-proportion="-2.5">
+        <state line="4" column="88" selection-start="58" selection-end="142" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="2" selection-start="262" selection-end="284" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form_html.erb.html.back">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="0" selection-start="2912" selection-end="2912" vertical-scroll-proportion="-15.041667">
+        <state line="91" column="0" selection-start="2912" selection-end="2912" vertical-scroll-proportion="-9.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/formToWizard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="12" selection-start="2412" selection-end="2412" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="31" column="60" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="7" selection-start="8194" selection-end="8194" vertical-scroll-proportion="6.858847">
+        <state line="61" column="37" selection-start="2989" selection-end="2989" vertical-scroll-proportion="-38.125">
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="60" selection-start="1794" selection-end="1794" vertical-scroll-proportion="-4.438389">
+          <folding />
         </state>
       </provider>
     </entry>
