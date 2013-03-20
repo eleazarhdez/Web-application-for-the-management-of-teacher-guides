@@ -1,0 +1,30 @@
+<h1>Listing competencies</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Descripcion</th>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @competencies.each do |competency| %>
+  <tr>
+    <td><%= competency.id %></td>
+    <td><%= competency.name %></td>
+    <td><%= competency.descripcion %></td>
+    <td><%= competency.tipo %></td>
+    <td><%= link_to 'Show', competency %></td>
+    <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
+    <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Competency', new_competency_path %>
+<%= link_to 'home', root_path %>

@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  codigo: 
+  nombre: MyString
+  titulacion: MyString
+  rama: MyString
+  itinerario: MyString
+  departamento: MyString
+  area: MyString
+  curso: 1
+  caracter: MyString
+  duracion: MyString
+  creditos: 1
+  horario: MyString
+  web: MyString
+  idioma: MyString
+  bloque: MyString
+  perfil: MyString
+  bibliografia: MyText
+  resultados: MyText
+
+two:
+  codigo: 
+  nombre: MyString
+  titulacion: MyString
+  rama: MyString
+  itinerario: MyString
+  departamento: MyString
+  area: MyString
+  curso: 1
+  caracter: MyString
+  duracion: MyString
+  creditos: 1
+  horario: MyString
+  web: MyString
+  idioma: MyString
+  bloque: MyString
+  perfil: MyString
+  bibliografia: MyText
+  resultados: MyText

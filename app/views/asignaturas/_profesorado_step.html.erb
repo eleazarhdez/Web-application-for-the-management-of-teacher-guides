@@ -1,0 +1,8 @@
+<h2>3.Profesorado que imparte la Asignatura</h2> 
+<p>
+  <div> 
+    <%= f.label :profesor_tokens, "Profesores" %><br />  
+    <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+    <%#= @evaluation.class.instance_methods.inspect %>  
+  </div>
+</p>

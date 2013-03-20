@@ -1,0 +1,10 @@
+--- 
+open_files: 
+  - app/views/home/index.html.erb
+  - app/models/asignatura.rb
+  - app/models/competency_pertenece_asignatura.rb
+  - Gemfile
+  - app/views/profesores/index.html.erb
+  - app/views/competencies/index.html.erb
+  - app/models/profesor_pertenece_asignatura.rb
+  - app/models/evaluation.rb

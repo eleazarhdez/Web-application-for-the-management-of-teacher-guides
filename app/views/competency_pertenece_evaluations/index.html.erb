@@ -1,0 +1,27 @@
+<h1>Listing competency_pertenece_evaluations</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Evaluation</th>
+    <th>Competency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @competency_pertenece_evaluations.each do |competency_pertenece_evaluation| %>
+  <tr>
+    <td><%= competency_pertenece_evaluation.id %></td>
+    <td><%= competency_pertenece_evaluation.evaluation_id %></td>
+    <td><%= competency_pertenece_evaluation.competency_id %></td>
+    <td><%= link_to 'Show', competency_pertenece_evaluation %></td>
+    <td><%= link_to 'Edit', edit_competency_pertenece_evaluation_path(competency_pertenece_evaluation) %></td>
+    <td><%= link_to 'Destroy', competency_pertenece_evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Competency pertenece evaluation', new_competency_pertenece_evaluation_path %>

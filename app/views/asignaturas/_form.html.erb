@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+  <title>Turn plain webform into a powerful wizard with jQuery</title>
+  <style type="text/css">
+      body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px;}
+      #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#f6f6f6;}
+      #header { text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+      fieldset { border:none; width:320px;}
+      legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
+      label { display:block; margin:15px 0 5px;}
+      input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
+      .prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
+      .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+      .prev { float:left;}
+      .next { float:right;}
+      #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+      #steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+      #steps li span {font-size:11px; display:block;}
+      #steps li.current { color:#000;}
+      #makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+      #makeWizard:hover { background-color:#000;}
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/formToWizard.js"></script>
+  <%= stylesheet_link_tag    "application", "token-input-facebook", :media => "all" %>
+  <script type="text/javascript" src="/assets/jquery.tokeninput.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+          $("#asignatura").formToWizard({ submitButton: 'SaveAccount' })
+      });
+  </script>
+</head>
+<body>
+<div id="main">
+  <div id="header">
+    <img src="/assets/logo.jpg" alt="JankoAtWrpSpeed demos" />
+    <h3>Menú de Asignatura</h3>
+
+    <span id="info" style="display:none;">You don't have to fill the form, really. Just click on Next and Back to see the demo.</span></p>
+  </div>
+
+
+
+  <form id="asignatura" action= "" method="post">
+    <%= form_for(@asignatura) do |f| %>
+        <% if @asignatura.errors.any? %>
+            <fieldset><div id='step'>0
+              <div id="error_explanation">
+                <h2><%= pluralize(@asignatura.errors.count, "error") %> prohibited this asignatura from being saved:</h2>
+
+                <ul>
+                  <% @asignatura.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+        <% end %>
+
+
+        <fieldset>
+          <legend>Asignatura</legend>
+          <div class="field">
+            <%= f.label :nombre %><br />
+            <%= f.text_field :nombre %>
+          </div>
+          <div class="field">
+            <%= f.label :codigo %><br />
+            <%= f.text_field :codigo %>
+
+          </div>
+          <div class="field">
+            <%= f.label :centro %><br />
+            <%= f.text_field :centro %>
+          </div>
+          <div class="field">
+            <%= f.label :titulacion %><br />
+            <%= f.text_field :titulacion %>
+          </div>
+          <div class="field">
+            <%= f.label :plan %><br />
+            <%= f.text_field :plan %>
+          </div>
+          <div class="field">
+            <%= f.label :rama %><br />
+            <%= f.text_field :rama %>
+          </div>
+          <div class="field">
+            <%= f.label :itinerario %><br />
+            <%= f.text_field :itinerario %>
+          </div>
+          <div class="field">
+            <%= f.label :departamento %><br />
+            <%= f.text_field :departamento %>
+          </div>
+          <div class="field">
+            <%= f.label :area %><br />
+            <%= f.text_field :area %>
+          </div>
+          <div class="field">
+            <%= f.label :Curso %><br />
+            <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]]) %>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Asignatura 2</legend>
+          <div class="field">
+            <%= f.label :caracter %><br />
+            <%= f.text_field :caracter %>
+          </div>
+          <div class="field">
+            <%= f.label :duracion %><br />
+            <%= f.text_field :duracion %>
+          </div>
+          <div class="field">
+            <%= f.label :creditos %><br />
+            <%= f.number_field :creditos %>
+          </div>
+          <div class="field">
+            <%= f.label :horario %><br />
+            <%= f.text_field :horario %>
+          </div>
+          <div class="field">
+            <%= f.label :web %><br />
+            <%= f.text_field :web %>
+          </div>
+          <div class="field">
+            <%= f.label :idioma %><br />
+            <%= f.text_field :idioma %>
+          </div>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>3.Profesorado </legend>
+          <div>
+            <%= f.label :profesor_tokens, "Profesores" %><br />
+            <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+            <%#= @evaluation.class.instance_methods.inspect %>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>5.Competencias</legend>
+          <div>
+            <%= f.label :competencia_tokens, "Competencias" %><br />
+            <%= f.text_field :competencia_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>4.Contextualización </legend>
+          <div class="field">
+            <%= f.label :bloque %><br />
+            <%= f.text_field :bloque %>
+          </div>
+          <div class="field">
+            <%= f.label :perfil %><br />
+            <%= f.text_field :perfil %>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>8.Bibliografía</legend>
+          <div class="field">
+            <%= f.label :bibliografia %><br />
+            <%= f.text_area :bibliografia %>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>9. Evaluación</legend>
+          <%= fields_for :evaluation do |builder| %>
+              <p>
+                <%= builder.label :tipoprueba %>
+                <%= builder.text_field :tipoprueba %>
+                <%= builder.label :descripcion %>
+                <%= builder.text_area :descripcion %>
+
+                <%= builder.label :competenciaevaluacion_tokens, "Competencias" %><br />
+                <%= builder.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
+              <p> <%="LOS DE EVALUATION: " + @asignatura.evaluations.inspect %></p>
+              <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
+              <p><%#= @asignatura.class.instance_methods.inspect %></p>
+              <p><%= @evaluation.inspect %></p>
+              <p><%#= @evaluation.instance_values %></p>
+              <p> <%#= @evaluation.class.inspect %> </p>
+              <p> <%#= @asignatura.class.inspect %> </p>
+              <p> <%#= builder.class.instance_methods.inspect %> </p>
+
+              <%= builder.label :ponderacion %>
+              <%= builder.text_field :ponderacion %>
+              </p>
+              <%= builder.label :criterios %>
+              <%= builder.text_area :criterios %>
+
+          <% end %>
+        </fieldset>
+
+        <fieldset>
+          <legend>10. Resultados</legend>
+          <div class="field">
+            <%= f.label :resultados %>
+            <%= f.text_area :resultados %>
+          </div>
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+        <%= f.submit "Crear" %></p>
+        <%#= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+
+  </form>
+</div>
+
+
+</body>
+</html>

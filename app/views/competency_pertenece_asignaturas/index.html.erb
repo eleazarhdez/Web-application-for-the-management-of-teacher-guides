@@ -1,0 +1,27 @@
+<h1>Listing competency_pertenece_asignaturas</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Asignatura</th>
+    <th>Competency</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @competency_pertenece_asignaturas.each do |competency_pertenece_asignatura| %>
+  <tr>
+    <td><%= competency_pertenece_asignatura.id %></td>
+    <td><%= competency_pertenece_asignatura.asignatura_id %></td>
+    <td><%= competency_pertenece_asignatura.competency_id %></td>
+    <td><%= link_to 'Show', competency_pertenece_asignatura %></td>
+    <td><%= link_to 'Edit', edit_competency_pertenece_asignatura_path(competency_pertenece_asignatura) %></td>
+    <td><%= link_to 'Destroy', competency_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Competency pertenece asignatura', new_competency_pertenece_asignatura_path %>

@@ -1,0 +1,39 @@
+<h1>Listing profesores</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Departamento</th>
+    <th>Area</th>
+    <th>Lugar tutoria</th>
+    <th>Horario tutoria</th>
+    <th>Telefono</th>
+    <th>Mail</th>
+    <th>Web</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profesore.each do |profesore| %>
+  <tr>
+    <td><%= profesore.id %></td>
+    <td><%= profesore.name %></td>
+    <td><%= profesore.departamento %></td>
+    <td><%= profesore.area %></td>
+    <td><%= profesore.lugar_tutoria %></td>
+    <td><%= profesore.horario_tutoria %></td>
+    <td><%= profesore.telefono %></td>
+    <td><%= profesore.mail %></td>
+    <td><%= profesore.web %></td>
+    <td><%= link_to 'Show', profesore %></td>
+    <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
+    <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profesore', new_profesore_path %>

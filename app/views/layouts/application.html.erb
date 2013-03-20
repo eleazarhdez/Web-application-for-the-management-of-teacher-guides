@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SGGA-ULL</title>
+  <%= stylesheet_link_tag    "application", "token-input-facebook", :media => "all" %>
+  <%= javascript_include_tag "application", "jquery.tokeninput" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head)%>
+</head>
+<body>
+      <%= yield %>
+</body>
+</html>
+

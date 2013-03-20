@@ -1,0 +1,30 @@
+<%= form_for(@competency) do |f| %>
+  <% if @competency.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@competency.errors.count, "error") %> prohibited this competency from being saved:</h2>
+
+      <ul>
+      <% @competency.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br />
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :Tipo %><br />
+   <%= f.select :tipo, options_for_select([["General", "General"], ["Transversal", "Transversal"],["Específica", "Específica"]]) %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

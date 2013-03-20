@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @profesor_pertenece_asignatura.asignatura_id%>
+</p>
+
+<p>
+  <b>Profesor:</b>
+  <%= @profesor_pertenece_asignatura.profesore_id %>
+</p>
+
+<p>
+  <b>Rol:</b>
+  <%= @profesor_pertenece_asignatura.rol %>
+</p>
+
+
+<%= link_to 'Edit', edit_profesor_pertenece_asignatura_path(@profesor_pertenece_asignatura) %> |
+<%= link_to 'Back', profesor_pertenece_asignaturas_path %>
