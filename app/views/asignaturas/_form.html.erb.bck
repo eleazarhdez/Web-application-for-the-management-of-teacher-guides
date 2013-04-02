@@ -1,0 +1,97 @@
+<%= form_for(@asignatura) do |f| %>
+<% if @asignatura.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(@asignatura.errors.count, "error") %> prohibited this asignatura from being saved:</h2>
+
+    <ul>
+        <% @asignatura.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+<div>
+    <%= f.label :profesor_tokens, "Profesores" %><br />
+    <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+</div>
+<%= render "#{@asignatura.current_step}_step", :f => f %>
+<%# = @asignatura.class.instance_methods.inspect %>
+<%#= render 'descripcion_step', :f => f %>
+<%#= render 'profesorado_step', :f => f %>
+<%#= render 'contextualizacion_step', :f => f %>
+<%#= render 'competencias_step', :f => f %>
+<%#= render 'bibliografia_step', :f => f %>
+<%#= render 'resultados_step', :f => f %>
+<%#= @asignatura.class.instance_methods.select {|x| x=~ /record/}.inspect %>
+<%#= f.fields_for :evaluations do |builder| %>
+<%#= render 'evaluacion_step', f: builder %>
+<p>
+    <%#= builder.label :tipoprueba %>
+    <%#= builder.text_field :tipoprueba %>
+
+    <%#= builder.label :ponderacion %>
+    <%#= builder.text_field :ponderacion %>
+
+    <%#= builder.label :descripcion %>
+    <%#= builder.text_area :descripcion %>
+
+    <%#= builder.label :criterios %>
+    <%#= builder.text_area :criterios %>
+</p>
+<%# end %>
+<p><%= f.submit "Siquiente" %></p>
+<p><%= f.submit "Anterior", :name => "back_button" unless @asignatura.first_step? %></p>
+<%#= @evaluation.class.instance_methods.inspect %>
+<%#= "tonto" + @asignatura.evaluations.inspect %>
+<%#= @asignatura.class.instance_methods.inspect %>
+
+
+<%#= fields_for :profesor_pertenece_asignatura do |fa| %>
+<%#=fa.label :profesor %>
+<%#= fa.collection_select :profesor, Profesore.find(:all),:name, :name, :prompt => "Elige a un profesor" %>
+<%#= fa.select :rol, options_for_select([["Administrador", "1"], ["Profesor", "2"],["Revisor", "3"]]) %>
+<%#= fa.instance_values  %>
+<%#=ProfesorPerteneceAsignatura.new(:rol => "profesor")%>
+<%#= fa.class.instance_methods.inspect %>
+<%#= ProfesorPerteneceAsignatura.instance_methods.select {|x| x=~ /rol/}.inspect %>
+<%#= a = ProfesorPerteneceAsignatura.find(:all)
+a.inspect
+a.each do |p|
+p.rol = "profesorSGGA-ULL"
+p.save
+end
+a.inspect
+
+%>
+
+<%#= fa.submit "Crear pertenencia" %>
+<%# end %>
+<%#= fields_for :evaluation do |fe| %>
+<%#= fe.label :competenciaevaluacion_tokens, "Competencias" %><br />
+<%#= fe.text_field :competenciaevaluacion_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+
+<%# end %>
+
+<!--   <div class="field">
+   <!%= f.label "combo de profesores"%><br />
+  <!-- f.collection_select :nombre, Profesore.find(:all),:nombre, :nombre, :prompt => "Elige a un profesor" -->
+<!-->  </div> -->
+
+
+
+
+<!--<div class="actions">
+<%#= f.submit "Crear asignatura" %>
+</div> -->
+
+
+<% end %>
+
+
+
+
+
+
+
+
+

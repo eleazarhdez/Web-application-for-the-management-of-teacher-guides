@@ -27,7 +27,7 @@
   <script type="text/javascript" src="/assets/jquery.tokeninput.js"></script>
   <script type="text/javascript">
       $(document).ready(function(){
-          $("#asignatura").formToWizard({ submitButton: 'SaveAccount' })
+          $('form').formToWizard({ submitButton: 'SaveAccount' })
       });
   </script>
 </head>
@@ -42,7 +42,7 @@
 
 
 
-  <form id="asignatura" action= "/asignaturas" method="post">
+
     <%= form_for(@asignatura) do |f| %>
         <% if @asignatura.errors.any? %>
             <fieldset><div id='step'>0
@@ -223,8 +223,7 @@
     <% end %>
 
 
-  </form>
-</div>
+  </div>
 
 
 </body>
