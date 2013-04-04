@@ -53,7 +53,7 @@ cursor_positions:
   - :path: db/migrate/20130205102049_change_profesor_to_profesor_pertenece_asignaturas.rb
     :cursor_offset: 232
     :timestamp: 2013-02-05 10:36:07 +00:00
-  - :path: app/views/profesor_pertenece_asignaturas/_form.html.erb
+  - :path: app/views/profesor_pertenece_asignaturas/_form.html.erb.bck.back
     :cursor_offset: 554
     :timestamp: 2013-02-05 12:27:24 +00:00
   - :path: app/controllers/asignaturas_controller_pruebarb
@@ -103,10 +103,10 @@ cursor_positions:
   - :path: app/models/competencia.rb
     :cursor_offset: 172
     :timestamp: 2013-02-18 10:59:48 +00:00
-  - :path: app/views/profesores/_form.html.erb
+  - :path: app/views/profesores/_form.html.erb.bck.back
     :cursor_offset: 441
     :timestamp: 2013-02-04 12:46:11 +00:00
-  - :path: app/views/competencia/_form.html.erb
+  - :path: app/views/competencia/_form.html.erb.bck.back
     :cursor_offset: 242
     :timestamp: 2013-02-18 12:56:56 +00:00
     :selection_offset: 254
@@ -133,7 +133,7 @@ cursor_positions:
   - :path: app/views/competencies/edit.html.erb
     :cursor_offset: 0
     :timestamp: 2013-02-19 10:20:15 +00:00
-  - :path: app/views/competencies/_form.html.erb
+  - :path: app/views/competencies/_form.html.erb.bck.back
     :cursor_offset: 824
     :timestamp: 2013-02-19 11:24:10 +00:00
   - :path: app/views/competencies/new.html.erb
@@ -148,7 +148,7 @@ cursor_positions:
   - :path: app/views/competencies/show.html.erb
     :cursor_offset: 191
     :timestamp: 2013-02-19 11:25:47 +00:00
-  - :path: app/views/competencia_pertenece_asignaturas/_form.html.erb
+  - :path: app/views/competencia_pertenece_asignaturas/_form.html.erb.bck.back
     :cursor_offset: 685
     :timestamp: 2013-02-19 11:38:31 +00:00
   - :path: app/views/competencia_pertenece_asignaturas/edit.html.erb
@@ -192,7 +192,7 @@ cursor_positions:
   - :path: app/views/competency_pertenece_asignaturas/index.html.erb
     :cursor_offset: 0
     :timestamp: 2013-02-19 16:08:51 +00:00
-  - :path: app/views/competency_pertenece_asignaturas/_form.html.erb
+  - :path: app/views/competency_pertenece_asignaturas/_form.html.erb.bck.back
     :cursor_offset: 0
     :timestamp: 2013-02-19 16:08:51 +00:00
   - :path: app/views/profesor_pertenece_asignaturas/index.html.erb
@@ -216,7 +216,7 @@ cursor_positions:
   - :path: app/controllers/application_controller.rb
     :cursor_offset: 0
     :timestamp: 2012-11-02 10:31:58 +00:00
-  - :path: app/views/asignaturas/_form.html.erb
+  - :path: app/views/asignaturas/_form.html.erb.bck.back
     :cursor_offset: 1022
     :timestamp: 2013-02-19 12:48:27 +00:00
   - :path: app/views/home/index.html.erb
