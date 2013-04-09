@@ -25,8 +25,8 @@ class AsignaturasController < ApplicationController
   # GET /asignaturas/new.json
   def new
     @asignatura = Asignatura.new
+    #@evaluation = @asignatura.evaluations.create(:evaluation_date => Time.now)
     @evaluation = @asignatura.evaluations.build
-    #@evaluation = @asignatura.evaluations.build(params[:evaluation])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +36,10 @@ class AsignaturasController < ApplicationController
 
   # GET /asignaturas/1/edit
   def edit
+    puts "----------------------------------------------------------------------------PASAAA"
+
     @asignatura = Asignatura.find(params[:id])
+    #puts "ESTE ES EL ID: " + @asignatura.evaluations.build(params[:id])
     @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
   end
@@ -46,6 +49,7 @@ class AsignaturasController < ApplicationController
   def create
 
     @asignatura = Asignatura.new(params[:asignatura])
+    @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
     respond_to do |format|
       if @asignatura.save
@@ -63,6 +67,7 @@ class AsignaturasController < ApplicationController
   def update
 
     @asignatura = Asignatura.find(params[:id])
+    @evaluation = @asignatura.evaluations.find(params[:id]) #para que esto funcione debe encntrar un id
     respond_to do |format|
       if @asignatura.update_attributes(params[:asignatura])
         format.html { redirect_to @asignatura, notice: 'Asignatura was successfully updated.' }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226120513) do
+ActiveRecord::Schema.define(:version => 20130407155013) do
 
   create_table "asignaturas", :primary_key => "codigo", :force => true do |t|
     t.string   "nombre"
@@ -55,6 +55,13 @@ ActiveRecord::Schema.define(:version => 20130226120513) do
   create_table "competency_pertenece_evaluations", :force => true do |t|
     t.integer  "evaluation_id"
     t.integer  "competency_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "evaluation_pertenece_asignaturas", :force => true do |t|
+    t.integer  "asignatura_id"
+    t.integer  "tipoprueba"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Asignatura:</b>
+  <%= @evaluation_pertenece_asignatura.asignatura_id %>
+</p>
+
+<p>
+  <b>Tipoprueba:</b>
+  <%= @evaluation_pertenece_asignatura.tipoprueba %>
+</p>
+
+
+<%= link_to 'Edit', edit_evaluation_pertenece_asignatura_path(@evaluation_pertenece_asignatura) %> |
+<%= link_to 'Back', evaluation_pertenece_asignaturas_path %>

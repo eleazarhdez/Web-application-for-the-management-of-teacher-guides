@@ -4,9 +4,10 @@ class Evaluation < ActiveRecord::Base
   attr_accessible :asignatura_id, :criterios, :descripcion, :ponderacion, :tipoprueba, :competenciaevaluacion_tokens,
   :updated_at, :created_at
   attr_reader :competenciaevaluacion_tokens
-  belongs_to :asignatura, :foreign_key => [:asignatura_id]
-
-
+  #has_and_belongs_to_many :asignaturas #, :foreign_key => [:asignatura_id]
+ # has_many :evaluationPerteneceAsignaturas
+  #has_many :asignaturas, :through => :evaluationPerteneceAsignaturas
+   belongs_to :asignatura
   has_many :competencyPerteneceEvaluations
   has_many :competencies, :through => :competencyPerteneceEvaluations
 

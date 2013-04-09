@@ -1,0 +1,25 @@
+<%= form_for(@evaluation_pertenece_asignatura) do |f| %>
+  <% if @evaluation_pertenece_asignatura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation_pertenece_asignatura.errors.count, "error") %> prohibited this evaluation_pertenece_asignatura from being saved:</h2>
+
+      <ul>
+      <% @evaluation_pertenece_asignatura.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :asignatura_id %><br />
+    <%= f.number_field :asignatura_id %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoprueba %><br />
+    <%= f.number_field :tipoprueba %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
