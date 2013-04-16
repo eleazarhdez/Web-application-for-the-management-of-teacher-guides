@@ -28,6 +28,8 @@
 <% end %>
 </table>
 
+<%= "ESTA ES LA CLAVE:" + @evaluations.inspect%>
 <br />
 
 <%= link_to 'New Evaluation', new_evaluation_path %>
+<%= puts "ESTA ES LA CLAVE:" + Evaluation.primary_key.to_s %>

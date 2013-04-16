@@ -40,6 +40,7 @@
   </div>
 
   <p><%= @evaluation.inspect %></p>
+  <p><%= "Esto es:" + @asignatura.evaluations_attributes.inspect %>
 
 
     <%= form_for(@asignatura) do |f| %>
@@ -186,7 +187,7 @@
               <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
               <p><%#= @asignatura.class.instance_methods.inspect %></p>
               <p><%= @evaluation.inspect %></p>
-              <p><%= @evaluation.instance_values %></p>
+              <p><%#= @evaluation.instance_values %></p>
               <p> <%#= @evaluation.class.inspect %> </p>
               <p> <%#= @asignatura.class.inspect %> </p>
               <p> <%#= evaluation_fields.class.instance_methods.inspect %> </p>

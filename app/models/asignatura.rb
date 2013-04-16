@@ -17,8 +17,8 @@
   #has_and_belongs_to_many :evaluations #con claves dobles (tipoprueba, asignatura)
   accepts_nested_attributes_for :evaluations, :allow_destroy => true
   
-  attr_reader :profesor_tokens, :competencia_tokens, :evaluations_attributes  
-  attr_writer :current_step, :evaluations_attributes 
+  attr_reader :profesor_tokens, :competencia_tokens, :evaluations_attributes, :tipoprueba
+  attr_writer :current_step, :evaluations_attributes, :tipoprueba
 
   #validates_presence_of :codigo, :if => lambda { |o| o.current_step == "codigo" }
   #validates_presence_of :nombre, :if => lambda { |o| o.current_step == "nombre" }

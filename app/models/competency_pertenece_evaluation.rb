@@ -4,4 +4,7 @@ class CompetencyPerteneceEvaluation < ActiveRecord::Base
   attr_accessible :competency_id, :evaluation_id
   belongs_to :evaluation
   belongs_to :competency
+
+
 end
+

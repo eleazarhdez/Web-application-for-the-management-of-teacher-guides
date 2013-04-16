@@ -40,7 +40,12 @@ class AsignaturasController < ApplicationController
 
     @asignatura = Asignatura.find(params[:id])
     #puts "ESTE ES EL ID: " + @asignatura.evaluations.build(params[:id])
-    @evaluation = @asignatura.evaluations.build(params[:evaluation])
+    #@evaluation = @asignatura.evaluations.find(params[:id], params[:tipooprueba])  #así debería de ser
+    @evaluation = @asignatura.evaluations.build
+    puts "Esto es:" + @asignatura.evaluations.instance_methods.inspect
+    #@evaluation = Evaluation.find(params[:asignatura_id])
+    @evaluation = @asignatura.evaluations.find(params[:asignatura_id])
+    puts "ESTE ES EL ID: " + @asignatura.evaluations.inspect
 
   end
 
@@ -65,9 +70,10 @@ class AsignaturasController < ApplicationController
   # PUT /asignaturas/1
   # PUT /asignaturas/1.json
   def update
-
     @asignatura = Asignatura.find(params[:id])
-    @evaluation = @asignatura.evaluations.find(params[:id]) #para que esto funcione debe encntrar un id
+    @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
+    puts "Pasando por el update: " + @asignatura.evaluations.inspect
+
     respond_to do |format|
       if @asignatura.update_attributes(params[:asignatura])
         format.html { redirect_to @asignatura, notice: 'Asignatura was successfully updated.' }

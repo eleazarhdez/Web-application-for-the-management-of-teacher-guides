@@ -1,6 +1,6 @@
 class CreateEvaluations < ActiveRecord::Migration
   def change
-    create_table :evaluations do |t|
+    create_table :evaluations, {:id => false} do  |t|
       t.string :tipoprueba
       t.integer :asignatura_id
       t.text :criterios
