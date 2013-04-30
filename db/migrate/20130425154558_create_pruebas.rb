@@ -1,8 +1,8 @@
-class CreateEvaluations < ActiveRecord::Migration
+class CreatePruebas < ActiveRecord::Migration
   def change
-    create_table :evaluations do  |t|
-      t.string :tipoprueba
+    create_table :pruebas do |t|
       t.integer :asignatura_id
+      t.string :tipoprueba
       t.text :criterios
       t.float :ponderacion
       t.text :descripcion

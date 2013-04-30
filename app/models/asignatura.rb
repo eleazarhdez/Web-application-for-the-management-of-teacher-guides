@@ -1,6 +1,7 @@
   class Asignatura < ActiveRecord::Base
   attr_accessible :area, :bibliografia, :bloque, :caracter, :centro, :codigo, :creditos, :curso, :departamento, :duracion, :horario, :idioma, 
-  :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens, :evaluations_attributes, :tipoprueba#,
+  :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens, :evaluations_attributes,
+  :tipoprueba, :pruebas_attributes#,
   #:evaluation_attributes
   
   
@@ -13,9 +14,9 @@
 
  # has_many :evaluationPerteneceAsignaturas
   has_many :evaluations, :dependent => :destroy #, :through => :evaluationPerteneceAsignaturas
-
+  has_many :pruebas, :dependent => :destroy
   #has_and_belongs_to_many :evaluations #con claves dobles (tipoprueba, asignatura)
-  accepts_nested_attributes_for :evaluations, :allow_destroy => true
+  accepts_nested_attributes_for :evaluations, :pruebas, :allow_destroy => true
   
   attr_reader :profesor_tokens, :competencia_tokens, :evaluations_attributes, :tipoprueba
   attr_writer :current_step, :evaluations_attributes, :tipoprueba

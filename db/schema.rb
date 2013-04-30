@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130408185243) do
+ActiveRecord::Schema.define(:version => 20130425154558) do
 
   create_table "asignaturas", :primary_key => "codigo", :force => true do |t|
     t.string   "nombre"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20130408185243) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "competency_pertenece_evaluations", :id => false, :force => true do |t|
+  create_table "competency_pertenece_evaluations", :force => true do |t|
     t.integer  "evaluation_id"
     t.integer  "competency_id"
     t.datetime "created_at",    :null => false
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20130408185243) do
     t.datetime "updated_at",    :null => false
   end
 
-  create_table "evaluations", :id => false, :force => true do |t|
+  create_table "evaluations", :force => true do |t|
     t.string   "tipoprueba"
     t.integer  "asignatura_id"
     t.text     "criterios"
@@ -95,6 +95,16 @@ ActiveRecord::Schema.define(:version => 20130408185243) do
     t.string   "web"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "pruebas", :force => true do |t|
+    t.integer  "asignatura_id"
+    t.string   "tipoprueba"
+    t.text     "criterios"
+    t.float    "ponderacion"
+    t.text     "descripcion"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

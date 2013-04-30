@@ -40,9 +40,10 @@
   </div>
 
   <p><%= @evaluation.inspect %></p>
+
   <p><%= "Esto es:" + @asignatura.evaluations_attributes.inspect %>
 
-
+    <% @asignatura.pruebas.build %>
     <%= form_for(@asignatura) do |f| %>
         <% if @asignatura.errors.any? %>
 
@@ -56,6 +57,32 @@
                 </ul>
               </div>
         <% end %>
+
+
+              <fieldset>
+          <%= render :partial => 'pruebas/form',
+                    :locals => {:form => f} %>
+              </fieldset>
+<!--          <%= f.fields_for :pruebas do |builder| %>
+              <p>
+
+                <%= builder.label :tipoprueba %><br />
+                <%= builder.text_field :tipoprueba %>
+
+                <%#= builder.label :prueba_tokens, "COmpetencia" %><br />
+                <%#= builder.text_field :prueba_tokens, "data-pre" =>
+                    @prueba.competencies.map(&:attributes).to_json %>
+
+                <%= builder.label :criterios %><br />
+                <%= builder.text_area :criterios %>
+
+                <%= builder.label :ponderacion %><br />
+                <%= builder.text_field :ponderacion %>
+
+                <%= builder.label :descripcion %><br />
+                <%= builder.text_area :descripcion %>
+              </p>
+          <% end %>-->
 
 
         <fieldset>
@@ -134,6 +161,7 @@
         </fieldset>
 
         <fieldset>
+
           <legend>3.Profesorado </legend>
           <div>
             <%= f.label :profesor_tokens, "Profesores" %><br />
@@ -181,8 +209,8 @@
                 <%= evaluation_fields.label :descripcion %>
                 <%= evaluation_fields.text_area :descripcion %>
 
-                <%= evaluation_fields.label :competenciaevaluacion_tokens, "Competencias" %><br />
-                <%= evaluation_fields.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
+                <%#= evaluation_fields.label :competenciaevaluacion_tokens, "Competencias" %><br />
+                <%#= evaluation_fields.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
               <p> <%#="LOS DE EVALUATION: " + @asignatura.evaluations.inspect %></p>
               <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
               <p><%#= @asignatura.class.instance_methods.inspect %></p>

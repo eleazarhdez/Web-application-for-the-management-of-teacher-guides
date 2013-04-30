@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Asignatura:</b>
+  <%= @prueba.asignatura_id %>
+</p>
+
+<p>
+  <b>Tipo Prueba:</b>
+  <%= @prueba.tipoprueba %>
+</p>
+
+<p>
+  <b>Criterios:</b>
+  <%= @prueba.criterios %>
+</p>
+
+<p>
+  <b>Ponderación:</b>
+  <%= @prueba.ponderacion %>
+</p>
+
+<p>
+  <b>Descripción:</b>
+  <%= @prueba.descripcion %>
+</p>
+
+
+<%= link_to 'Edit', edit_prueba_path(@prueba) %> |
+<%= link_to 'Back', pruebas_path %>

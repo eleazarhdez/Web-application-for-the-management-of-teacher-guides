@@ -1,0 +1,46 @@
+<%= form.fields_for(@prueba) do |prueba| %>
+<!--  <% if @prueba.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prueba.errors.count, "error") %> prohibited this prueba from being saved:</h2>
+
+      <ul>
+      <% @prueba.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>-->
+<!--
+  <div class="field">
+    <%= prueba.label :asignatura_id %><br />
+    <%= prueba.number_field :asignatura_id %>
+  </div>-->
+
+      <legend>0.PROBANDO</legend>
+  <div class="field">
+    <%= prueba.label :tipoprueba %><br />
+    <%= prueba.text_field :tipoprueba %>
+  </div>
+  <div class="field">
+    <%= prueba.label :criterios %><br />
+    <%= prueba.text_area :criterios %>
+  </div>
+
+  <div class="field">
+    <%= prueba.label :ponderacion %><br />
+    <%= prueba.text_field :ponderacion %>
+  </div>
+
+  <div class="field">
+    <%= prueba.label :descripcion %><br />
+    <%= prueba.text_area :descripcion %>
+  </div>
+
+    <%= prueba.label :prueba_tokens, "COmpetencia" %><br />
+    <%= prueba.text_field :prueba_tokens, "data-pre" =>
+            @prueba.competencies.map(&:attributes).to_json  %>
+
+  <!--<div class="actions">-->
+    <!--<%= prueba.submit %>-->
+  <!--</div>-->
+<% end %>

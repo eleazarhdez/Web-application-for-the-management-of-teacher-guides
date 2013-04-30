@@ -27,8 +27,8 @@ $(function () {
   });  
 }); 
 $(function () { 
-  $('#evaluation_competenciaevaluacion_tokens').tokenInput('/competencies.json', { crossDomain: false,
-                                                              prePopulate: $('#evaluation_competenciaevaluacion_tokens').data('pre'),
+  $('#prueba_prueba_tokens').tokenInput('/competencies.json', { crossDomain: false,
+                                                              prePopulate: $('#prueba_prueba_tokens').data('pre'),
                                                               theme: 'facebook'
   }); 
 });

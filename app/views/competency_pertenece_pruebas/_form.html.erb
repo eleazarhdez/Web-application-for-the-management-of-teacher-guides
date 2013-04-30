@@ -1,0 +1,25 @@
+<%= form_for(@competency_pertenece_prueba) do |f| %>
+  <% if @competency_pertenece_prueba.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@competency_pertenece_prueba.errors.count, "error") %> prohibited this competency_pertenece_prueba from being saved:</h2>
+
+      <ul>
+      <% @competency_pertenece_prueba.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :competency_id %><br />
+    <%= f.number_field :competency_id %>
+  </div>
+  <div class="field">
+    <%= f.label :prueba_id %><br />
+    <%= f.number_field :prueba_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

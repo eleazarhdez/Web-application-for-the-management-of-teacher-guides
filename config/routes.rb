@@ -1,5 +1,11 @@
 Activerecord::Application.routes.draw do
 
+  resources :competency_pertenece_pruebas
+
+
+  resources :pruebas
+
+
   resources :competency_pertenece_evaluations
 
 

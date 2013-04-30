@@ -26,7 +26,12 @@ class AsignaturasController < ApplicationController
   def new
     @asignatura = Asignatura.new
     #@evaluation = @asignatura.evaluations.create(:evaluation_date => Time.now)
-    @evaluation = @asignatura.evaluations.build
+    1.times{@asignatura.evaluations.build}
+   # 1.times{@asignatura.pruebas.build}
+    #@evaluation = @asignatura.evaluations.build
+    @prueba = @asignatura.pruebas.build
+    puts "PROBANDO= " + @prueba.inspect
+    puts "PROBANDO= " + @asignatura.class.instance_methods.inspect
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,10 +46,11 @@ class AsignaturasController < ApplicationController
     @asignatura = Asignatura.find(params[:id])
     #puts "ESTE ES EL ID: " + @asignatura.evaluations.build(params[:id])
     #@evaluation = @asignatura.evaluations.find(params[:id], params[:tipooprueba])  #así debería de ser
-    @evaluation = @asignatura.evaluations.build
+
+    #@evaluation = @asignatura.evaluations.build
     puts "Esto es:" + @asignatura.evaluations.instance_methods.inspect
-    #@evaluation = Evaluation.find(params[:asignatura_id])
-    @evaluation = @asignatura.evaluations.find(params[:asignatura_id])
+   # @evaluation = Evaluation.find(params[:asignatura_id])
+    #@evaluation = @asignatura.evaluations.find(params[:asignatura_id])
     puts "ESTE ES EL ID: " + @asignatura.evaluations.inspect
 
   end
@@ -54,7 +60,7 @@ class AsignaturasController < ApplicationController
   def create
 
     @asignatura = Asignatura.new(params[:asignatura])
-    @evaluation = @asignatura.evaluations.build(params[:evaluation])
+   # @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
     respond_to do |format|
       if @asignatura.save
@@ -71,7 +77,7 @@ class AsignaturasController < ApplicationController
   # PUT /asignaturas/1.json
   def update
     @asignatura = Asignatura.find(params[:id])
-    @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
+   # @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
     puts "Pasando por el update: " + @asignatura.evaluations.inspect
 
     respond_to do |format|
