@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425154558) do
+ActiveRecord::Schema.define(:version => 20130425170011) do
 
   create_table "asignaturas", :primary_key => "codigo", :force => true do |t|
     t.string   "nombre"
@@ -55,6 +55,13 @@ ActiveRecord::Schema.define(:version => 20130425154558) do
   create_table "competency_pertenece_evaluations", :force => true do |t|
     t.integer  "evaluation_id"
     t.integer  "competency_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "competency_pertenece_pruebas", :force => true do |t|
+    t.integer  "competency_id"
+    t.integer  "prueba_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
@@ -106,5 +113,7 @@ ActiveRecord::Schema.define(:version => 20130425154558) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  add_index "pruebas", ["asignatura_id"], :name => "index_pruebas_on_asignatura_id"
 
 end

@@ -9,5 +9,7 @@ class CreatePruebas < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :pruebas, :asignatura_id
   end
 end
