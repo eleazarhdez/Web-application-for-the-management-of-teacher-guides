@@ -43,7 +43,7 @@
 
   <p><%= "Esto es:" + @asignatura.evaluations_attributes.inspect %>
 
-    <% @asignatura.pruebas.build %>
+    <!--<%# @asignatura.pruebas.build %>  esto aqui no, pq al editar se vuelve a crear uno nuevo -->
     <%= form_for(@asignatura) do |f| %>
         <% if @asignatura.errors.any? %>
 
@@ -60,29 +60,9 @@
 
 
               <fieldset>
-          <%= render :partial => 'pruebas/form',
+          <%= render :partial => 'pruebas/form' ,
                     :locals => {:form => f} %>
               </fieldset>
-<!--          <%= f.fields_for :pruebas do |builder| %>
-              <p>
-
-                <%= builder.label :tipoprueba %><br />
-                <%= builder.text_field :tipoprueba %>
-
-                <%#= builder.label :prueba_tokens, "COmpetencia" %><br />
-                <%#= builder.text_field :prueba_tokens, "data-pre" =>
-                    @prueba.competencies.map(&:attributes).to_json %>
-
-                <%= builder.label :criterios %><br />
-                <%= builder.text_area :criterios %>
-
-                <%= builder.label :ponderacion %><br />
-                <%= builder.text_field :ponderacion %>
-
-                <%= builder.label :descripcion %><br />
-                <%= builder.text_area :descripcion %>
-              </p>
-          <% end %>-->
 
 
         <fieldset>

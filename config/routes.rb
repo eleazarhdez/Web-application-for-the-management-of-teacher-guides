@@ -24,7 +24,9 @@ Activerecord::Application.routes.draw do
   resources :profesor_pertenece_asignaturas
 
   resources :profesores
-  resources :asignaturas
+  resources :asignaturas do
+    resources :pruebas
+  end
 
   get "home/index"
 

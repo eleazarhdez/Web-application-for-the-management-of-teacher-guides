@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Asignatura</th>
     <th>Tipo Prueba</th>
     <th>Criterios</th>
@@ -14,6 +15,7 @@
 
 <% @pruebas.each do |prueba| %>
   <tr>
+    <td><%= prueba.id %></td>
     <td><%= prueba.asignatura_id %></td>
     <td><%= prueba.tipoprueba %></td>
     <td><%= prueba.criterios %></td>

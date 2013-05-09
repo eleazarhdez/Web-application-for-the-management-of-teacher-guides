@@ -26,9 +26,9 @@ $(function () {
                                                               theme: 'facebook'
   });  
 }); 
-$(function () { 
-  $('#prueba_prueba_tokens').tokenInput('/competencies.json', { crossDomain: false,
-                                                              prePopulate: $('#prueba_prueba_tokens').data('pre'),
+$(function () {
+  $('#asignatura_pruebas_attributes_0_prueba_tokens').tokenInput('/competencies.json', { crossDomain: false,
+                                                              prePopulate: $('#asignatura_pruebas_attributes_0_prueba_tokens').data('pre'),
                                                               theme: 'facebook'
-  }); 
+  });
 });
