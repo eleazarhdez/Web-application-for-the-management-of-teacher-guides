@@ -60,11 +60,14 @@ ActiveRecord::Schema.define(:version => 20130425170011) do
   end
 
   create_table "competency_pertenece_pruebas", :force => true do |t|
+    t.integer  "asignatura_id"
     t.integer  "competency_id"
     t.integer  "prueba_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  add_index "competency_pertenece_pruebas", ["asignatura_id"], :name => "index_competency_pertenece_pruebas_on_asignatura_id"
 
   create_table "evaluation_pertenece_asignaturas", :force => true do |t|
     t.integer  "asignatura_id"
@@ -104,16 +107,13 @@ ActiveRecord::Schema.define(:version => 20130425170011) do
     t.datetime "updated_at",      :null => false
   end
 
-  create_table "pruebas", :force => true do |t|
-    t.integer  "asignatura_id"
+  create_table "pruebas", :primary_key => "asignatura_id", :force => true do |t|
     t.string   "tipoprueba"
     t.text     "criterios"
     t.float    "ponderacion"
     t.text     "descripcion"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
-
-  add_index "pruebas", ["asignatura_id"], :name => "index_pruebas_on_asignatura_id"
 
 end

@@ -21,13 +21,18 @@
   </div>
 
 
-  <div class="field">
+<!--  <div class="field">
     <label for="asignatura_pruebas_attributes_0_prueba_tokens">Competencia</label><br>
      <ul class="token-input-list-facebook">
       <li class="token-input-input-token-facebook">
       <div class="token-input-dropdown-facebook" style="display: none; "></div>
       <input data-pre="[]" id="asignatura_pruebas_attributes_0_prueba_tokens" name="asignatura[pruebas_attributes][0][prueba_tokens]" size="30" type="text">
-  </div>
+  </div>-->
+
+    <div>
+      <%= prueba.label :prueba_tokens, "Competencias" %><br />
+      <%= prueba.text_field :prueba_tokens, "data-pre" => @prueba.competencies.map(&:attributes).to_json %>
+    </div>
 
 
 <% end %>

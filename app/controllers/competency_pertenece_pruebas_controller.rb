@@ -34,6 +34,7 @@ class CompetencyPertenecePruebasController < ApplicationController
 
   # GET /competency_pertenece_pruebas/1/edit
   def edit
+    puts "ESTOY PASANDO POR EL EDIT DE COMPETENCY_PERTENECE_PRUEBAS"
     @competency_pertenece_prueba = CompetencyPertenecePrueba.find(params[:id])
   end
 

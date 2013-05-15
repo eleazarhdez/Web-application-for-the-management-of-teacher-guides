@@ -34,6 +34,7 @@ class PruebasController < ApplicationController
 
   # GET /pruebas/1/edit
   def edit
+    puts "ESTOY PASANDO POR EL EDITAR DE PRUEBAS"
     @prueba = Prueba.find(params[:id])
   end
 

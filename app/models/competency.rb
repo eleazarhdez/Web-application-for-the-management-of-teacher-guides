@@ -6,4 +6,7 @@ class Competency < ActiveRecord::Base
   has_many :competencyPerteneceEvaluations
   has_many :evaluations, :through => :competencyPerteneceEvaluations
 
+  has_many :competencyPertenecePruebas
+  has_many :pruebas, :through => :competencyPertenecePruebas
+
 end

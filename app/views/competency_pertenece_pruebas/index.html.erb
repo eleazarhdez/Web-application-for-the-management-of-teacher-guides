@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>ID</th>
+    <th>Asignatura</th>
     <th>Competency</th>
     <th>Prueba</th>
     <th></th>
@@ -11,6 +13,8 @@
 
 <% @competency_pertenece_pruebas.each do |competency_pertenece_prueba| %>
   <tr>
+    <td><%= competency_pertenece_prueba.id %></td>
+    <td><%= competency_pertenece_prueba.asignatura_id %></td>
     <td><%= competency_pertenece_prueba.competency_id %></td>
     <td><%= competency_pertenece_prueba.prueba_id %></td>
     <td><%= link_to 'Show', competency_pertenece_prueba %></td>

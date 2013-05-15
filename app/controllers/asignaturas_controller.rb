@@ -44,11 +44,15 @@ class AsignaturasController < ApplicationController
     puts "----------------------------------------------------------------------------PASAAA"
 
     @asignatura = Asignatura.find(params[:id])
+    @prueba = Prueba.find( params[:id])
+   # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
+
+    #SELECT "pruebas".* FROM "pruebas" INNER JOIN "competency_pertenece_pruebas" ON "pruebas"."id" = "competency_pertenece_pruebas"."competency_id" WHERE "competency_pertenece_pruebas"."asignatura_id" =
     #puts "ESTE ES EL ID: " + @asignatura.evaluations.build(params[:id])
     #@evaluation = @asignatura.evaluations.find(params[:id], params[:tipooprueba])  #así debería de ser
 
     #@evaluation = @asignatura.evaluations.build
-    puts "Esto es:" + @asignatura.evaluations.instance_methods.inspect
+    puts "Esto es:" + Asignatura.find(params[:id]).inspect
    # @evaluation = Evaluation.find(params[:asignatura_id])
     #@evaluation = @asignatura.evaluations.find(params[:asignatura_id])
     puts "ESTE ES EL ID: " + @asignatura.evaluations.inspect
