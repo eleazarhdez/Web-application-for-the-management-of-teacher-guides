@@ -1,23 +1,29 @@
-<%= form.fields_for :pruebas do |prueba| %>
+<%= form.fields_for :pruebas, :html => {:class => "form-horizontal"} do |prueba| %>
 
-      <legend>0.PROBANDO</legend>
-  <div class="field">
-    <%= prueba.label :tipoprueba %><br />
-    <%= prueba.text_field :tipoprueba %>
+      <legend>Evaluación</legend>
+    <div class="control-group">
+    <%= prueba.label :tipoprueba, "Tipo de prueba", :class => "control-label" %><br />
+      <div class="controls">
+    <%= prueba.text_field :tipoprueba, :class => "input-xlarge", :type => "text", :placeholder => "Introduce tipo de prueba" %>
+      </div>
+      </div>
+    <div class="control-group">
+      <%= prueba.label :ponderacion,"Ponderación", :class => "control-label" %><br />
+      <div class="controls">
+      <%= prueba.text_field :ponderacion, :class => "input-xlarge", :type => "text", :placeholder => "Introduce una ponderación"  %>
+      </div>
   </div>
-  <div class="field">
-    <%= prueba.label :criterios %><br />
-    <%= prueba.text_area :criterios %>
+    <div class="control-group">
+    <%= prueba.label :criterios, :class => "control-label" %><br />
+      <div class="controls">
+    <%= prueba.text_area :criterios, :rows => "2", :cols => "60", :type => "text", :placeholder => "Introduce los criterios"  %>
+        </div>
   </div>
-
-  <div class="field">
-    <%= prueba.label :ponderacion %><br />
-    <%= prueba.text_field :ponderacion %>
-  </div>
-
-  <div class="field">
-    <%= prueba.label :descripcion %><br />
-    <%= prueba.text_area :descripcion %>
+    <div class="control-group">
+    <%= prueba.label :descripcion, :class => "control-label" %><br />
+      <div class="controls">
+    <%= prueba.text_area :descripcion, :rows => "2", :cols => "60", :type => "text", :placeholder => "Introduce una descripción"  %>
+        </div>
   </div>
 
 
@@ -29,9 +35,11 @@
       <input data-pre="[]" id="asignatura_pruebas_attributes_0_prueba_tokens" name="asignatura[pruebas_attributes][0][prueba_tokens]" size="30" type="text">
   </div>-->
 
-    <div>
-      <%= prueba.label :prueba_tokens, "Competencias" %><br />
-      <%= prueba.text_field :prueba_tokens, "data-pre" => @prueba.competencies.map(&:attributes).to_json %>
+    <div class="control-group">
+      <%= prueba.label :prueba_tokens, "Competencias", :class => "control-label" %><br />
+      <div class="controls">
+      <%= prueba.text_field :prueba_tokens, :class => "input-medium search-query", "data-pre" => @prueba.competencies.map(&:attributes).to_json %>
+        </div>
     </div>
 
 

@@ -4,24 +4,32 @@
   <title>Turn plain webform into a powerful wizard with jQuery</title>
   <style type="text/css">
       body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px;}
-      #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#f6f6f6;}
-      #header { text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+      #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#956295;}
+      #header {font-family: Arial, Helvetica, sans-serif; color:#ffffff; text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+      form {class: form-horizontal}
       fieldset { border:none; width:320px;}
-      legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
-      label { display:block; margin:15px 0 5px;}
-      input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
-      .prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
+      legend { font-size:18px; margin:0px; padding:10px 0px; color:#ffffff; font-weight:bold;}
+      label { display:block; margin:15px 0 5px;color:#ffffff; font-weight:bold;}
+      input[type=text], input[type=password], input[type=number] { width:300px; padding:5px; border:solid 2px #000;}
+      textarea {width:300px; padding:5px; border:solid 2px #000;}
+      select  {width:100px; padding:5px; border:solid 2px #000;}
+      img  {width:50%; height: 50%;}
+      .prev, .next { background-color:#ffffff; padding:5px 10px; color:#fff; text-decoration:none;     border-top-left-radius: 5px 5px;
+          border-bottom-right-radius: 5px 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;border:solid 2px #000;}
       .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
       .prev { float:left;}
       .next { float:right;}
       #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
-      #steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+      #steps li {font-size:24px; float:left; padding:10px; color:#ffffff;}
       #steps li span {font-size:11px; display:block;}
-      #steps li.current { color:#000;}
+      #steps li.current {color:#000;}
       #makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
       #makeWizard:hover { background-color:#000;}
+
   </style>
-  <=#script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><=#/script>
+  <!--<=script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><=#/script>-->
   <script type="text/javascript" src="/assets/formToWizard.js"></script>
 
   <script type="text/javascript">
@@ -33,18 +41,13 @@
 <body>
 <div id="main">
   <div id="header">
-    <img src="/assets/logo.jpg" alt="JankoAtWrpSpeed demos" />
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
     <h3>Menú de Asignatura</h3>
 
-    <span id="info" style="display:none;">You don't have to fill the form, really. Just click on Next and Back to see the demo.</span></p>
+
   </div>
 
-  <p><%= @evaluation.inspect %></p>
-
-  <p><%= "Esto es:" + @asignatura.evaluations_attributes.inspect %>
-
-    <!--<%# @asignatura.pruebas.build %>  esto aqui no, pq al editar se vuelve a crear uno nuevo -->
-    <%= form_for(@asignatura) do |f| %>
+    <%= form_for @asignatura, :html => {:class => "form-horizontal"} do |f| %>
         <% if @asignatura.errors.any? %>
 
               <div id="error_explanation">
@@ -59,176 +62,176 @@
         <% end %>
 
 
-              <fieldset>
-          <%= render :partial => 'pruebas/form' ,
-                    :locals => {:form => f} %>
-              </fieldset>
-
-
         <fieldset>
           <legend>Asignatura</legend>
-          <div class="field">
-            <%= f.label :nombre %><br />
-            <%= f.text_field :nombre %>
+          <div class="control-group">
+            <%= f.label :nombre, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :nombre,:type => "text", :placeholder => "Introduce nombre de asignatura" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :codigo %><br />
-            <%= f.text_field :codigo %>
+          <div class="control-group">
+            <%= f.label :codigo, "Código", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :codigo,:type => "text", :placeholder => "Introduce código de asignatura" %>
+            </div>
 
           </div>
-          <div class="field">
-            <%= f.label :centro %><br />
-            <%= f.text_field :centro %>
+          <div class="control-group">
+            <%= f.label :centro, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :centro,:type => "text", :placeholder => "Introduce centro"%>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :titulacion %><br />
-            <%= f.text_field :titulacion %>
+          <div class="control-group">
+            <%= f.label :titulacion, "Titulación", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :titulacion,:type => "text", :placeholder => "Introduce titulación " %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :plan %><br />
-            <%= f.text_field :plan %>
+          <div class="control-group">
+            <%= f.label :plan, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :plan, :type => "text", :placeholder => "Introduce el plan" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :rama %><br />
-            <%= f.text_field :rama %>
+          <div class="control-group">
+            <%= f.label :rama, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :rama, :type => "text", :placeholder => "Introduce rama" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :itinerario %><br />
-            <%= f.text_field :itinerario %>
+          <div class="control-group">
+            <%= f.label :itinerario, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :itinerario, :type => "text", :placeholder => "Introduce itinerario" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :departamento %><br />
-            <%= f.text_field :departamento %>
+          <div class="control-group">
+            <%= f.label :departamento, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :departamento, :type => "text", :placeholder => "Introduce departamento" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :area %><br />
-            <%= f.text_field :area %>
+          <div class="control-group">
+            <%= f.label :area, "Área", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :area, :type => "text", :placeholder => "Introduce área" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :Curso %><br />
-            <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]]) %>
+          <div class="control-group">
+            <%= f.label :Curso, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]], :multiple => "muliple") %>
+            </div>
           </div>
         </fieldset>
 
 
         <fieldset>
-          <legend>Asignatura 2</legend>
-          <div class="field">
-            <%= f.label :caracter %><br />
-            <%= f.text_field :caracter %>
+          <legend>Asignatura </legend>
+          <div class="control-group">
+            <%= f.label :caracter,"Carácter", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :caracter, :type => "text", :placeholder => "Introduce carácter" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :duracion %><br />
-            <%= f.text_field :duracion %>
+          <div class="control-group">
+            <%= f.label :duracion,"Duración", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :duracion, :type => "number", :placeholder => "Introduce nº de créditos" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :creditos %><br />
-            <%= f.number_field :creditos %>
+          <div class="control-group">
+            <%= f.label :creditos, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.number_field :creditos, :type => "text", :placeholder => "Introduce duración" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :horario %><br />
-            <%= f.text_field :horario %>
+          <div class="control-group">
+            <%= f.label :horario, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :horario, :type => "text", :placeholder => "Introduce horario" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :web %><br />
-            <%= f.text_field :web %>
+          <div class="control-group">
+            <%= f.label :web, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :web, :type => "text", :placeholder => "Introduce web" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :idioma %><br />
-            <%= f.text_field :idioma %>
+          <div class="control-group">
+            <%= f.label :idioma, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :idioma, :type => "text", :placeholder => "Introduce idioma/s" %>
+            </div>
           </div>
 
         </fieldset>
 
         <fieldset>
 
-          <legend>3.Profesorado </legend>
+          <legend>Profesorado </legend>
           <div>
-            <%= f.label :profesor_tokens, "Profesores" %><br />
-            <%= f.text_field :profesor_tokens, "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+            <%= f.label :profesor_tokens, "Profesores", :class => "control-label"  %><br />
+            <%= f.text_field :profesor_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
             <%#= @evaluation.class.instance_methods.inspect %>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>5.Competencias</legend>
+          <legend>Competencias</legend>
           <div>
-            <%= f.label :competencia_tokens, "Competencias" %><br />
-            <%= f.text_field :competencia_tokens, "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+            <%= f.label :competencia_tokens, "Competencias", :class => "control-label"  %><br />
+            <%= f.text_field :competencia_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
           </div>
         </fieldset>
 
         <fieldset>
-          <legend>4.Contextualización </legend>
-          <div class="field">
-            <%= f.label :bloque %><br />
-            <%= f.text_field :bloque %>
+          <legend>Contextualización </legend>
+          <div class="control-group">
+            <%= f.label :bloque, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :bloque, :type => "text", :placeholder => "Introduce bloque" %>
+            </div>
           </div>
-          <div class="field">
-            <%= f.label :perfil %><br />
-            <%= f.text_field :perfil %>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>8.Bibliografía</legend>
-          <div class="field">
-            <%= f.label :bibliografia %><br />
-            <%= f.text_area :bibliografia %>
+          <div class="control-group">
+            <%= f.label :perfil, :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :perfil, :type => "text", :placeholder => "Introduce perfil" %>
+            </div>
           </div>
         </fieldset>
 
 
         <fieldset>
-          <legend>9. Evaluación</legend>
-
-          <%= fields_for :evaluation do |evaluation_fields| %>
-              <p>
-                <%= evaluation_fields.label :tipoprueba %>
-                <%= evaluation_fields.text_field :tipoprueba %>
-                <%= evaluation_fields.label :descripcion %>
-                <%= evaluation_fields.text_area :descripcion %>
-
-                <%#= evaluation_fields.label :competenciaevaluacion_tokens, "Competencias" %><br />
-                <%#= evaluation_fields.text_field :competenciaevaluacion_tokens, "data-pre" => @evaluation.competencies.map(&:attributes).to_json %>
-              <p> <%#="LOS DE EVALUATION: " + @asignatura.evaluations.inspect %></p>
-              <p> <%="LOS DE ASIGNATURA: " + @asignatura.inspect %></p>
-              <p><%#= @asignatura.class.instance_methods.inspect %></p>
-              <p><%= @evaluation.inspect %></p>
-              <p><%#= @evaluation.instance_values %></p>
-              <p> <%#= @evaluation.class.inspect %> </p>
-              <p> <%#= @asignatura.class.inspect %> </p>
-              <p> <%#= evaluation_fields.class.instance_methods.inspect %> </p>
-
-              <%= evaluation_fields.label :ponderacion %>
-              <%= evaluation_fields.text_field :ponderacion %>
-              </p>
-              <%= evaluation_fields.label :criterios %>
-              <%= evaluation_fields.text_area :criterios %>
-
-          <% end %>
+            <%= render :partial => 'pruebas/form' ,
+                   :locals => {:form => f} %>
         </fieldset>
 
         <fieldset>
-          <legend>10. Resultados</legend>
-          <div class="field">
-            <%= f.label :resultados %>
-            <%= f.text_area :resultados %>
+          <legend>Bibliografía</legend>
+          <div class="control-group">
+            <%= f.label :bibliografia, "Bibliografía", :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_area :bibliografia, :type => "text", :placeholder => "Introduce bibliografía", :rows => "2" %>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Resultados</legend>
+          <div class="control-group">
+            <%= f.label :resultados, :class => "control-label" %>
+            <div class="controls">
+                <%= f.text_area :resultados, :rows => "2", :cols => "60", :type => "text", :placeholder => "Introduce resultados" %>
+            </div>
           </div>
         </fieldset>
 
 
+        <%= f.submit "Crear", :class => "btn btn-success"%></p>
 
-
-
-
-
-
-
-
-
-        <%= f.submit "Crear" %></p>
-        <%#= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
 
 

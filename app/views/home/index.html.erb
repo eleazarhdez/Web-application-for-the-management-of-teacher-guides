@@ -1,12 +1,16 @@
 <h1>ADMINISTRACIÓN DEL GESTOR DE GUÍAS ACADÉMICAS!</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 <h1>Úsame con cuidado</h1>
-<%= link_to "Asignaturas", asignaturas_path %>
-<%= link_to "Profesores", profesores_path %>
-<%= link_to "Competencia", competencies_path %>
-<%= link_to "Evaluaciones", evaluations_path %>
-<%= link_to "Pruebas", pruebas_path %>
-<%= link_to "Pertenencia de profesores", profesor_pertenece_asignaturas_path %>
-<%= link_to "Pertenencia de competencias", competency_pertenece_asignaturas_path %>
-<%= link_to "Pertenencia de competencias a prueba", competency_pertenece_pruebas_path %>
+<ul class="nav nav-tabs">
+  <li>
+  <%= link_to "Asignaturas", asignaturas_path %>
+    </li>
+  <li><%= link_to "Profesores", profesores_path %></li>
+  <li><%= link_to "Competencia", competencies_path %></li>
+  <li><%= link_to "Evaluaciones", evaluations_path %></li>
+  <li><%= link_to "Pruebas", pruebas_path %></li>
+  <li><%= link_to "Pertenencia de profesores", profesor_pertenece_asignaturas_path %></li>
+  <li><%= link_to "Pertenencia de competencias", competency_pertenece_asignaturas_path %></li>
+  <li><%= link_to "Pertenencia de competencias a prueba", competency_pertenece_pruebas_path %></li>
 
+</ul>

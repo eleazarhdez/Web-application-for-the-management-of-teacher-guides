@@ -3,25 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="f5e262bb-8484-42e3-9f30-ff183307262a" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20130408185243_create_competency_pertenece_evaluations.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130425154558_create_pruebas.rb" afterPath="$PROJECT_DIR$/db/migrate/20130425154558_create_pruebas.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130425170011_create_competency_pertenece_pruebas.rb" afterPath="$PROJECT_DIR$/db/migrate/20130425170011_create_competency_pertenece_pruebas.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pruebas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/pruebas/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/asignatura.rb" afterPath="$PROJECT_DIR$/app/models/asignatura.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/asignaturas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/asignaturas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/competency.rb" afterPath="$PROJECT_DIR$/app/models/competency.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/competency_pertenece_prueba.rb" afterPath="$PROJECT_DIR$/app/models/competency_pertenece_prueba.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/competency_pertenece_pruebas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/competency_pertenece_pruebas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/pruebas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/pruebas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/asignaturas.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/asignaturas.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/formToWizard.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/formToWizard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/new.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/pruebas.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pruebas.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/token-input-facebook.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/token-input-facebook.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="activerecord.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/_form_html.erb.html.back" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363708864561" ignored="false" />
-    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368549895969" ignored="false" />
+    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368730933182" ignored="false" />
     <file path="/asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368551134654" ignored="false" />
-    <file path="/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368473189369" ignored="false" />
+    <file path="/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368724495004" ignored="false" />
     <file path="/profesores_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365009295699" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365006845323" ignored="false" />
     <file path="/evaluation.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365527070528" ignored="false" />
@@ -36,7 +35,7 @@
     <file path="/prueba.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367864104126" ignored="false" />
     <file path="/show.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1366908363453" ignored="false" />
     <file path="/competency_pertenece_prueba.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368202221784" ignored="false" />
-    <file path="/Dummy.txt" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368634688151" ignored="false" />
+    <file path="/Dummy.txt" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368714872136" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/Gemfile" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367403572301" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/app/views/home/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367404083721" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/config/routes.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367408167575" ignored="false" />
@@ -56,6 +55,9 @@
     <file path="/pruebas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368281872465" ignored="false" />
     <file path="/competency_pertenece_pruebas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368281898110" ignored="false" />
     <file path="/competencies_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368470422657" ignored="false" />
+    <file path="/edit.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368644108526" ignored="false" />
+    <file path="/formToWizard.js" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368730428059" ignored="false" />
+    <file path="/token-input-facebook.css" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368725719411" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,28 +79,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="76" selection-start="5919" selection-end="5919" vertical-scroll-proportion="0.0">
+            <state line="15" column="35" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.17857143">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asignaturas_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
+      <file leaf-file-name="token-input-facebook.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/token-input-facebook.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="26" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20121219111034_create_asignaturas.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121219111034_create_asignaturas.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="31" selection-start="94" selection-end="117" vertical-scroll-proportion="0.0">
+            <state line="18" column="0" selection-start="434" selection-end="581" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,15 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competency.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/competency.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="prueba.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/prueba.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,28 +124,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/pruebas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="46" selection-start="537" selection-end="537" vertical-scroll-proportion="0.40076336">
+            <state line="2" column="14" selection-start="99" selection-end="99" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competencies_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/competencies_controller.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="29" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="4" column="6" selection-start="163" selection-end="163" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pruebas_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/pruebas_controller.rb">
+      <file leaf-file-name="formToWizard.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/formToWizard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="4" selection-start="750" selection-end="784" vertical-scroll-proportion="0.0">
+            <state line="43" column="109" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-13.2">
               <folding />
             </state>
           </provider>
@@ -185,22 +169,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/prueba.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/pruebas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/competency.rb" />
-        <option value="$PROJECT_DIR$/app/models/competency_pertenece_prueba.rb" />
-        <option value="$PROJECT_DIR$/app/models/asignatura.rb" />
-        <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20130425170011_create_competency_pertenece_pruebas.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/pruebas_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/competency_pertenece_pruebas_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/competencies_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/views/pruebas/_form.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20130425154558_create_pruebas.rb" />
         <option value="$PROJECT_DIR$/app/controllers/asignaturas_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/asignaturas/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/asignaturas/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/asignaturas.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/pruebas.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/token-input-facebook.css" />
+        <option value="$PROJECT_DIR$/app/views/pruebas/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/formToWizard.js" />
+        <option value="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" />
       </list>
     </option>
   </component>
@@ -261,7 +245,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,60 +274,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pruebas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -365,6 +295,28 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activerecord" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,7 +332,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,19 +360,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog/blog" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="Rails.Development: activerecord">
     <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
@@ -670,7 +626,6 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24921136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="868" y="80" width="316" height="891" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21742544" sideWeight="0.9913473" order="0" side_tool="false" content_ui="combo" />
@@ -682,6 +637,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -786,86 +742,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130425170011_create_competency_pertenece_pruebas.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="320" selection-end="320" vertical-scroll-proportion="0.23104265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/competency_pertenece_pruebas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="453" selection-end="453" vertical-scroll-proportion="0.017772513" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/asignatura.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="51" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="100" selection-start="954" selection-end="954" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/competencies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/pruebas.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="1725" selection-end="1725" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="76" selection-start="5919" selection-end="5919" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121219111034_create_asignaturas.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="31" selection-start="94" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/pruebas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="750" selection-end="784" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/prueba.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/competency.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -887,9 +763,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="4" selection-end="29" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="4" selection-end="32" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/asignaturas.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="331" selection-end="331" vertical-scroll-proportion="0.23104265" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="654" selection-end="654" vertical-scroll-proportion="0.33767772" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/pruebas.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="179" selection-end="277" vertical-scroll-proportion="0.07109005" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/prueba.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="34" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="6" selection-start="163" selection-end="163" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2077" column="32" selection-start="36689" selection-end="36711" vertical-scroll-proportion="-10.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/pruebas/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="46" selection-start="537" selection-end="537" vertical-scroll-proportion="0.40076336">
+        <state line="2" column="14" selection-start="99" selection-end="99" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7740" column="29" selection-start="200745" selection-end="200749" vertical-scroll-proportion="0.018050542">
+          <folding>
+            <marker date="1365010881161" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1365010881161" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1365010881161" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1365010881161" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1365010881161" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/token-input-facebook.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="434" selection-end="581" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/formToWizard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="109" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-13.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="35" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.17857143">
           <folding />
         </state>
       </provider>
