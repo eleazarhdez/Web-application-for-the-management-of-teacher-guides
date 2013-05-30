@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425170011) do
+ActiveRecord::Schema.define(:version => 20130530175403) do
 
   create_table "asignaturas", :primary_key => "codigo", :force => true do |t|
     t.string   "nombre"
@@ -105,6 +105,8 @@ ActiveRecord::Schema.define(:version => 20130425170011) do
     t.string   "web"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "password"
+    t.string   "rol"
   end
 
   create_table "pruebas", :primary_key => "asignatura_id", :force => true do |t|

@@ -22,8 +22,12 @@
     <th>Bibliografia</th>
     <th>Resultados</th> -->
     <th></th>
+    <% if can? :edit, @asignatura %>
     <th></th>
-    <th></th>
+    <% end %>
+    <% if can? :destroy, @asignatura %>
+        <th></th>
+    <% end %>
   </tr>
 
 <% @asignaturas.each do |asignatura| %>
@@ -47,13 +51,19 @@
     <td><%= asignatura.bibliografia %></td>
     <td><%= asignatura.resultados %></td> -->
     <td align="right"><%= link_to 'Mostrar', asignatura %></td>
-    <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
-    <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+    <% if can? :edit, @asignatura %>
+        <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+    <% end %>
+    <% if can? :destroy, @asignatura %>
+        <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'Nueva Asignatura', new_asignatura_path %>
-<%= link_to 'home', root_path %>
+<!--  <%= "Esto es el rol = " + @current_rol.to_s %>-->
+<% if can? :new, @asignatura %>
+    <%= link_to 'Nueva Asignatura', new_asignatura_path %>
+<% end %>
+<%= link_to 'Atrás', index_path %>

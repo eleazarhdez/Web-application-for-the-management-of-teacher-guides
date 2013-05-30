@@ -15,6 +15,8 @@ class ProfesoresController < ApplicationController
   def show
     @profesore = Profesore.find(params[:id])
 
+
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @profesore }
@@ -25,6 +27,7 @@ class ProfesoresController < ApplicationController
   # GET /profesores/new.json
   def new
     @profesore = Profesore.new
+    authorize! :new, @profesore
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +38,16 @@ class ProfesoresController < ApplicationController
   # GET /profesores/1/edit
   def edit
     @profesore = Profesore.find(params[:id])
+
   end
 
   # POST /profesores
   # POST /profesores.json
   def create
     @profesore = Profesore.new(params[:profesore])
+    authorize! :create, @profesore
+
+
 
     respond_to do |format|
       if @profesore.save
@@ -58,6 +65,7 @@ class ProfesoresController < ApplicationController
   def update
     @profesore = Profesore.find(params[:id])
 
+
     respond_to do |format|
       if @profesore.update_attributes(params[:profesore])
         format.html { redirect_to @profesore, notice: 'Profesore was successfully updated.' }
@@ -74,6 +82,7 @@ class ProfesoresController < ApplicationController
   def destroy
     @profesore = Profesore.find(params[:id])
     @profesore.destroy
+    authorize! :destroy, @profesore
 
     respond_to do |format|
       format.html { redirect_to profesores_url }

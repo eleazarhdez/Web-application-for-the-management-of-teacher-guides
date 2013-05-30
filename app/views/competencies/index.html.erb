@@ -7,8 +7,12 @@
     <th>Descripcion</th>
     <th>Tipo</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <% if can? :edit, @competency %>
+        <th></th>
+    <% end %>
+    <% if can? :destroy, @competency %>
+        <th></th>
+    <% end %>
   </tr>
 
 <% @competencies.each do |competency| %>
@@ -18,13 +22,18 @@
     <td><%= competency.descripcion %></td>
     <td><%= competency.tipo %></td>
     <td><%= link_to 'Show', competency %></td>
-    <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
-    <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if can? :new, @competency %>
+        <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
+    <% end %>
+    <% if can? :destroy, @competency %>
+        <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Competency', new_competency_path %>
-<%= link_to 'home', root_path %>
+<% if can? :new, @competency %>
+    <%= link_to 'New Competency', new_competency_path %>
+<% end %>
+<%= link_to 'Atrás', index_path %>

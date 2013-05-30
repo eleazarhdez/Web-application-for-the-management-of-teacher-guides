@@ -9,8 +9,12 @@
     <th>Ponderación</th>
     <th>Descripción</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <% if can? :edit, @prueba %>
+        <th></th>
+    <% end %>
+    <% if can? :destroy, @prueba %>
+        <th></th>
+    <% end %>
   </tr>
 
 <% @pruebas.each do |prueba| %>
@@ -22,13 +26,18 @@
     <td><%= prueba.ponderacion %></td>
     <td><%= prueba.descripcion %></td>
     <td><%= link_to 'Show', prueba %></td>
-    <td><%= link_to 'Edit', edit_prueba_path(prueba) %></td>
-    <td><%= link_to 'Destroy', prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if can? :edit, @prueba %>
+        <td><%= link_to 'Edit', edit_prueba_path(prueba) %></td>
+    <% end %>
+    <% if can? :destroy, @prueba %>
+        <td><%= link_to 'Destroy', prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Prueba', new_prueba_path %>
-<%= link_to 'home', root_path %>
+<% if can? :new, @prueba %>
+    <%= link_to 'New Prueba', new_prueba_path %>
+<% end %>
+<%= link_to 'home', index_path %>

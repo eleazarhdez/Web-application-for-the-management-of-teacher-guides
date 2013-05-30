@@ -11,9 +11,15 @@
     <th>Telefono</th>
     <th>Mail</th>
     <th>Web</th>
+    <th>Password
+    <th>Rol</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <% if can? :edit, @profesore %>
+        <th></th>
+    <% end %>
+    <% if can? :destroy, @profesore %>
+        <th></th>
+    <% end %>
   </tr>
 
 <% @profesore.each do |profesore| %>
@@ -27,14 +33,28 @@
     <td><%= profesore.telefono %></td>
     <td><%= profesore.mail %></td>
     <td><%= profesore.web %></td>
+    <td><%= profesore.password %></td>
+    <td><%= profesore.rol %></td>
     <td><%= link_to 'Show', profesore %></td>
-    <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
-    <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if can? :edit, @profesore %>
+        <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
+    <% end %>
+    <% if can? :destroy, @profesore %>
+        <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
+       <% @extra_attributes = session[:cas_extra_attributes] %>
+       <% @identifier = @extra_attributes["id"]  %>
+<%= "El id  = " + @identifier %>
+   <% @p = Profesore.find(@identifier) %>
 
-<%= link_to 'New Profesore', new_profesore_path %>
-<%= link_to 'home', root_path %>
+    <%= "El usuario actual  = " + @p.name.to_s %>
+<%= "El usuario actual  = " + session[:cas_user].to_s %>
+<% if can? :new, @profesore %>
+    <%= link_to 'New Profesore', new_profesore_path %>
+<% end %>
+<%= link_to 'home', index_path %>

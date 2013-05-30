@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <title>SGD - ULL</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="/assets/home.css.scss" />
+  <script type="text/javascript" src="/assets/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/assets/jquery.dropotron-1.0.js"></script>
+  <script type="text/javascript" src="/assets/jquery.slidertron-1.1.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="header">
+    <div id="logo">
+      <h1><a href=>Sistema de Guías Docentes</a></h1>
+    </div>
+    <div id="slogan">
+      <h2><% if @username %>
+            ¡Bienvenido <%= @username %>!
+        <% else %>
+            Usted no ha iniciado sesión
+        <% end %></h2>
+    </div>
+  </div>
+  <div id="page-bottom">
+    <div id="page-bottom-content">
+      <h3>Bienvenid@ al entorno virtual de guías docentes institucional 2012 / 2013</h3>
+      <p> Este sistema abarca el tratamiento, revisión y oficialización de las guías docentes las asignaturas pertenecientes al plan docente oficial de la Universidad de La Laguna del curso académico 2012 / 2013. Versión en pruebas.
+      </p>
+      <span class="button"><%= link_to "Iniciar sesión", :controller => "home", :action => "index" %> </span>
+      <!--<span class="button"><%= link_to "Cerrar sesión", :controller => "home", :action => "logout" %> </span>-->
+    </div>
+    <div id="page-bottom-sidebar">
+      <h3>Enlaces de interés</h3>
+      <ul class="list">
+        <li class="first"><a href="http://www.ull.es">Página oficial de la ULL</a></li>
+        <li><a href="http://www.ccti.ull.es/info/servicios/servicios/index.asp">STIC</a></li>
+        <li class="last"><a href="http://campusvirtual.ull.es/1213m2/">Campus Virtual</a></li>
+      </ul>
+    </div>
+    <br class="clearfix" />
+  </div>
+</div>
+<div id="footer">
+  Copyright (c) 2012 guiasdocentes.ull.es. Todos los derechos reservados. Desarrollado por Eleazar Hernández.
+  <p>Universidad de La Laguna. Pabellón de Gobierno, C/ Molinos de Agua s/n. · 38200 · La Laguna · España </p>
+</div>
+
+</div>
+</body>
+</html>

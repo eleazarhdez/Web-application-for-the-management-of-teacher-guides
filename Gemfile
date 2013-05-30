@@ -7,12 +7,14 @@ gem 'rails'#, '3.2.6'
 
 gem 'sqlite3'
 gem 'activerecord'
+gem 'cancan'
 #gem 'mysql2'
 gem 'execjs'
 gem 'therubyracer'
 gem 'jquery-rails'
 gem 'faker', :group => :development
 gem 'nifty-generators'
+gem 'rubycas-client'
 gem 'thin'
 gem 'composite_primary_keys', '~> 5.0.12'
 

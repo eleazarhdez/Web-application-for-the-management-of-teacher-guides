@@ -3,6 +3,7 @@ class CompetenciesController < ApplicationController
   # GET /competencies.json
   def index
     @competencies = Competency.where("name like ?", "%#{params[:q]}%")
+    authorize! :index, @competency
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +15,7 @@ class CompetenciesController < ApplicationController
   # GET /competencies/1.json
   def show
     @competency = Competency.find(params[:id])
+    authorize! :show, @competency
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,6 +27,7 @@ class CompetenciesController < ApplicationController
   # GET /competencies/new.json
   def new
     @competency = Competency.new
+    authorize! :new, @competency
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,12 +38,14 @@ class CompetenciesController < ApplicationController
   # GET /competencies/1/edit
   def edit
     @competency = Competency.find(params[:id])
+    authorize! :edit, @competency
   end
 
   # POST /competencies
   # POST /competencies.json
   def create
     @competency = Competency.new(params[:competency])
+    authorize! :create, @competency
 
     respond_to do |format|
       if @competency.save
@@ -57,6 +62,7 @@ class CompetenciesController < ApplicationController
   # PUT /competencies/1.json
   def update
     @competency = Competency.find(params[:id])
+    authorize! :update, @competency
 
     respond_to do |format|
       if @competency.update_attributes(params[:competency])
@@ -74,6 +80,7 @@ class CompetenciesController < ApplicationController
   def destroy
     @competency = Competency.find(params[:id])
     @competency.destroy
+    authorize! :destroy, @competency
 
     respond_to do |format|
       format.html { redirect_to competencies_url }

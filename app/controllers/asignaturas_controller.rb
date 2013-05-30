@@ -4,16 +4,33 @@ class AsignaturasController < ApplicationController
   def index
     @asignaturas = Asignatura.all
 
+    @extra_attributes = session[:cas_extra_attributes]
+    @identifier = @extra_attributes["id"]
+    @current_user = Profesore.find(@identifier)
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @asignaturas }
     end
   end
 
+=begin
+  def current_user
+    @current_user = session[:cas_user]
+    @extra_attributes = session[:cas_extra_attributes]
+    @current_user = @extra_attributes["roles"]
+  end
+  def current_rol
+    @extra_attributes = session[:cas_extra_attributes]
+    @current_rol = @extra_attributes["roles"]
+  end
+=end
+
   # GET /asignaturas/1
   # GET /asignaturas/1.json
   def show
     @asignatura = Asignatura.find(params[:id])
+    authorize!  :show, @asignatura
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,10 +43,14 @@ class AsignaturasController < ApplicationController
   def new
     @asignatura = Asignatura.new
     #@evaluation = @asignatura.evaluations.create(:evaluation_date => Time.now)
-    1.times{@asignatura.evaluations.build}
+    #1.times{@asignatura.evaluations.build}
    # 1.times{@asignatura.pruebas.build}
     #@evaluation = @asignatura.evaluations.build
     @prueba = @asignatura.pruebas.build
+
+    authorize!  :new, @asignatura
+    authorize!  :new, @prueba
+
     puts "PROBANDO= " + @prueba.inspect
     puts "PROBANDO= " + @asignatura.class.instance_methods.inspect
 
@@ -45,6 +66,10 @@ class AsignaturasController < ApplicationController
 
     @asignatura = Asignatura.find(params[:id])
     @prueba = Prueba.find( params[:id])
+
+    authorize!  :edit, @asignatura
+    authorize!  :edit, @prueba
+
    # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
 
     #SELECT "pruebas".* FROM "pruebas" INNER JOIN "competency_pertenece_pruebas" ON "pruebas"."id" = "competency_pertenece_pruebas"."competency_id" WHERE "competency_pertenece_pruebas"."asignatura_id" =
@@ -64,6 +89,7 @@ class AsignaturasController < ApplicationController
   def create
 
     @asignatura = Asignatura.new(params[:asignatura])
+    authorize!  :create, @asignatura
    # @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
     respond_to do |format|
@@ -84,6 +110,8 @@ class AsignaturasController < ApplicationController
    # @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
     puts "Pasando por el update: " + @asignatura.evaluations.inspect
 
+    authorize!  :update, @asignatura
+
     respond_to do |format|
       if @asignatura.update_attributes(params[:asignatura])
         format.html { redirect_to @asignatura, notice: 'Asignatura was successfully updated.' }
@@ -100,6 +128,8 @@ class AsignaturasController < ApplicationController
   def destroy
     @asignatura = Asignatura.find(params[:id])
     @asignatura.destroy
+
+    authorize!  :destroy, @asignatura
 
     respond_to do |format|
       format.html { redirect_to asignaturas_url }

@@ -25,6 +25,7 @@ class PruebasController < ApplicationController
   # GET /pruebas/new.json
   def new
     @prueba = Prueba.new
+    authorize! :new, @prueba
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,12 +37,14 @@ class PruebasController < ApplicationController
   def edit
     puts "ESTOY PASANDO POR EL EDITAR DE PRUEBAS"
     @prueba = Prueba.find(params[:id])
+    authorize! :edit, @prueba
   end
 
   # POST /pruebas
   # POST /pruebas.json
   def create
     @prueba = Prueba.new(params[:prueba])
+    authorize! :create, @prueba
 
     respond_to do |format|
       if @prueba.save
@@ -58,6 +61,7 @@ class PruebasController < ApplicationController
   # PUT /pruebas/1.json
   def update
     @prueba = Prueba.find(params[:id])
+    authorize! :update, @prueba
 
     respond_to do |format|
       if @prueba.update_attributes(params[:prueba])
@@ -75,6 +79,7 @@ class PruebasController < ApplicationController
   def destroy
     @prueba = Prueba.find(params[:id])
     @prueba.destroy
+    authorize! :destroy, @prueba
 
     respond_to do |format|
       format.html { redirect_to pruebas_url }

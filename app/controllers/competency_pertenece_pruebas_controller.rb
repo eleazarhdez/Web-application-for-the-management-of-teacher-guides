@@ -25,6 +25,7 @@ class CompetencyPertenecePruebasController < ApplicationController
   # GET /competency_pertenece_pruebas/new.json
   def new
     @competency_pertenece_prueba = CompetencyPertenecePrueba.new
+    authorize! :new, @competency_pertenece_prueba
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,12 +37,14 @@ class CompetencyPertenecePruebasController < ApplicationController
   def edit
     puts "ESTOY PASANDO POR EL EDIT DE COMPETENCY_PERTENECE_PRUEBAS"
     @competency_pertenece_prueba = CompetencyPertenecePrueba.find(params[:id])
+    authorize! :edit, @competency_pertenece_prueba
   end
 
   # POST /competency_pertenece_pruebas
   # POST /competency_pertenece_pruebas.json
   def create
     @competency_pertenece_prueba = CompetencyPertenecePrueba.new(params[:competency_pertenece_prueba])
+    authorize! :create, @competency_pertenece_prueba
 
     respond_to do |format|
       if @competency_pertenece_prueba.save
@@ -58,6 +61,7 @@ class CompetencyPertenecePruebasController < ApplicationController
   # PUT /competency_pertenece_pruebas/1.json
   def update
     @competency_pertenece_prueba = CompetencyPertenecePrueba.find(params[:id])
+    authorize! :update, @competency_pertenece_prueba
 
     respond_to do |format|
       if @competency_pertenece_prueba.update_attributes(params[:competency_pertenece_prueba])
@@ -75,6 +79,7 @@ class CompetencyPertenecePruebasController < ApplicationController
   def destroy
     @competency_pertenece_prueba = CompetencyPertenecePrueba.find(params[:id])
     @competency_pertenece_prueba.destroy
+    authorize! :destroy, @competency_pertenece_prueba
 
     respond_to do |format|
       format.html { redirect_to competency_pertenece_pruebas_url }

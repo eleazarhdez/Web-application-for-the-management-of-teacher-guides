@@ -1,5 +1,7 @@
 Activerecord::Application.routes.draw do
 
+  get "login/index"
+
   resources :competency_pertenece_pruebas
 
 
@@ -28,7 +30,11 @@ Activerecord::Application.routes.draw do
     resources :pruebas
   end
 
-  get "home/index"
+  #get "home/index" ------------------------------->  ESTA ES LA ORIGINAL QUE ESTABA PUESTA
+  get "logout" => "home#logout", :as => "logout"
+  get "index" => "home#index", :as => "index"
+  get "my_account" => "login#my_account", :as => "my_account"
+  get "home/index" => "posts#back", :as => "back"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -79,8 +85,8 @@ Activerecord::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
-
+   #root :to => 'home#index'
+    root :to => 'login#index'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

@@ -7,8 +7,12 @@
     <th>Competency</th>
     <th>Prueba</th>
     <th></th>
-    <th></th>
-    <th></th>
+    <% if can? :edit, @competency_pertenece_prueba %>
+        <th></th>
+    <% end %>
+    <% if can? :destroy, @competency_pertenece_prueba %>
+        <th></th>
+    <% end %>
   </tr>
 
 <% @competency_pertenece_pruebas.each do |competency_pertenece_prueba| %>
@@ -18,13 +22,18 @@
     <td><%= competency_pertenece_prueba.competency_id %></td>
     <td><%= competency_pertenece_prueba.prueba_id %></td>
     <td><%= link_to 'Show', competency_pertenece_prueba %></td>
-    <td><%= link_to 'Edit', edit_competency_pertenece_prueba_path(competency_pertenece_prueba) %></td>
-    <td><%= link_to 'Destroy', competency_pertenece_prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if can? :edit, @competency_pertenece_prueba %>
+        <td><%= link_to 'Edit', edit_competency_pertenece_prueba_path(competency_pertenece_prueba) %></td>
+    <% end %>
+    <% if can? :destroy, @competency_pertenece_prueba %>
+        <td><%= link_to 'Destroy', competency_pertenece_prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Competency pertenece prueba', new_competency_pertenece_prueba_path %>
-<%= link_to 'home', root_path %>
+<% if can? :new, @competency_pertenece_prueba %>
+    <%= link_to 'New Competency pertenece prueba', new_competency_pertenece_prueba_path %>
+<% end %>
+<%= link_to 'home', index_path %>
