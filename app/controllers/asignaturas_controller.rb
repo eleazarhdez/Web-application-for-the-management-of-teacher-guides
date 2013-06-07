@@ -3,28 +3,13 @@ class AsignaturasController < ApplicationController
   # GET /asignaturas.json
   def index
     @asignaturas = Asignatura.all
-
-    @extra_attributes = session[:cas_extra_attributes]
-    @identifier = @extra_attributes["id"]
-    @current_user = Profesore.find(@identifier)
+    authorize! :index, @asignaturas
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @asignaturas }
     end
   end
-
-=begin
-  def current_user
-    @current_user = session[:cas_user]
-    @extra_attributes = session[:cas_extra_attributes]
-    @current_user = @extra_attributes["roles"]
-  end
-  def current_rol
-    @extra_attributes = session[:cas_extra_attributes]
-    @current_rol = @extra_attributes["roles"]
-  end
-=end
 
   # GET /asignaturas/1
   # GET /asignaturas/1.json
@@ -49,7 +34,7 @@ class AsignaturasController < ApplicationController
     @prueba = @asignatura.pruebas.build
 
     authorize!  :new, @asignatura
-    authorize!  :new, @prueba
+
 
     puts "PROBANDO= " + @prueba.inspect
     puts "PROBANDO= " + @asignatura.class.instance_methods.inspect
@@ -68,7 +53,7 @@ class AsignaturasController < ApplicationController
     @prueba = Prueba.find( params[:id])
 
     authorize!  :edit, @asignatura
-    authorize!  :edit, @prueba
+
 
    # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
 

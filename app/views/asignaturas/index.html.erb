@@ -22,10 +22,10 @@
     <th>Bibliografia</th>
     <th>Resultados</th> -->
     <th></th>
-    <% if can? :edit, @asignatura %>
+    <% if can? :edit, Asignatura %>
     <th></th>
     <% end %>
-    <% if can? :destroy, @asignatura %>
+    <% if can? :destroy, Asignatura %>
         <th></th>
     <% end %>
   </tr>
@@ -51,10 +51,10 @@
     <td><%= asignatura.bibliografia %></td>
     <td><%= asignatura.resultados %></td> -->
     <td align="right"><%= link_to 'Mostrar', asignatura %></td>
-    <% if can? :edit, @asignatura %>
+    <% if can? :edit, Asignatura %>
         <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
     <% end %>
-    <% if can? :destroy, @asignatura %>
+    <% if can? :destroy, Asignatura %>
         <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
     <% end %>
   </tr>
@@ -63,7 +63,7 @@
 
 <br />
 <!--  <%= "Esto es el rol = " + @current_rol.to_s %>-->
-<% if can? :new, @asignatura %>
+<% if can? :new, Asignatura %>
     <%= link_to 'Nueva Asignatura', new_asignatura_path %>
 <% end %>
 <%= link_to 'Atrás', index_path %>

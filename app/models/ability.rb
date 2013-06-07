@@ -5,13 +5,22 @@ class Ability
     # Define abilities for the passed in user here. For example:
     #
        #user ||= User.new # guest user (not logged in)
-    user ||= Asignatura.index # guest user (not logged in)
+    user #||= Asignatura.index
         if user.rol == "admin"
-
-      # if @current_rol.equal?("admin")
-         can :manage, :all
-        else
+          can :manage, :all
+        end
+         if user.rol == "profesor"
+        #else
          can :read, :all
+         can :edit, Competency
+         can [:update, :create], Asignatura
+         can [:update, :create], Prueba
+
+         can :index, Profesore
+
+         can :edit, Profesore do |prof|
+           prof.try(:id) ==  user.id
+         end
        end
     #
     # The first argument to `can` is the action you are giving the user 

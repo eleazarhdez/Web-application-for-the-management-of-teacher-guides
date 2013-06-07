@@ -4,6 +4,7 @@ class ProfesoresController < ApplicationController
   def index
     @profesore = Profesore.where("name like ?", "%#{params[:q]}%")
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @profesore.map(&:attributes) }
@@ -38,6 +39,8 @@ class ProfesoresController < ApplicationController
   # GET /profesores/1/edit
   def edit
     @profesore = Profesore.find(params[:id])
+    authorize! :edit, @profesore
+    @profesore = Profesore.accessible_by(current_ability)
 
   end
 
@@ -64,6 +67,7 @@ class ProfesoresController < ApplicationController
   # PUT /profesores/1.json
   def update
     @profesore = Profesore.find(params[:id])
+    authorize! :update, @profesore
 
 
     respond_to do |format|

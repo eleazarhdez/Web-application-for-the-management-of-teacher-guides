@@ -65,7 +65,7 @@ Released   : 20120624
     </div>
     <div id="slogan">
       <h2><% if @username %>
-            ¡Bienvenido <%= @current_user.name%> !
+            ¡Bienvenido <%= @current_user.rol%> !
         <% else %>
             <p>Usted no ha iniciado sesión. <%= link_to("Login", @login_url) %>
         <% end %></h2>
@@ -76,14 +76,17 @@ Released   : 20120624
       <li class="first">
         <%= link_to "Asignaturas", asignaturas_path %>
       </li>
+
       <li><%= link_to "Profesores", profesores_path %></li>
-      <% if can? :new, @competency %>
+
+
+      <% if can? :new, Competency %>
         <li><%= link_to "Competencia", competencies_path %></li>
       <% end %>
-      <% if can? :new, @prueba %>
+      <% if can? :destroy, Prueba %>
         <li><%= link_to "Evaluaciones-Pruebas", pruebas_path %></li>
       <% end %>
-      <% if can? :new, @profesor_pertenece_asignatura %>
+      <% if can? :new, ProfesorPerteneceAsignatura %>
       <li>
        <span class="opener">Pertenencias<b></b></span>
         <ul>

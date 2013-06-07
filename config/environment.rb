@@ -11,5 +11,7 @@ CASClient::Frameworks::Rails::Filter.configure(
     :username_session_key => :cas_user,
     :extra_attributes_session_key => :cas_extra_attributes,
     #:logger => cas_logger,
-    :authenticate_on_every_request => true
+    :authenticate_on_every_request => true,
+    :enable_single_sign_out => true
+
 )

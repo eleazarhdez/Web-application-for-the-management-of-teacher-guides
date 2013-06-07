@@ -14,10 +14,10 @@
     <th>Password
     <th>Rol</th>
     <th></th>
-    <% if can? :edit, @profesore %>
+    <% if can? :edit, Profesore %>
         <th></th>
     <% end %>
-    <% if can? :destroy, @profesore %>
+    <% if can? :destroy, Profesore %>
         <th></th>
     <% end %>
   </tr>
@@ -36,10 +36,10 @@
     <td><%= profesore.password %></td>
     <td><%= profesore.rol %></td>
     <td><%= link_to 'Show', profesore %></td>
-    <% if can? :edit, @profesore %>
+    <% if can? :edit, Profesore %>
         <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
     <% end %>
-    <% if can? :destroy, @profesore %>
+    <% if can? :destroy, Profesore %>
         <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
      <% end %>
   </tr>
@@ -54,7 +54,7 @@
 
     <%= "El usuario actual  = " + @p.name.to_s %>
 <%= "El usuario actual  = " + session[:cas_user].to_s %>
-<% if can? :new, @profesore %>
+<% if can? :new, Profesore %>
     <%= link_to 'New Profesore', new_profesore_path %>
 <% end %>
 <%= link_to 'home', index_path %>
