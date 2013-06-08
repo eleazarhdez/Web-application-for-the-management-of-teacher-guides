@@ -5,11 +5,6 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-=begin
-    @current_user = session[:cas_user]
-    @extra_attributes = session[:cas_extra_attributes]
-    @current_user = @extra_attributes["roles"]
-=end
     @extra_attributes = session[:cas_extra_attributes]
     @identifier = @extra_attributes["id"]
     @current_user = Profesore.find(@identifier)

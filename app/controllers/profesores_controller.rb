@@ -3,6 +3,8 @@ class ProfesoresController < ApplicationController
   # GET /profesores.json
   def index
     @profesore = Profesore.where("name like ?", "%#{params[:q]}%")
+    authorize! :index, Profesore
+
 
 
     respond_to do |format|
@@ -40,7 +42,7 @@ class ProfesoresController < ApplicationController
   def edit
     @profesore = Profesore.find(params[:id])
     authorize! :edit, @profesore
-    @profesore = Profesore.accessible_by(current_ability)
+
 
   end
 

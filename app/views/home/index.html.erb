@@ -76,9 +76,12 @@ Released   : 20120624
       <li class="first">
         <%= link_to "Asignaturas", asignaturas_path %>
       </li>
-
-      <li><%= link_to "Profesores", profesores_path %></li>
-
+      <% if @current_user.rol == "profesor" %>
+          <li><%= link_to "Perfil", edit_profesore_path(@current_user) %></li>
+      <% end %>
+      <% if @current_user.rol == "admin" %>
+          <li><%= link_to "Profesores", profesores_path %></li>
+      <% end %>
 
       <% if can? :new, Competency %>
         <li><%= link_to "Competencia", competencies_path %></li>

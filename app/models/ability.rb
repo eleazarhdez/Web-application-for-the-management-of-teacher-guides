@@ -16,7 +16,9 @@ class Ability
          can [:update, :create], Asignatura
          can [:update, :create], Prueba
 
-         can :index, Profesore
+         can :index, Profesore do |prof|
+           prof.try(:id) ==  user.id
+         end
 
          can :edit, Profesore do |prof|
            prof.try(:id) ==  user.id

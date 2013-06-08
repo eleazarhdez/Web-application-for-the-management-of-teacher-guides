@@ -1,3 +1,7 @@
+<% @extra_attributes = session[:cas_extra_attributes] %>
+<% @identifier = @extra_attributes["id"]  %>
+
+<% @p = Profesore.find(@identifier) %>
 <h1>Listing profesores</h1>
 
 <table>
@@ -37,7 +41,9 @@
     <td><%= profesore.rol %></td>
     <td><%= link_to 'Show', profesore %></td>
     <% if can? :edit, Profesore %>
-        <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
+        <% if @p.id == profesore.id || @p.rol == "admin" %>
+            <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
+        <% end %>
     <% end %>
     <% if can? :destroy, Profesore %>
         <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -47,13 +53,11 @@
 </table>
 
 <br />
-       <% @extra_attributes = session[:cas_extra_attributes] %>
-       <% @identifier = @extra_attributes["id"]  %>
-<%= "El id  = " + @identifier %>
-   <% @p = Profesore.find(@identifier) %>
 
+    <%= "El id  = " + @identifier %>
     <%= "El usuario actual  = " + @p.name.to_s %>
 <%= "El usuario actual  = " + session[:cas_user].to_s %>
+<%= "El usuario actual  = " + :current_user.inspect %>
 <% if can? :new, Profesore %>
     <%= link_to 'New Profesore', new_profesore_path %>
 <% end %>
