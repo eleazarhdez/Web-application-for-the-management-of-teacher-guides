@@ -13,7 +13,15 @@ class Ability
         #else
          can :read, :all
          can :edit, Competency
-         can [:update, :create], Asignatura
+         can [:update, :create], Asignatura do |asig|
+           asig.try(:codigo) == ProfesorPerteneceAsignatura.asinatura_id
+           ProfesorPerteneceAsignatura.where("profesore_id like ?", user.id)
+
+         end
+         can :edit, ProfesorPerteneceAsignatura do |prof|
+           prof.try(:profesore_id) ==  user.id
+         end
+
          can [:update, :create], Prueba
 
          can :index, Profesore do |prof|

@@ -3,6 +3,7 @@ class AsignaturasController < ApplicationController
   # GET /asignaturas.json
   def index
     @asignaturas = Asignatura.all
+    @profesor_pertenece_asignaturas = ProfesorPerteneceAsignatura.all
     authorize! :index, @asignaturas
 
     respond_to do |format|
@@ -52,7 +53,7 @@ class AsignaturasController < ApplicationController
     @asignatura = Asignatura.find(params[:id])
     @prueba = Prueba.find( params[:id])
 
-    authorize!  :edit, @asignatura
+    authorize!  :edit, Asignatura
 
 
    # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
@@ -63,9 +64,8 @@ class AsignaturasController < ApplicationController
 
     #@evaluation = @asignatura.evaluations.build
     puts "Esto es:" + Asignatura.find(params[:id]).inspect
-   # @evaluation = Evaluation.find(params[:asignatura_id])
-    #@evaluation = @asignatura.evaluations.find(params[:asignatura_id])
-    puts "ESTE ES EL ID: " + @asignatura.evaluations.inspect
+    puts "Esto es:" + @asignatura.profesor_tokens.to_s
+
 
   end
 

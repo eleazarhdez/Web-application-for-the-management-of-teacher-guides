@@ -89,7 +89,7 @@ Released   : 20120624
       <% if can? :destroy, Prueba %>
         <li><%= link_to "Evaluaciones-Pruebas", pruebas_path %></li>
       <% end %>
-      <% if can? :new, ProfesorPerteneceAsignatura %>
+      <% if can? :edit, ProfesorPerteneceAsignatura %>
       <li>
        <span class="opener">Pertenencias<b></b></span>
         <ul>

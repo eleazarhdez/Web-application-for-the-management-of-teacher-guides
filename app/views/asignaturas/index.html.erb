@@ -1,3 +1,7 @@
+<% @extra_attributes = session[:cas_extra_attributes] %>
+<% @identifier = @extra_attributes["id"]  %>
+
+<% @p = Profesore.find(@identifier) %>
 <h1>Listado de asignaturas</h1>
 
 
@@ -31,7 +35,11 @@
   </tr>
 
 <% @asignaturas.each do |asignatura| %>
+      <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
+
   <tr>
+        <% if profesor_pertenece_asignatura.asignatura_id == asignatura.codigo %>
+            <% if profesor_pertenece_asignatura.profesore_id == @p.id %>
     <td border="1"><%= asignatura.codigo %></td>
     <td><%= asignatura.nombre %></td>
     <td><%= asignatura.titulacion %></td>
@@ -57,7 +65,10 @@
     <% if can? :destroy, Asignatura %>
         <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
     <% end %>
+            <% end %>
+        <% end %>
   </tr>
+          <% end %>
 <% end %>
 </table>
 
