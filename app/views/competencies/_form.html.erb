@@ -11,16 +11,20 @@
     </div>
   <% end %>
 
+    <div class="control-group">
+      <%= f.label :name, "Nombre" + mark_required(@competency, :name), :class => "control-label", :required => true %> <br />
+      <div class="controls">
+        <%= f.text_field :name,:type => "text", :placeholder => "Introduce nombre de asignatura" %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :descripcion, "Descripción", :class => "control-label" %><br />
+      <div class="controls">
+        <%= f.text_area :descripcion, :type => "text", :placeholder => "Introduce bibliografía", :rows => "2" %>
+      </div>
+    </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :descripcion %><br />
-    <%= f.text_area :descripcion %>
-  </div>
-  <div class="field">
-    <%= f.label :Tipo %><br />
+    <%= f.label :tipo, "Tipo"+ mark_required(@competency, :tipo) %><br />
    <%= f.select :tipo, options_for_select([["General", "General"], ["Transversal", "Transversal"],["Específica", "Específica"]]) %>
   </div>
   

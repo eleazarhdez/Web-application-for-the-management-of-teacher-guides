@@ -3,3 +3,13 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+      attributes:
+        user:
+          email: "E-mail address"
+      errors:
+        models:
+          user:
+            attributes:
+              email:
+                blank: "is required"

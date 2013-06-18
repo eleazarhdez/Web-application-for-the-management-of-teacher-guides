@@ -39,14 +39,14 @@
     <td><%= profesore.web %></td>
     <td><%= profesore.password %></td>
     <td><%= profesore.rol %></td>
-    <td><%= link_to 'Show', profesore %></td>
+    <td><%= link_to 'Mostrar', profesore %></td>
     <% if can? :edit, Profesore %>
         <% if @p.id == profesore.id || @p.rol == "admin" %>
-            <td><%= link_to 'Edit', edit_profesore_path(profesore) %></td>
+            <td><%= link_to 'Editar', edit_profesore_path(profesore) %></td>
         <% end %>
     <% end %>
     <% if can? :destroy, Profesore %>
-        <td><%= link_to 'Destroy', profesore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', profesore, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
      <% end %>
   </tr>
 <% end %>
@@ -59,6 +59,6 @@
 <%= "El usuario actual  = " + session[:cas_user].to_s %>
 <%= "El usuario actual  = " + :current_user.inspect %>
 <% if can? :new, Profesore %>
-    <%= link_to 'New Profesore', new_profesore_path %>
+    <%= link_to 'Nuevo Profesor', new_profesore_path %>
 <% end %>
 <%= link_to 'home', index_path %>

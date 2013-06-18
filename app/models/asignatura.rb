@@ -2,6 +2,9 @@
   attr_accessible :area, :bibliografia, :bloque, :caracter, :centro, :codigo, :creditos, :curso, :departamento, :duracion, :horario, :idioma, 
   :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens, :evaluations_attributes,
    :pruebas_attributes #,
+  validates :nombre, :presence => { :message => "Nombre requerido" }
+  validates :codigo, :presence => true, :uniqueness => true
+
   #:evaluation_attributes
   
   
@@ -42,28 +45,28 @@
       self.competency_ids = ids.split(",")
     end
 
-    def current_step  
-      @current_step || steps.first  
-    end  
-    
-    def steps  
-      %w[descripcion profesorado contextualizacion competencias bibliografia evaluacion resultados]  
+    def current_step
+      @current_step || steps.first
     end
 
-    def next_step  
-      self.current_step = steps[steps.index(current_step)+1]  
-    end 
-
-    def previous_step  
-      self.current_step = steps[steps.index(current_step)-1]  
+    def steps
+      %w[descripcion profesorado contextualizacion competencias bibliografia evaluacion resultados]
     end
 
-    def first_step?  
-      current_step == steps.first  
-    end 
+    def next_step
+      self.current_step = steps[steps.index(current_step)+1]
+    end
 
-    def last_step?  
-      current_step == steps.last  
-    end  
+    def previous_step
+      self.current_step = steps[steps.index(current_step)-1]
+    end
+
+    def first_step?
+      current_step == steps.first
+    end
+
+    def last_step?
+      current_step == steps.last
+    end
 
 end

@@ -1,0 +1,11 @@
+es:
+  activerecord:
+      attributes:
+        profesore:
+          mail: "E-mail address"
+      errors:
+        models:
+          profesore:
+            attributes:
+              mail:
+                blank: "is required"

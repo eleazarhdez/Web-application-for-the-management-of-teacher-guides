@@ -1,7 +1,7 @@
 <%= form_for(@profesore) do |f| %>
   <% if @profesore.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@profesore.errors.count, "error") %> prohibited this profesore from being saved:</h2>
+      <h2><%= pluralize(@profesore.errors.count, "error") %> El profesor no ha podido ser guardado:</h2>
 
       <ul>
       <% @profesore.errors.full_messages.each do |msg| %>
@@ -11,45 +11,85 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <div class="field">
+        <%= f.label :name, "Nombre" + mark_required(@profesore, :name), :class => "control-label" %><br />
+            <div class="controls">
+                <%= f.text_field :name %>
+            </div>
+    </div>
   </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :departamento %><br />
+    <%= f.label :departamento, :class => "control-label" %><br />
+    <div class="controls">
     <%= f.text_field :departamento %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :area %><br />
+    <%= f.label :area, :class => "control-label" %><br />
+    <div class="controls">
     <%= f.text_field :area %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :lugar_tutoria %><br />
+    <%= f.label :lugar_tutoria, :class => "control-label" %><br />
+    <div class="controls">
     <%= f.text_field :lugar_tutoria %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :horario_tutoria %><br />
+    <%= f.label :horario_tutoria, :class => "control-label" %><br />
+    <div class="controls">
     <%= f.text_field :horario_tutoria %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :telefono %><br />
+    <%= f.label :telefono, :class => "control-label" %><br />
+    <div class="controls">
     <%= f.number_field :telefono %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
-    <%= f.label :mail %><br />
+    <%= f.label :mail, "E-mail" , :class => "control-label"%><br />
+    <div class="controls">
     <%= f.text_field :mail %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
   <div class="field">
     <%= f.label :web %><br />
+    <div class="controls">
     <%= f.text_field :web %>
+    </div>
   </div>
+  </div>
+    <div class="control-group">
     <div class="field">
-      <%= f.label :password %><br />
+      <%= f.label :password, "Contraseña"  + mark_required(@profesore, :password), :class => "control-label"  %><br />
+      <div class="controls">
       <%= f.text_field :password %>
+      </div>
+    </div>
   </div>
+    <div class="control-group">
     <div class="field">
-      <%= f.label :rol %><br />
+      <%= f.label :rol, "Rol" +  mark_required(@profesore, :rol), :class => "control-label"  %><br />
+      <div class="controls">
       <%= f.text_field :rol %>
+      </div>
+    </div>
     </div>
  
  

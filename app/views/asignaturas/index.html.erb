@@ -2,10 +2,17 @@
 <% @identifier = @extra_attributes["id"]  %>
 
 <% @p = Profesore.find(@identifier) %>
-<h1>Listado de asignaturas</h1>
+
+<div class="container">
+<div id="header">
+  <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+  <div class="page-header">
+    <h1>Asignaturas <small>Índice</small></h1>
+  </div>
+</div>
 
 
-<table border="1">
+<table class="table table-bordered">
   <tr>
     <th text-align="left">Código</th>
     <th text-align="left">Nombre</th>
@@ -33,17 +40,54 @@
         <th></th>
     <% end %>
   </tr>
+<% if @p.rol == "admin" %>
+          <%= "ENTRNADO POR EL ADMIN" %>
+    <% @asignaturas.each do |asignatura| %>
 
-<% @asignaturas.each do |asignatura| %>
-      <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
+      <tr>
+                    <td border="1"><%= asignatura.codigo %></td>
+                    <td><%= asignatura.nombre %></td>
+                    <td><%= asignatura.titulacion %></td>
+                <!--    <td><%= asignatura.rama %></td>
+                    <td><%= asignatura.itinerario %></td>
+                    <td><%= asignatura.departamento %></td>
+                    <td><%= asignatura.area %></td>
+                    <td><%= asignatura.curso %></td>
+                    <td><%= asignatura.caracter %></td>
+                    <td><%= asignatura.duracion %></td>
+                    <td><%= asignatura.creditos %></td>
+                    <td><%= asignatura.horario %></td>
+                    <td><%= asignatura.web %></td>
+                    <td><%= asignatura.idioma %></td>
+                    <td><%= asignatura.bloque %></td>
+                    <td><%= asignatura.perfil %></td>
+                    <td><%= asignatura.bibliografia %></td>
+                    <td><%= asignatura.resultados %></td> -->
+                    <td align="right"><%= link_to 'Mostrar', asignatura %></td>
+                    <% if can? :edit, Asignatura %>
+                        <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+                    <% end %>
+                    <% if can? :destroy, Asignatura %>
+                        <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+                    <% end %>
+                <% end %>
 
-  <tr>
-        <% if profesor_pertenece_asignatura.asignatura_id == asignatura.codigo %>
-            <% if profesor_pertenece_asignatura.profesore_id == @p.id %>
-    <td border="1"><%= asignatura.codigo %></td>
-    <td><%= asignatura.nombre %></td>
-    <td><%= asignatura.titulacion %></td>
-<!--    <td><%= asignatura.rama %></td>
+      </tr>
+
+<% end %>
+
+<% if @p.rol == "profesor" %>
+<%= "ENTRNADO POR EL profe" %>
+    <% @asignaturas.each do |asignatura| %>
+          <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
+
+              <tr>
+                <% if profesor_pertenece_asignatura.asignatura_id == asignatura.codigo   %>
+                    <% if profesor_pertenece_asignatura.profesore_id == @p.id %>
+                        <td border="1"><%= asignatura.codigo %></td>
+                        <td><%= asignatura.nombre %></td>
+                        <td><%= asignatura.titulacion %></td>
+                        <!--    <td><%= asignatura.rama %></td>
     <td><%= asignatura.itinerario %></td>
     <td><%= asignatura.departamento %></td>
     <td><%= asignatura.area %></td>
@@ -58,23 +102,30 @@
     <td><%= asignatura.perfil %></td>
     <td><%= asignatura.bibliografia %></td>
     <td><%= asignatura.resultados %></td> -->
-    <td align="right"><%= link_to 'Mostrar', asignatura %></td>
-    <% if can? :edit, Asignatura %>
-        <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
-    <% end %>
-    <% if can? :destroy, Asignatura %>
-        <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
-    <% end %>
-            <% end %>
-        <% end %>
-  </tr>
+                        <td align="right"><%= link_to 'Mostrar', asignatura %></td>
+                        <% if can? :edit, Asignatura %>
+                            <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+                        <% end %>
+                        <% if can? :destroy, Asignatura %>
+                            <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+                        <% end %>
+                    <% end %>
+                <% end %>
           <% end %>
+          </tr>
+      <% end %>
 <% end %>
 </table>
 
 <br />
-<!--  <%= "Esto es el rol = " + @current_rol.to_s %>-->
+
+  <%= "Esto es el rol = " + @p.rol.to_s %>
 <% if can? :new, Asignatura %>
-    <%= link_to 'Nueva Asignatura', new_asignatura_path %>
+    <div class="btn">
+        <%= link_to 'Nueva Asignatura', new_asignatura_path %>
 <% end %>
-<%= link_to 'Atrás', index_path %>
+    </div>
+    <div class="btn">
+        <%= link_to 'Atrás', index_path %>
+    </div>
+ </div>

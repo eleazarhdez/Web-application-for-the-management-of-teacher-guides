@@ -9,4 +9,7 @@ class Competency < ActiveRecord::Base
   has_many :competencyPertenecePruebas
   has_many :pruebas, :through => :competencyPertenecePruebas
 
+  validates :name, :presence => { :message => "Nombre requerido" }
+  validates :tipo, :presence => { :message => "Nombre requerido" }
+
 end

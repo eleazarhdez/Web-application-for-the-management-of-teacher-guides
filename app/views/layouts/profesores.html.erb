@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SGGA-ULL</title>
+  <%= stylesheet_link_tag    "bootstrap", "bootstrap-responsive",  "asignaturas","scaffolds", :media => "all" %>
+  <%= javascript_include_tag  "jquery" %>
+  <style type="text/css">
+      body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px; background-color:#E0DCDC}
+      #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#00000;} <!-- esto debe #956295 -->
+      #header {font-family: Arial, Helvetica, sans-serif; color:#ffffff; text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+      form {class: form-horizontal}
+      fieldset { border:none; width:320px;}
+      legend { font-size:18px; margin:0px; padding:10px 0px; color:#ffffff; font-weight:bold;}
+      label { display:block; margin:15px 0 5px;color:#ffffff; font-weight:bold;}
+      input[type=text], input[type=password], input[type=number] { width:300px; padding:5px; border:solid 2px #000;}
+      textarea {width:300px; padding:5px; border:solid 2px #000;}
+      select  {width:100px; padding:5px; border:solid 2px #000;}
+      img  {width:50%; height: 50%;}
+
+
+  </style>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>

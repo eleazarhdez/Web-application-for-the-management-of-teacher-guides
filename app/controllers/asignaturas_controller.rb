@@ -79,7 +79,7 @@ class AsignaturasController < ApplicationController
 
     respond_to do |format|
       if @asignatura.save
-        format.html { redirect_to @asignatura, notice: 'Asignatura was successfully created.' }
+        format.html { redirect_to @asignatura, notice: 'Se ha creado la asignatura ' + @asignatura.nombre + ' correctamente.' }
         format.json { render json: @asignatura, status: :created, location: @asignatura }
       else
         format.html { render action: "new" }
@@ -92,6 +92,7 @@ class AsignaturasController < ApplicationController
   # PUT /asignaturas/1.json
   def update
     @asignatura = Asignatura.find(params[:id])
+    @prueba = Prueba.find( params[:id])
    # @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
     puts "Pasando por el update: " + @asignatura.evaluations.inspect
 
@@ -99,7 +100,7 @@ class AsignaturasController < ApplicationController
 
     respond_to do |format|
       if @asignatura.update_attributes(params[:asignatura])
-        format.html { redirect_to @asignatura, notice: 'Asignatura was successfully updated.' }
+        format.html { redirect_to @asignatura, notice: 'La asignatura ' + @asignatura.nombre + ' fue actualizada correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
