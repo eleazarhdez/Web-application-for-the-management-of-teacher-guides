@@ -1,6 +1,12 @@
-<h1>Listing profesor_pertenece_asignaturas</h1>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Profesores de las asignaturas <small>Índice</small></h1>
+    </div>
+  </div>
 
-<table>
+  <table class="table table-bordered">
   <tr>
     <th>ID</th>
     <th>Codigo</th>
@@ -21,12 +27,12 @@
     <td><%= profesor_pertenece_asignatura.asignatura_id %></td>
     <td><%= profesor_pertenece_asignatura.profesore_id %></td>
     <td><%= profesor_pertenece_asignatura.rol %></td>
-    <td><%= link_to 'Show', profesor_pertenece_asignatura %></td>
+    <td><%= link_to 'Show', profesor_pertenece_asignatura, :class => "btn" %></td>
     <% if can? :edit, @profesor_pertenece_asignatura %>
-        <td><%= link_to 'Edit', edit_profesor_pertenece_asignatura_path(profesor_pertenece_asignatura) %></td>
+        <td><%= link_to 'Edit', edit_profesor_pertenece_asignatura_path(profesor_pertenece_asignatura), :class => "btn" %></td>
     <% end %>
     <% if can? :destroy, @profesor_pertenece_asignatura %>
-        <td><%= link_to 'Destroy', profesor_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', profesor_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>
 <% end %>
@@ -34,6 +40,12 @@
 
 <br />
 <% if can? :new, @profesor_pertenece_asignatura %>
-    <%= link_to 'New Profesor pertenece asignatura', new_profesor_pertenece_asignatura_path %>
+      <div class="btn">
+    <%= link_to 'Nuevo Profesor a Asignatura', new_profesor_pertenece_asignatura_path %>
+      </div>
 <% end %>
-<%= link_to 'home', index_path %>
+  <div class="btn">
+<%= link_to 'Home', index_path %>
+    </div>
+  </div>
+</div>

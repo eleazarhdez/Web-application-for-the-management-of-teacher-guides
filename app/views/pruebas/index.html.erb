@@ -1,6 +1,13 @@
-<h1>Listing pruebas</h1>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Evaluaciones <small>Índice</small></h1>
+    </div>
+  </div>
 
-<table>
+
+  <table class="table table-bordered">
   <tr>
     <th>ID</th>
     <th>Asignatura</th>
@@ -9,9 +16,6 @@
     <th>Ponderación</th>
     <th>Descripción</th>
     <th></th>
-    <% if can? :edit, @prueba %>
-        <th></th>
-    <% end %>
     <% if can? :destroy, @prueba %>
         <th></th>
     <% end %>
@@ -25,12 +29,9 @@
     <td><%= prueba.criterios %></td>
     <td><%= prueba.ponderacion %></td>
     <td><%= prueba.descripcion %></td>
-    <td><%= link_to 'Show', prueba %></td>
-    <% if can? :edit, @prueba %>
-        <td><%= link_to 'Edit', edit_prueba_path(prueba) %></td>
-    <% end %>
+    <td><%= link_to 'Mostrar', prueba, :class => "btn" %></td>
     <% if can? :destroy, @prueba %>
-        <td><%= link_to 'Destroy', prueba, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Borrar', prueba, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>
 <% end %>
@@ -38,6 +39,12 @@
 
 <br />
 <% if can? :new, @prueba %>
-    <%= link_to 'New Prueba', new_prueba_path %>
+      <div class="btn">
+    <%= link_to 'Nueva Prueba', new_prueba_path %>
+      </div>
 <% end %>
-<%= link_to 'home', index_path %>
+  <div class="btn">
+<%= link_to 'Home', index_path %>
+    </div>
+</div>
+</div>

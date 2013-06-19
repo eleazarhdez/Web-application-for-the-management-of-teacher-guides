@@ -35,11 +35,11 @@
 
 </head>
 <body>
-<div id="main">
+<div class="container">
 <div id="header">
   <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
   <div class="page-header">
-    <h1>Asignaturas <small>Nueva Asignatura</small></h1>
+    <h1>Asignaturas <small>Editar Asignatura</small></h1>
   </div>
 </div>
 
@@ -70,119 +70,148 @@
     <fieldset>
       <legend>Asignatura</legend>
 
-      <!--<div class="control-group string required comment_name"><label class="string required control-label" for="asignatura_nombre"><abbr title="required">*</abbr> Nombre</label><div class="controls"><input class="string required xxlarge" id="asignatura_nombre" name="asignatura[nombre]" type="text"><p class="help-block">please, identify yourself</p></div></div>-->
-      <div class="control-group">
-        <%= f.label :nombre, "Nombre" + mark_required(@asignatura, :nombre), :class => "control-label", :required => true %> <br />
-        <div class="controls">
-          <%= f.text_field :nombre,:type => "text", :placeholder => "Introduce nombre de asignatura" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :centro, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :centro,:type => "text", :placeholder => "Introduce centro"%>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :titulacion, "Titulación", :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :titulacion,:type => "text", :placeholder => "Introduce titulación " %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :plan, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :plan, :type => "text", :placeholder => "Introduce el plan" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :rama, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :rama, :type => "text", :placeholder => "Introduce rama" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :itinerario, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :itinerario, :type => "text", :placeholder => "Introduce itinerario" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :departamento, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :departamento, :type => "text", :placeholder => "Introduce departamento" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :area, "Área", :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :area, :type => "text", :placeholder => "Introduce área" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :Curso, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]], :multiple => "muliple") %>
+      <div class="row">
+        <div class="span10">
+          <div class="row">
+            <div class="span5">
+              <div class="control-group">
+                <%= f.label :nombre, "Nombre" + mark_required(@asignatura, :nombre), :class => "control-label", :required => true %> <br />
+                <div class="controls">
+                  <%= f.text_field :nombre,:type => "text", :placeholder => "Introduce nombre de asignatura" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :codigo, "Código"+ mark_required(@asignatura, :codigo), :class => "control-label", :required => true %><br />
+                <div class="controls">
+                  <%= f.text_field :codigo,:type => "text", :placeholder => "Introduce código de asignatura" %>
+                </div>
+
+              </div>
+              <div class="control-group">
+                <%= f.label :centro, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :centro,:type => "text", :placeholder => "Introduce centro"%>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :titulacion, "Titulación", :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :titulacion,:type => "text", :placeholder => "Introduce titulación " %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :plan, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :plan, :type => "text", :placeholder => "Introduce el plan" %>
+                </div>
+              </div>
+
+            </div>
+            <div class="span5">
+              <div class="control-group">
+                <%= f.label :rama, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :rama, :type => "text", :placeholder => "Introduce rama" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :itinerario, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :itinerario, :type => "text", :placeholder => "Introduce itinerario" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :departamento, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :departamento, :type => "text", :placeholder => "Introduce departamento" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :area, "Área", :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :area, :type => "text", :placeholder => "Introduce área" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :Curso, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.select :curso, options_for_select([["Primero", "1"], ["Segundo", "2"],["Tercero", "3"],["Cuarto", "4"]], :multiple => "muliple") %>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </fieldset>
-
 
     <fieldset>
       <legend>Asignatura </legend>
-      <div class="control-group">
-        <%= f.label :caracter,"Carácter", :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :caracter, :type => "text", :placeholder => "Introduce carácter" %>
+      <div class="row">
+        <div class="span10">
+          <div class="row">
+            <div class="span5">
+              <div class="control-group">
+                <%= f.label :caracter,"Carácter", :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :caracter, :type => "text", :placeholder => "Introduce carácter" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :duracion,"Duración", :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :duracion, :type => "number", :placeholder => "Introduce nº de créditos" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :creditos, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.number_field :creditos, :type => "text", :placeholder => "Introduce duración" %>
+                </div>
+              </div>
+            </div>
+            <div class="span5">
+              <div class="control-group">
+                <%= f.label :horario, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :horario, :type => "text", :placeholder => "Introduce horario" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :web, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :web, :type => "text", :placeholder => "Introduce web" %>
+                </div>
+              </div>
+              <div class="control-group">
+                <%= f.label :idioma, :class => "control-label" %><br />
+                <div class="controls">
+                  <%= f.text_field :idioma, :type => "text", :placeholder => "Introduce idioma/s" %>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="control-group">
-        <%= f.label :duracion,"Duración", :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :duracion, :type => "number", :placeholder => "Introduce nº de créditos" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :creditos, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.number_field :creditos, :type => "text", :placeholder => "Introduce duración" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :horario, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :horario, :type => "text", :placeholder => "Introduce horario" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :web, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :web, :type => "text", :placeholder => "Introduce web" %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :idioma, :class => "control-label" %><br />
-        <div class="controls">
-          <%= f.text_field :idioma, :type => "text", :placeholder => "Introduce idioma/s" %>
-        </div>
-      </div>
-
     </fieldset>
 
     <fieldset>
-
       <legend>Profesorado </legend>
-      <div>
+      <div class="control-group">
         <%= f.label :profesor_tokens, "Profesores", :class => "control-label"  %><br />
-        <%= f.text_field :profesor_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+        <div class="controls">
+          <%= f.text_field :profesor_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.profesores.map(&:attributes).to_json %>
+        </div>
       </div>
     </fieldset>
 
     <fieldset>
       <legend>Competencias</legend>
-      <div>
+      <div class="control-group">
         <%= f.label :competencia_tokens, "Competencias", :class => "control-label"  %><br />
-        <%= f.text_field :competencia_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+        <div class="controls">
+          <%= f.text_field :competencia_tokens, :class => "input-medium search-query", "data-pre" => @asignatura.competencies.map(&:attributes).to_json %>
+        </div>
       </div>
     </fieldset>
 
@@ -213,7 +242,7 @@
       <div class="control-group">
         <%= f.label :bibliografia, "Bibliografía", :class => "control-label" %><br />
         <div class="controls">
-          <%= f.text_area :bibliografia, :type => "text", :placeholder => "Introduce bibliografía", :rows => "2" %>
+          <%= f.text_area :bibliografia,:rows => "2", :cols => "60", :type => "text", :placeholder => "Introduce bibliografía", :rows => "2" %>
         </div>
       </div>
     </fieldset>
@@ -221,7 +250,7 @@
     <fieldset>
       <legend>Resultados</legend>
       <div class="control-group">
-        <%= f.label :resultados, :class => "control-label" %>
+        <%= f.label :resultados, "Resultados", :class => "control-label" %><br />
         <div class="controls">
           <%= f.text_area :resultados, :rows => "2", :cols => "60", :type => "text", :placeholder => "Introduce resultados" %>
         </div>
@@ -232,9 +261,8 @@
     <%#= f.submit "Crear", :class => "btn btn-success"%>
 
 
-    <%= f.submit  :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                asignaturas_path, :class => 'btn' %>
+    <%= f.submit  :class => 'btn btn-primary', :value => "Actualizar Asignatura" %>
+    <%= link_to 'Cancelar', asignaturas_path, :class => 'btn' %>
 
 
 <% end %>

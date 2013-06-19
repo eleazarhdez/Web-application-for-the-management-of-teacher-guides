@@ -63,13 +63,15 @@
                     <td><%= asignatura.perfil %></td>
                     <td><%= asignatura.bibliografia %></td>
                     <td><%= asignatura.resultados %></td> -->
-                    <td align="right"><%= link_to 'Mostrar', asignatura %></td>
+                <div class="btn-group">
+                    <td align="right"><%= link_to 'Mostrar', asignatura, :class =>"btn"  %></td>
                     <% if can? :edit, Asignatura %>
-                        <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+                        <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura), :class =>"btn"  %></td>
                     <% end %>
                     <% if can? :destroy, Asignatura %>
-                        <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+                        <td align="center"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' }, :class => "btn btn-danger" %></td>
                     <% end %>
+          </div>
                 <% end %>
 
       </tr>
@@ -102,13 +104,15 @@
     <td><%= asignatura.perfil %></td>
     <td><%= asignatura.bibliografia %></td>
     <td><%= asignatura.resultados %></td> -->
-                        <td align="right"><%= link_to 'Mostrar', asignatura %></td>
+                        <div class="btn-group">
+                        <td align="right"><%= link_to 'Mostrar', asignatura, :class =>"btn"  %></td>
                         <% if can? :edit, Asignatura %>
-                            <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura) %></td>
+                            <td align="right"><%= link_to 'Editar', edit_asignatura_path(asignatura), :class =>"btn"  %></td>
                         <% end %>
                         <% if can? :destroy, Asignatura %>
-                            <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
+                            <td align="right"><%= link_to 'Borrar', asignatura, method: :delete, data: { confirm: '¿Está seguro?' }, :class => "btn btn-danger"  %></td>
                         <% end %>
+                            </div>
                     <% end %>
                 <% end %>
           <% end %>
@@ -126,6 +130,6 @@
 <% end %>
     </div>
     <div class="btn">
-        <%= link_to 'Atrás', index_path %>
+        <%= link_to 'Home', index_path %>
     </div>
  </div>

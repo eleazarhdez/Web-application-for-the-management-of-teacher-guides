@@ -1,0 +1,62 @@
+<style type="text/css">
+    body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px; background-color:#white}
+    #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#00000;} <!-- esto debe #956295 -->
+    #header {font-family: Arial, Helvetica, sans-serif; color:#black; text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+    form {class: form-horizontal}
+    fieldset { border:none; width:320px;}
+    legend { font-size:18px; margin:0px; padding:10px 0px; color:#black; font-weight:bold;}
+    label { display:block; margin:15px 0 5px;color:#black; font-weight:bold;}
+    input[type=text], input[type=password], input[type=number] { width:300px; padding:5px; border:solid 2px #000;}
+    textarea {width:300px; padding:5px; border:solid 2px #000;}
+    select  {width:100px; padding:5px; border:solid 2px #000;}
+    img  {width:50%; height: 50%;}
+</style>
+
+<body>
+<div class="container">
+
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Profesores <small>Editar Competencia</small></h1>
+    </div>
+  </div>
+
+  <%= form_for @competency, :html => {:class => "form-horizontal"}  do |f| %>
+      <% if @competency.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@competency.errors.count, "error") %> prohibited this competency from being saved:</h2>
+
+            <ul>
+              <% @competency.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="control-group">
+        <%= f.label :name, "Nombre" + mark_required(@competency, :name), :class => "control-label", :required => true %> <br />
+        <div class="controls">
+          <%= f.text_field :name,:type => "text", :placeholder => "Introduce nombre de asignatura" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :descripcion, "Descripción", :class => "control-label" %><br />
+        <div class="controls">
+          <%= f.text_area :descripcion, :type => "text", :placeholder => "Introduce bibliografía", :rows => "2" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label :tipo, "Tipo"+ mark_required(@competency, :tipo), :class => "control-label"  %><br />
+        <div class="controls">
+          <%= f.select :tipo, options_for_select([["General", "General"], ["Transversal", "Transversal"],["Específica", "Específica"]]) %>
+        </div>
+      </div>
+
+      <%= f.submit  :class => 'btn btn-primary', :value => "Actualizar Competencia" %>
+      <%= link_to 'Cancelar', competencies_path, :class => 'btn' %>
+  <% end %>
+
+</div>
+</body>

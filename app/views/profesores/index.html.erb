@@ -2,9 +2,16 @@
 <% @identifier = @extra_attributes["id"]  %>
 
 <% @p = Profesore.find(@identifier) %>
-<h1>Listing profesores</h1>
 
-<table>
+<div class="container">
+<div id="header">
+  <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+  <div class="page-header">
+    <h1>Profesores <small>Índice</small></h1>
+  </div>
+</div>
+
+<table class="table table-bordered">
   <tr>
     <th>ID</th>
     <th>Nombre</th>
@@ -39,14 +46,14 @@
     <td><%= profesore.web %></td>
     <td><%= profesore.password %></td>
     <td><%= profesore.rol %></td>
-    <td><%= link_to 'Mostrar', profesore %></td>
+    <td><%= link_to 'Mostrar', profesore, :class =>"btn"  %></td>
     <% if can? :edit, Profesore %>
         <% if @p.id == profesore.id || @p.rol == "admin" %>
-            <td><%= link_to 'Editar', edit_profesore_path(profesore) %></td>
+            <td><%= link_to 'Editar', edit_profesore_path(profesore), :class =>"btn"  %></td>
         <% end %>
     <% end %>
     <% if can? :destroy, Profesore %>
-        <td><%= link_to 'Eliminar', profesore, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+        <td><%= link_to 'Borrar', profesore, method: :delete, data: { confirm: '¿Estás seguro?' }, :class =>"btn btn-danger"  %></td>
      <% end %>
   </tr>
 <% end %>
@@ -54,11 +61,16 @@
 
 <br />
 
-    <%= "El id  = " + @identifier %>
+Zz    <%= "El id  = " + @identifier %>
     <%= "El usuario actual  = " + @p.name.to_s %>
 <%= "El usuario actual  = " + session[:cas_user].to_s %>
 <%= "El usuario actual  = " + :current_user.inspect %>
 <% if can? :new, Profesore %>
-    <%= link_to 'Nuevo Profesor', new_profesore_path %>
+    <div class="btn">
+        <%= link_to 'Nuevo Profesor', new_profesore_path %>
+    </div>
 <% end %>
-<%= link_to 'home', index_path %>
+  <div class="btn">
+    <%= link_to 'Home', index_path %>
+  </div>
+</div>

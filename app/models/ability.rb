@@ -20,9 +20,13 @@ class Ability
 
          can [:update, :create], Prueba
 
+=begin                                        ALOMEJOR ESTOY HAY QUE DESCOMENTARLO
          can :index, Profesore do |prof|
            prof.try(:id) ==  user.id
          end
+=end
+
+           cannot :index, Profesore
 
          can :edit, Profesore do |prof|
            prof.try(:id) ==  user.id

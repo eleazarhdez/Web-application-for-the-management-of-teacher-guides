@@ -1,6 +1,13 @@
-<h1>Listing competency_pertenece_asignaturas</h1>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Competencias de las Asignaturas <small>Índice</small></h1>
+    </div>
+  </div>
 
-<table>
+
+  <table class="table table-bordered">
   <tr>
     <th>ID</th>
     <th>Asignatura</th>
@@ -19,12 +26,12 @@
     <td><%= competency_pertenece_asignatura.id %></td>
     <td><%= competency_pertenece_asignatura.asignatura_id %></td>
     <td><%= competency_pertenece_asignatura.competency_id %></td>
-    <td><%= link_to 'Show', competency_pertenece_asignatura %></td>
-    <% if can? :edit, @competency_pertenece_asignatura %>
-        <td><%= link_to 'Edit', edit_competency_pertenece_asignatura_path(competency_pertenece_asignatura) %></td>
+    <td><%= link_to 'Show', competency_pertenece_asignatura, :class => "btn" %></td>
+    <% if can? :edit, @competency_pertenece_asignatura, :class => "btn" %>
+        <td><%= link_to 'Edit', edit_competency_pertenece_asignatura_path(competency_pertenece_asignatura), :class => "btn" %></td>
     <% end %>
     <% if can? :destroy, @competency_pertenece_asignatura %>
-        <td><%= link_to 'Destroy', competency_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', competency_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>
 <% end %>
@@ -32,6 +39,13 @@
 
 <br />
 <% if can? :new, @competency_pertenece_asignatura %>
-    <%= link_to 'New Competency pertenece asignatura', new_competency_pertenece_asignatura_path %>
+      <div class="btn">
+    <%= link_to 'Nueva competencia de asignatura', new_competency_pertenece_asignatura_path %>
+      </div>
 <% end %>
-<%= link_to 'Atrás', index_path %>
+  <div class="btn">
+<%= link_to 'Home', index_path %>
+    </div>
+
+    </div>
+</div>

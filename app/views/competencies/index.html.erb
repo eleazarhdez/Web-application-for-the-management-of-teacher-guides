@@ -1,6 +1,12 @@
-<h1>Listing competencies</h1>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Competencias <small>Índice</small></h1>
+    </div>
+  </div>
 
-<table>
+<table class="table table-bordered">
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -21,12 +27,12 @@
     <td><%= competency.name %></td>
     <td><%= competency.descripcion %></td>
     <td><%= competency.tipo %></td>
-    <td><%= link_to 'Show', competency %></td>
+    <td><%= link_to 'Mostrar', competency, :class => "btn"  %></td>
     <% if can? :new, @competency %>
-        <td><%= link_to 'Edit', edit_competency_path(competency) %></td>
+        <td><%= link_to 'Editar', edit_competency_path(competency), :class => "btn" %></td>
     <% end %>
     <% if can? :destroy, @competency %>
-        <td><%= link_to 'Destroy', competency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Borrar', competency, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>
 <% end %>
@@ -34,6 +40,12 @@
 
 <br />
 <% if can? :new, @competency %>
-    <%= link_to 'New Competency', new_competency_path %>
+      <div class="btn">
+    <%= link_to 'Nueva Competencia', new_competency_path %>
+      </div>
 <% end %>
-<%= link_to 'Atrás', index_path %>
+  <div class="btn">
+<%= link_to 'Home', index_path %>
+    </div>
+
+</div>

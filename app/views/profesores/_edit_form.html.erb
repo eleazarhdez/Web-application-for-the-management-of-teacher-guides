@@ -12,31 +12,48 @@
       textarea {width:300px; padding:5px; border:solid 2px #000;}
       select  {width:100px; padding:5px; border:solid 2px #000;}
       img  {width:50%; height: 50%;}
+      .prev, .next { background-color:#blue; padding:5px 10px; color:#black; text-decoration:none;     border-top-left-radius: 5px 5px;
+          border-bottom-right-radius: 5px 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;border:solid 2px #000;}
+      .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+      .prev { float:left;}
+      .next { float:right;}
+      #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+      #steps li {font-size:24px; float:left; padding:10px; color:#DBDBDB;}
+      #steps li span {font-size:11px; display:block;}
+      #steps li.current {color:#000;}
+      #makeWizard { background-color:#b0232a; color:#black; padding:5px 10px; text-decoration:none; font-size:18px;}
+      #makeWizard:hover { background-color:#000;}
+
   </style>
+  <!--<=script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><=#/script>-->
+  <script type="text/javascript" src="/assets/formToWizard.js"></script>
+
 
 </head>
 <body>
 <div class="container">
 
-  <div id="header">
-    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
-    <div class="page-header">
-      <h1>Profesores <small>Nuevo Profesor</small></h1>
-    </div>
+<div id="header">
+  <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+  <div class="page-header">
+    <h1>Profesores <small>Editar Profesor</small></h1>
   </div>
+</div>
 
-  <%= form_for @profesore, :html => {:class => "form-horizontal"} do |f| %>
-      <% if @profesore.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@profesore.errors.count, "error") %> El profesor no ha podido ser guardado:</h2>
+<%= form_for @profesore, :html => {:class => "form-horizontal"} do |f| %>
+    <% if @profesore.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@profesore.errors.count, "error") %> El profesor no ha podido ser guardado:</h2>
 
-            <ul>
-              <% @profesore.errors.full_messages.each do |msg| %>
-                  <li><%= msg %></li>
-              <% end %>
-            </ul>
-          </div>
-      <% end %>
+          <ul>
+            <% @profesore.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
       <div class="row">
         <div class="span10">
           <div class="row">
@@ -131,8 +148,13 @@
         </div>
       </div>
 
-      <%= f.submit  :class => 'btn btn-primary', :value => "Crear Profesor" %>
-      <%= link_to 'Cancelar', profesores_path, :class => 'btn' %>
-  <% end %>
+
+
+
+
+
+      <%= f.submit  :class => 'btn btn-primary', :value => "Actualizar Profesor" %>
+      <%= link_to 'Cancelar', index_path, :class => 'btn' %>
+<% end %>
 </div>
 </body>
