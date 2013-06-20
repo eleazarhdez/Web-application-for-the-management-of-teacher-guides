@@ -1,12 +1,20 @@
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Competencia <small><%= @competency.name %></small></h1>
+    </div>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Nombre:</b>
   <%= @competency.name %>
 </p>
 
 <p>
-  <b>Descripcion:</b>
+  <b>Descripción:</b>
   <%= @competency.descripcion %>
 </p>
 
@@ -15,6 +23,11 @@
   <%= @competency.tipo %>
 </p>
 
-
-<%= link_to 'Edit', edit_competency_path(@competency) %> |
-<%= link_to 'Back', competencies_path %>
+    <div class="btn">
+<%= link_to 'Editar', edit_competency_path(@competency) %>
+  </div>
+  <div class="btn">
+<%= link_to 'Volver', competencies_path %>
+  </div>
+</div>
+</div>

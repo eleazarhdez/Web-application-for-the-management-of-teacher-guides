@@ -30,7 +30,7 @@ class AsignaturasController < ApplicationController
     @asignatura = Asignatura.new
     #@evaluation = @asignatura.evaluations.create(:evaluation_date => Time.now)
     #1.times{@asignatura.evaluations.build}
-   # 1.times{@asignatura.pruebas.build}
+    # 1.times{@asignatura.pruebas.build}
     #@evaluation = @asignatura.evaluations.build
     @prueba = @asignatura.pruebas.build
 
@@ -56,7 +56,7 @@ class AsignaturasController < ApplicationController
     authorize!  :edit, Asignatura
 
 
-   # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
+    # @prueba =@asignatura.pruebas.where("asignatura_id = ?", params[:id])
 
     #SELECT "pruebas".* FROM "pruebas" INNER JOIN "competency_pertenece_pruebas" ON "pruebas"."id" = "competency_pertenece_pruebas"."competency_id" WHERE "competency_pertenece_pruebas"."asignatura_id" =
     #puts "ESTE ES EL ID: " + @asignatura.evaluations.build(params[:id])
@@ -75,7 +75,7 @@ class AsignaturasController < ApplicationController
 
     @asignatura = Asignatura.new(params[:asignatura])
     authorize!  :create, @asignatura
-   # @evaluation = @asignatura.evaluations.build(params[:evaluation])
+    # @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
     respond_to do |format|
       if @asignatura.save
@@ -93,7 +93,7 @@ class AsignaturasController < ApplicationController
   def update
     @asignatura = Asignatura.find(params[:id])
     @prueba = Prueba.find( params[:id])
-   # @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
+    # @evaluation = @asignatura.evaluations.find(params[:id]) #falla pq inserta un id único y no un par de claves
     puts "Pasando por el update: " + @asignatura.evaluations.inspect
 
     authorize!  :update, @asignatura

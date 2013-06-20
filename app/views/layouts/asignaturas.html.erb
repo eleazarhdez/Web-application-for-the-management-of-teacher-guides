@@ -2,9 +2,10 @@
 <html>
 <head>
   <title>SGGA-ULL</title>
-  <%= stylesheet_link_tag    "bootstrap", "bootstrap-responsive", "token-input-facebook", :media => "all" %>
-  <%= javascript_include_tag "application", "bootstrap", "jquery.tokeninput", "formToWizard", "jquery" %>
-
+  <%= stylesheet_link_tag    "bootstrap", "token-input-facebook", :media => "all" %>
+  <%= javascript_include_tag "application", "jquery.tokeninput" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head)%>
 </head>
 <body>
 <%= yield %>

@@ -1,55 +1,73 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Nombre:</b>
-  <%= @profesore.name %>
-</p>
-
-<p>
-  <b>Departamento:</b>
-  <%= @profesore.departamento %>
-</p>
-
-<p>
-  <b>Area:</b>
-  <%= @profesore.area %>
-</p>
-
-<p>
-  <b>Lugar tutoria:</b>
-  <%= @profesore.lugar_tutoria %>
-</p>
-
-<p>
-  <b>Horario tutoria:</b>
-  <%= @profesore.horario_tutoria %>
-</p>
-
-<p>
-  <b>Telefono:</b>
-  <%= @profesore.telefono %>
-</p>
-
-<p>
-  <b>Mail:</b>
-  <%= @profesore.mail %>
-</p>
-
-<p>
-  <b>Web:</b>
-  <%= @profesore.web %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%= @profesore.password %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%= @profesore.rol %>
-</p>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Profesor/a <small><%= @profesore.name %></small></h1>
+    </div>
+  </div>
 
 
-<%= link_to 'Edit', edit_profesore_path(@profesore) %> |
-<%= link_to 'Back', profesores_path %>
+  <div class="row">
+    <div class="span9">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <div class="span6"><p>
+          <b>Nombre:</b>
+          <%= @profesore.name %>
+        </p>
+
+          <p>
+            <b>Departamento:</b>
+            <%= @profesore.departamento %>
+          </p>
+
+          <p>
+            <b>Área:</b>
+            <%= @profesore.area %>
+          </p>
+
+          <p>
+            <b>Lugar tutoría:</b>
+            <%= @profesore.lugar_tutoria %>
+          </p>
+
+          <p>
+            <b>Horario tutoría:</b>
+            <%= @profesore.horario_tutoria %>
+          </p></div>
+        <div class="span3"><p>
+          <b>Teléfono:</b>
+          <%= @profesore.telefono %>
+        </p>
+
+          <p>
+            <b>E-Mail:</b>
+            <%= @profesore.mail %>
+          </p>
+
+          <p>
+            <b>Web:</b>
+            <%= @profesore.web %>
+          </p>
+
+          <p>
+            <b>Password:</b>
+            <%= @profesore.password %>
+          </p>
+
+          <p>
+            <b>Rol:</b>
+            <%= @profesore.rol %>
+          </p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn">
+    <%= link_to 'Editar', edit_profesore_path(@profesore) %>
+  </div>
+  <div class="btn">
+    <%= link_to 'Volver', profesores_path %>
+  </div>
+</div>
+</div>

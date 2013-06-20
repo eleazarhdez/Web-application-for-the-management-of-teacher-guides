@@ -1,33 +1,4 @@
-<!--
-<h1>ADMINISTRACIÓN DEL GESTOR DE GUÍAS ACADÉMICAS!</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<h1>Úsame con cuidado</h1>
-<ul class="nav nav-tabs">
-  <li>
-  <%= link_to "Asignaturas", asignaturas_path %>
-    </li>
-  <li><%= link_to "Profesores", profesores_path %></li>
-  <li><%= link_to "Competencia", competencies_path %></li>
-  <li><%= link_to "Evaluaciones", evaluations_path %></li>
-  <li><%= link_to "Pruebas", pruebas_path %></li>
-  <li><%= link_to "Pertenencia de profesores", profesor_pertenece_asignaturas_path %></li>
-  <li><%= link_to "Pertenencia de competencias", competency_pertenece_asignaturas_path %></li>
-  <li><%= link_to "Pertenencia de competencias a prueba", competency_pertenece_pruebas_path %></li>
-  <li><%= link_to("Salir", :action => 'logout') %></li>
-
-</ul>-->
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 3.0 License
-
-Name       : Big Business 2.0
-Description: A two-column, fixed-width design with a bright color scheme.
-Version    : 1.0
-Released   : 20120624
--->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta name="description" content="" />
@@ -84,10 +55,10 @@ Released   : 20120624
       <% end %>
 
       <% if can? :new, Competency %>
-        <li><%= link_to "Competencia", competencies_path %></li>
+        <li><%= link_to "Competencias", competencies_path %></li>
       <% end %>
       <% if can? :destroy, Prueba %>
-        <li><%= link_to "Evaluaciones-Pruebas", pruebas_path %></li>
+        <li><%= link_to "Evaluaciones", pruebas_path %></li>
       <% end %>
       <% if can? :edit, ProfesorPerteneceAsignatura %>
       <li>
@@ -216,7 +187,7 @@ Released   : 20120624
   </div>
 </div>
 <div id="footer">
-  Copyright (c) 2012 guiasdocentes.ull.es. Todos los derechos reservados. Desarrollado por Eleazar Hernández.
+  Copyright (c) 2013 guiasdocentes.ull.es. Todos los derechos reservados. Desarrollado por Eleazar Hernández.
   <p>Universidad de La Laguna. Pabellón de Gobierno, C/ Molinos de Agua s/n. · 38200 · La Laguna · España
 </div>
 </body>

@@ -1,4 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Prueba <small><%= @prueba.id %></small></h1>
+    </div>
+  </div>
+
+
+  <p id="notice"><%= notice %></p>
 
 <p>
   <b>Asignatura:</b>
@@ -25,6 +34,18 @@
   <%= @prueba.descripcion %>
 </p>
 
+  <p>
+    <b>Competencias:</b>
+    <%= @prueba.competencies.map(&:name).to_json %>
+  </p>
 
-<%= link_to 'Edit', edit_prueba_path(@prueba) %> |
-<%= link_to 'Back', pruebas_path %>
+
+  <div class="btn">
+    <%= link_to 'Editar', edit_prueba_path(@prueba) %>
+  </div>
+  <div class="btn">
+    <%= link_to 'Volver', pruebas_path %>
+  </div>
+
+</div>
+</div>

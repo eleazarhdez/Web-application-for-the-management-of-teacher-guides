@@ -10,15 +10,15 @@
 <table class="table table-bordered">
   <tr>
     <th>ID</th>
-    <th>Competency</th>
-    <th>Prueba</th>
+    <th>Competencia</th>
+    <th>Evaluación</th>
     <th></th>
     <% if can? :edit, @competency_pertenece_prueba %>
         <th></th>
     <% end %>
-    <% if can? :destroy, @competency_pertenece_prueba %>
+<!--    <% if can? :destroy, @competency_pertenece_prueba %>
         <th></th>
-    <% end %>
+    <% end %>-->
   </tr>
 
 <% @competency_pertenece_pruebas.each do |competency_pertenece_prueba| %>
@@ -30,9 +30,9 @@
     <% if can? :edit, @competency_pertenece_prueba %>
         <td><%= link_to 'Editar', edit_competency_pertenece_prueba_path(competency_pertenece_prueba), :class => "btn"  %></td>
     <% end %>
-    <% if can? :destroy, @competency_pertenece_prueba %>
+ <!--   <% if can? :destroy, @competency_pertenece_prueba %>
         <td><%= link_to 'Borrar', competency_pertenece_prueba, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger"  %></td>
-    <% end %>
+    <% end %>-->
   </tr>
 <% end %>
 </table>

@@ -1,4 +1,28 @@
-<%= form_for(@competency_pertenece_asignatura) do |f| %>
+<style type="text/css">
+    body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px; background-color:#white}
+    #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#00000;} <!-- esto debe #956295 -->
+    #header {font-family: Arial, Helvetica, sans-serif; color:#black; text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+    form {class: form-horizontal}
+    fieldset { border:none; width:320px;}
+    legend { font-size:18px; margin:0px; padding:10px 0px; color:#black; font-weight:bold;}
+    label { display:block; margin:15px 0 5px;color:#black; font-weight:bold;}
+    input[type=text], input[type=password], input[type=number] { width:300px; padding:5px; border:solid 2px #000;}
+    textarea {width:300px; padding:5px; border:solid 2px #000;}
+    select  {width:100px; padding:5px; border:solid 2px #000;}
+    img  {width:50%; height: 50%;}
+</style>
+
+<body>
+<div class="container">
+
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Relación <small>Asignatura-Competencia</small></h1>
+    </div>
+  </div>
+
+<%= form_for @competency_pertenece_asignatura, :html => {:class => "form-horizontal"}  do |f| %>
   <% if @competency_pertenece_asignatura.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@competency_pertenece_asignatura.errors.count, "error") %> prohibited this competency_pertenece_asignatura from being saved:</h2>
@@ -11,15 +35,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :asignatura_id %><br />
+      <div class="control-group">
+    <%= f.label :asignatura_id,"Asignatura",:class => "control-label" %><br />
+    <div class="controls">
     <%= f.number_field :asignatura_id %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :competency_id %><br />
+      <div class="control-group">
+    <%= f.label :competency_id,"Competencia", :class => "control-label" %><br />
+    <div class="controls">
     <%= f.number_field :competency_id %>
+      </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+      <%= f.submit :class => 'btn btn-primary', :value => "Crear asociación" %>
+      <%= link_to 'Cancelar', competency_pertenece_asignaturas_path, :class => 'btn' %>
+  <% end %>
+
+</div>
+</body>

@@ -5,6 +5,12 @@ class ProfesorPerteneceAsignaturasController < ApplicationController
     @profesor_pertenece_asignaturas = ProfesorPerteneceAsignatura.all
     authorize!  :index, @profesor_pertenece_asignatura
 
+    @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura|
+      @id = profesor_pertenece_asignatura.profesore_id
+      @profe = Profesore.find(@id)
+      profesor_pertenece_asignatura.rol = @profe.rol
+    end
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @profesor_pertenece_asignaturas }

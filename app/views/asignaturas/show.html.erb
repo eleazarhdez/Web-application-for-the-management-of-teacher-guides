@@ -1,95 +1,127 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Asignatura <small><%= @asignatura.nombre %></small></h1>
+    </div>
+  </div>
 
-<p>
-  <b>Codigo:</b>
-  <%= @asignatura.codigo %>
-</p>
+  <div class="row">
+    <div class="span9">
+      <p id="notice"><%= notice %></p>
+      <div class="row">
+        <div class="span6"><p>
+          <b>Código:</b>
+          <%= @asignatura.codigo %>
+        </p>
 
-<p>
-  <b>Nombre:</b>
-  <%= @asignatura.nombre %>
-</p>
+          <p>
+            <b>Nombre:</b>
+            <%= @asignatura.nombre %>
+          </p>
 
-<p>
-  <b>Titulacion:</b>
-  <%= @asignatura.titulacion %>
-</p>
+          <p>
+            <b>Titulación:</b>
+            <%= @asignatura.titulacion %>
+          </p>
 
-<p>
-  <b>Rama:</b>
-  <%= @asignatura.rama %>
-</p>
+          <p>
+            <b>Rama:</b>
+            <%= @asignatura.rama %>
+          </p>
 
-<p>
-  <b>Itinerario:</b>
-  <%= @asignatura.itinerario %>
-</p>
+          <p>
+            <b>Itinerario:</b>
+            <%= @asignatura.itinerario %>
+          </p>
 
-<p>
-  <b>Departamento:</b>
-  <%= @asignatura.departamento %>
-</p>
+          <p>
+            <b>Departamento:</b>
+            <%= @asignatura.departamento %>
+          </p>
 
-<p>
-  <b>Area:</b>
-  <%= @asignatura.area %>
-</p>
+          <p>
+            <b>Área:</b>
+            <%= @asignatura.area %>
+          </p>
 
-<p>
-  <b>Curso:</b>
-  <%= @asignatura.curso %>
-</p>
+          <p>
+            <b>Curso:</b>
+            <%= @asignatura.curso %>
+          </p>
 
-<p>
-  <b>Caracter:</b>
-  <%= @asignatura.caracter %>
-</p>
+          <p>
+            <b>Carácter:</b>
+            <%= @asignatura.caracter %>
+          </p>
+          <p>
+            <b>Duración:</b>
+            <%= @asignatura.duracion %>
+          </p>
+        </div>
+        <div class="span3">
+          <p>
+            <b>Créditos:</b>
+            <%= @asignatura.creditos %>
+          </p>
 
-<p>
-  <b>Duracion:</b>
-  <%= @asignatura.duracion %>
-</p>
+          <p>
+            <b>Horario:</b>
+            <%= @asignatura.horario %>
+          </p>
 
-<p>
-  <b>Creditos:</b>
-  <%= @asignatura.creditos %>
-</p>
+          <p>
+            <b>Web:</b>
+            <%= @asignatura.web %>
+          </p>
 
-<p>
-  <b>Horario:</b>
-  <%= @asignatura.horario %>
-</p>
+          <p>
+            <b>Idioma:</b>
+            <%= @asignatura.idioma %>
+          </p>
+          <p>
+            <b>Profesores:</b>
+            <%= @asignatura.profesores.map(&:name).to_json %>
+          </p>
+          <p>
+            <b>Competencias:</b>
+            <%= @asignatura.competencies.map(&:name).to_json %>
+          </p>
+          <p>
+            <b>Bloque:</b>
+            <%= @asignatura.bloque %>
+          </p>
 
-<p>
-  <b>Web:</b>
-  <%= @asignatura.web %>
-</p>
+          <p>
+            <b>Perfil:</b>
+            <%= @asignatura.perfil %>
+          </p>
 
-<p>
-  <b>Idioma:</b>
-  <%= @asignatura.idioma %>
-</p>
+          <p>
+            <b>Bibliografia:</b>
+            <%= @asignatura.bibliografia %>
+          </p>
 
-<p>
-  <b>Bloque:</b>
-  <%= @asignatura.bloque %>
-</p>
-
-<p>
-  <b>Perfil:</b>
-  <%= @asignatura.perfil %>
-</p>
-
-<p>
-  <b>Bibliografia:</b>
-  <%= @asignatura.bibliografia %>
-</p>
-
-<p>
-  <b>Resultados:</b>
-  <%= @asignatura.resultados %>
-</p>
+          <p>
+            <b>Resultados:</b>
+            <%= @asignatura.resultados %>
+          </p></div>
+      </div>
+    </div>
+  </div>
 
 
-<%= link_to 'Editar', edit_asignatura_path(@asignatura) %> |
-<%= link_to 'Volver', asignaturas_path %>
+
+
+
+
+
+<div class="btn">
+    <%= link_to 'Editar', edit_asignatura_path(@asignatura) %>
+</div>
+  <div class="btn">
+    <%= link_to 'Volver', asignaturas_path %>
+</div>
+
+    </div>
+</div>

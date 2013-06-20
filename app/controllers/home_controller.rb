@@ -11,7 +11,7 @@ class HomeController < ApplicationController
 
     @extra_attributes = session[:cas_extra_attributes]
     @identifier = @extra_attributes["id"]
-    @current_user = Profesore.find(@identifier)
+    @current_user = Profesore.find(8)
 
 
 

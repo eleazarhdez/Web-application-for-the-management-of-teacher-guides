@@ -23,31 +23,31 @@
   </div>
 
   <%= form_for @competency_pertenece_prueba, :html => {:class => "form-horizontal"}   do |f| %>
-  <% if @competency_pertenece_prueba.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@competency_pertenece_prueba.errors.count, "error") %> prohibited this competency_pertenece_prueba from being saved:</h2>
+      <% if @competency_pertenece_prueba.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@competency_pertenece_prueba.errors.count, "error") %> prohibited this competency_pertenece_prueba from being saved:</h2>
 
-      <ul>
-      <% @competency_pertenece_prueba.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+            <ul>
+              <% @competency_pertenece_prueba.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
       <div class="control-group">
-    <%= f.label :competency_id, "Competencia",:class => "control-label" %><br />
+        <%= f.label :competency_id, "Competencia",:class => "control-label" %><br />
         <div class="controls">
-    <%= f.number_field :competency_id %>
-          </div>
-  </div>
+          <%= f.number_field :competency_id %>
+        </div>
+      </div>
       <div class="control-group">
-    <%= f.label :prueba_id,"Evaluación",:class => "control-label" %><br />
+        <%= f.label :prueba_id, "Evaluación",:class => "control-label" %><br />
         <div class="controls">
-    <%= f.number_field :prueba_id %>
-          </div>
-  </div>
-      <%= f.submit :class => 'btn btn-primary', :value => "Crear asociación" %>
+          <%= f.number_field :prueba_id %>
+        </div>
+      </div>
+      <%= f.submit :class => 'btn btn-primary', :value => "Actualizar asociación" %>
       <%= link_to 'Cancelar', competency_pertenece_pruebas_path, :class => 'btn' %>
   <% end %>
 

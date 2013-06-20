@@ -11,14 +11,14 @@
   <tr>
     <th>ID</th>
     <th>Asignatura</th>
-    <th>Competency</th>
+    <th>Competencia</th>
     <th></th>
     <% if can? :edit, @competency_pertenece_asignatura%>
         <th></th>
     <% end %>
-    <% if can? :new, @competency_pertenece_asignatura %>
+<!--    <% if can? :new, @competency_pertenece_asignatura %>
         <th></th>
-     <% end %>
+     <% end %>-->
   </tr>
 
 <% @competency_pertenece_asignaturas.each do |competency_pertenece_asignatura| %>
@@ -26,13 +26,13 @@
     <td><%= competency_pertenece_asignatura.id %></td>
     <td><%= competency_pertenece_asignatura.asignatura_id %></td>
     <td><%= competency_pertenece_asignatura.competency_id %></td>
-    <td><%= link_to 'Show', competency_pertenece_asignatura, :class => "btn" %></td>
+    <td><%= link_to 'Mostrar', competency_pertenece_asignatura, :class => "btn" %></td>
     <% if can? :edit, @competency_pertenece_asignatura, :class => "btn" %>
-        <td><%= link_to 'Edit', edit_competency_pertenece_asignatura_path(competency_pertenece_asignatura), :class => "btn" %></td>
+        <td><%= link_to 'Editar', edit_competency_pertenece_asignatura_path(competency_pertenece_asignatura), :class => "btn" %></td>
     <% end %>
-    <% if can? :destroy, @competency_pertenece_asignatura %>
-        <td><%= link_to 'Destroy', competency_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
-    <% end %>
+<!--    <% if can? :destroy, @competency_pertenece_asignatura %>
+        <td><%= link_to 'Borrar', competency_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+    <% end %>-->
   </tr>
 <% end %>
 </table>

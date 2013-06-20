@@ -1,3 +1,11 @@
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Competencia <small><%= @profesor_pertenece_asignatura.id %></small></h1>
+    </div>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -15,6 +23,11 @@
   <%= @profesor_pertenece_asignatura.rol %>
 </p>
 
-
-<%= link_to 'Edit', edit_profesor_pertenece_asignatura_path(@profesor_pertenece_asignatura) %> |
-<%= link_to 'Back', profesor_pertenece_asignaturas_path %>
+  <div class="btn">
+    <%= link_to 'Editar', edit_profesor_pertenece_asignatura_path(@profesor_pertenece_asignatura) %>
+  </div>
+  <div class="btn">
+    <%= link_to 'Volver', profesor_pertenece_asignaturas_path %>
+  </div>
+</div>
+</div>

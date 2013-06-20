@@ -3,10 +3,12 @@ class ProfesorPerteneceAsignatura < ActiveRecord::Base
   belongs_to :asignatura
   belongs_to :profesore
 
+=begin
   before_save :default_values
   def default_values
     self.rol ||= 'Profesor'
   end
+=end
 
   #def default_values
    # self.codigo ||= Asignatura.codigo

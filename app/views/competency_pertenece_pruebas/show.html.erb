@@ -1,15 +1,28 @@
+<div class="container">
+  <div id="header">
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <div class="page-header">
+      <h1>Competencia-Evaluación <small><%=@competency_pertenece_prueba.id %></small></h1>
+    </div>
+  </div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Competency:</b>
+  <b>Competencia:</b>
   <%= @competency_pertenece_prueba.competency_id %>
 </p>
 
 <p>
-  <b>Prueba:</b>
+  <b>Evaluación:</b>
   <%= @competency_pertenece_prueba.prueba_id %>
 </p>
 
-
-<%= link_to 'Edit', edit_competency_pertenece_prueba_path(@competency_pertenece_prueba) %> |
-<%= link_to 'Back', competency_pertenece_pruebas_path %>
+<div class="btn">
+  <%= link_to 'Editar', edit_competency_pertenece_prueba_path(@competency_pertenece_prueba) %>
+</div>
+<div class="btn">
+  <%= link_to 'Volver', competency_pertenece_pruebas_path %>
+</div>
+</div>
+</div>
