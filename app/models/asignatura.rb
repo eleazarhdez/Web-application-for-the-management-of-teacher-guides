@@ -3,8 +3,8 @@
   :itinerario, :nombre, :plan, :perfil, :rama, :resultados, :titulacion, :web, :profesor_tokens, :competencia_tokens, :evaluations_attributes,
    :pruebas_attributes #,
   validates :nombre, :presence => { :message => "Nombre requerido" }
-  validates :codigo, :presence => true, :uniqueness => true
-  validates :profesor_tokens, :presence => true
+  validates :codigo, :presence => { :message => "Código requerido" }, :uniqueness => { :message => "Código usado" }
+  #validates :profesor_tokens, :presence => { :message => "Profesor requerido" }
 
   #:evaluation_attributes
   

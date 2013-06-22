@@ -74,6 +74,7 @@ class AsignaturasController < ApplicationController
   def create
 
     @asignatura = Asignatura.new(params[:asignatura])
+    @prueba = Prueba.new(params[:prueba])
     authorize!  :create, @asignatura
     # @evaluation = @asignatura.evaluations.build(params[:evaluation])
 
