@@ -47,20 +47,20 @@
       <li class="first">
         <%= link_to "Asignaturas", asignaturas_path %>
       </li>
-      <% if @current_user.rol == "profesor" %>
+      <% if @current_user.rol == "profesor" || @current_user.rol == "gestor"%>
           <li><%= link_to "Perfil", edit_profesore_path(@current_user) %></li>
       <% end %>
       <% if @current_user.rol == "admin" %>
           <li><%= link_to "Profesores", profesores_path %></li>
       <% end %>
 
-      <% if can? :new, Competency %>
+      <% if can? :edit, Competency %>
         <li><%= link_to "Competencias", competencies_path %></li>
       <% end %>
       <% if can? :destroy, Prueba %>
         <li><%= link_to "Evaluaciones", pruebas_path %></li>
       <% end %>
-      <% if can? :edit, ProfesorPerteneceAsignatura %>
+      <% if can? :edit, CompetencyPertenecePrueba %>
       <li>
        <span class="opener">Pertenencias<b></b></span>
         <ul>

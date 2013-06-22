@@ -6,32 +6,30 @@ class Ability
     #
        #user ||= User.new # guest user (not logged in)
     user #||= Asignatura.index
-        if user.rol == "admin"
-          can :manage, :all
-        end
-         if user.rol == "profesor"
+      if user.rol == "admin"
+        can :manage, :all
+      end
+      if user.rol == "gestor"
+      #else
+        can :read, :all
+        can [:update, :create, :destroy], Competency
+        can [:update, :create, :destroy], Asignatura
+        can :edit, ProfesorPerteneceAsignatura do |prof|
+          prof.try(:profesore_id) ==  user.id
+      end
+      can [:update, :create], Prueba
+      can :edit, Profesore do |prof|
+          prof.try(:id) ==  user.id
+      end
+      end
+      if user.rol == "profesor"
         #else
-         can :read, :all
-         can :edit, Competency
-         can [:update, :create], Asignatura
-         can :edit, ProfesorPerteneceAsignatura do |prof|
-           prof.try(:profesore_id) ==  user.id
-         end
-
-         can [:update, :create], Prueba
-
-=begin                                        ALOMEJOR ESTOY HAY QUE DESCOMENTARLO
-         can :index, Profesore do |prof|
-           prof.try(:id) ==  user.id
-         end
-=end
-
-           cannot :index, Profesore
-
-         can :edit, Profesore do |prof|
-           prof.try(:id) ==  user.id
-         end
-       end
+        can :read, :all
+        cannot :index, Profesore
+        can :update, Profesore do |prof|
+          prof.try(:id) ==  user.id
+        end
+      end
     #
     # The first argument to `can` is the action you are giving the user 
     # permission to do.

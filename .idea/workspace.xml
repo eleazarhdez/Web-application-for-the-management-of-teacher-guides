@@ -5,24 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5e262bb-8484-42e3-9f30-ff183307262a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profesores/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/profesores/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/asignaturas.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/asignaturas.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/login.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/_edit_form.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/_edit_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/profesores/_edit_form.html.erb" afterPath="$PROJECT_DIR$/app/views/profesores/_edit_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ability.rb" afterPath="$PROJECT_DIR$/app/models/ability.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/asignatura.rb" afterPath="$PROJECT_DIR$/app/models/asignatura.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/competencies.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/competencies.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/competencies.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/competencies.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/competency_pertenece_asignaturas.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/competency_pertenece_asignaturas.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/competency_pertenece_pruebas.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/competency_pertenece_pruebas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/profesores.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/profesores.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/competencies/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/competencies/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/asignaturas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/asignaturas/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/competencies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/competencies/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login/index.html.erb" afterPath="$PROJECT_DIR$/app/views/login/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/login.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/login.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login/logout,html.erb" afterPath="$PROJECT_DIR$/app/views/login/logout,html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/competencies/new.html.erb" afterPath="$PROJECT_DIR$/app/views/competencies/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/profesor_pertenece_asignaturas.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/profesor_pertenece_asignaturas.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/profesore.rb" afterPath="$PROJECT_DIR$/app/models/profesore.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/profesores.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/profesores.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/prueba.rb" afterPath="$PROJECT_DIR$/app/models/prueba.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/pruebas.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/pruebas.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="activerecord.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/_form_html.erb.html.back" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1363708864561" ignored="false" />
-    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371758976033" ignored="false" />
+    <file path="/_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371911976817" ignored="false" />
     <file path="/asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371758851391" ignored="false" />
-    <file path="/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371756959126" ignored="false" />
+    <file path="/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371902990829" ignored="false" />
     <file path="/profesores_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371053052915" ignored="false" />
     <file path="/evaluation.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365527070528" ignored="false" />
-    <file path="/a.dummy" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371486688871" ignored="false" />
-    <file path="/asignatura.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371312878897" ignored="false" />
+    <file path="/a.dummy" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371909635362" ignored="false" />
+    <file path="/asignatura.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371910360213" ignored="false" />
     <file path="/evaluation_pertenece_asignatura.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365360127909" ignored="false" />
     <file path="$PROJECT_DIR$/../../nestedforms/196-nested-model-form-part-1/revised/questionnaire-before/Gemfile" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1365353321097" ignored="false" />
     <file path="/Gemfile" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369324028821" ignored="false" />
@@ -32,7 +50,7 @@
     <file path="/prueba.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367864104126" ignored="false" />
     <file path="/show.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371745930874" ignored="false" />
     <file path="/competency_pertenece_prueba.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368202221784" ignored="false" />
-    <file path="/Dummy.txt" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371825731218" ignored="false" />
+    <file path="/Dummy.txt" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371891678312" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/Gemfile" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367403572301" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/app/views/home/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367404083721" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog/blog/config/routes.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1367408167575" ignored="false" />
@@ -51,8 +69,8 @@
     <file path="/schema.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368203163392" ignored="false" />
     <file path="/pruebas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369940103290" ignored="false" />
     <file path="/competency_pertenece_pruebas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369841119263" ignored="false" />
-    <file path="/competencies_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369938568717" ignored="false" />
-    <file path="/edit.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371746166415" ignored="false" />
+    <file path="/competencies_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371902483947" ignored="false" />
+    <file path="/edit.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371906520473" ignored="false" />
     <file path="/formToWizard.js" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368730428059" ignored="false" />
     <file path="/token-input-facebook.css" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1368725719411" ignored="false" />
     <file path="$PROJECT_DIR$/../../blog-prueba/app/views/home/my_account.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369072219275" ignored="false" />
@@ -60,35 +78,36 @@
     <file path="$PROJECT_DIR$/../../blog-prueba/app/views/application/index.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369150130619" ignored="false" />
     <file path="/home.css.scss" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369161565446" ignored="false" />
     <file path="/environment.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371487010648" ignored="false" />
-    <file path="/ability.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371670734559" ignored="false" />
+    <file path="/ability.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371903121611" ignored="false" />
     <file path="/application.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1370447405009" ignored="false" />
-    <file path="/home_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369940841135" ignored="false" />
+    <file path="/home_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371892270925" ignored="false" />
     <file path="/application_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1370796469162" ignored="false" />
     <file path="/profesor_pertenece_asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371751528264" ignored="false" />
     <file path="/competency_pertenece_asignaturas_controller.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369838794201" ignored="false" />
     <file path="/20130530111216_add_passwordto_profesores[password:string].rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369913026877" ignored="false" />
-    <file path="/profesore.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371140865606" ignored="false" />
+    <file path="/profesore.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371904716923" ignored="false" />
     <file path="/20130530175403_add_rol_to_profesores.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1369936471868" ignored="false" />
     <file path="/development.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1370448300699" ignored="false" />
     <file path="/*.regexp" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371488665506" ignored="false" />
     <file path="/es.yml" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371053954317" ignored="false" />
-    <file path="/new.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371746530196" ignored="false" />
+    <file path="/new.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371903233188" ignored="false" />
     <file path="$PROJECT_DIR$/../../rails3-bootstrap-devise-cancan/app/views/devise/registrations/new.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371154348781" ignored="false" />
     <file path="$PROJECT_DIR$/../../rails3-bootstrap-devise-cancan/config/locales/simple_form.en.yml" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371154768117" ignored="false" />
     <file path="/simple_form.en.yml" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371154768117" ignored="false" />
     <file path="$PROJECT_DIR$/../../rails3-bootstrap-devise-cancan/app/helpers/application_helper.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371154980217" ignored="false" />
     <file path="/jquery.validate.js" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371307398359" ignored="false" />
-    <file path="/asignaturas.js.coffee" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371311932329" ignored="false" />
+    <file path="/asignaturas.js.coffee" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371910166541" ignored="false" />
     <file path="/scaffolds.css.scss" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371489444583" ignored="false" />
     <file path="/asignaturas.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371829807522" ignored="false" />
     <file path="/home.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371494948246" ignored="false" />
     <file path="/competencies.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371755587871" ignored="false" />
     <file path="/profesores.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371827554033" ignored="false" />
     <file path="/application.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371584533397" ignored="false" />
-    <file path="/_edit_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371746245806" ignored="false" />
+    <file path="/_edit_form.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371906735215" ignored="false" />
     <file path="/competency_pertenece_pruebas.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371669531886" ignored="false" />
     <file path="/pruebas.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371669585518" ignored="false" />
     <file path="/profesor_pertenece_asignatura.rb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371751762177" ignored="false" />
+    <file path="/login.html.erb" changelist="f5e262bb-8484-42e3-9f30-ff183307262a" time="1371900993140" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,64 +129,55 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb">
+      <file leaf-file-name="ability.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="1" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-17.708334">
+            <state line="28" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competency_pertenece_pruebas.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/competency_pertenece_pruebas.html.erb">
+      <file leaf-file-name="profesore.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/profesore.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="51" selection-start="168" selection-end="168" vertical-scroll-proportion="-3.125">
+            <state line="8" column="105" selection-start="427" selection-end="470" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="asignaturas.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/asignaturas.html.erb">
+      <file leaf-file-name="competencies.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/competencies.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="56" selection-start="221" selection-end="240" vertical-scroll-proportion="-3.125">
+            <state line="7" column="30" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="competencies.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/competencies.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="40" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profesores.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/profesores.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="214" selection-end="258" vertical-scroll-proportion="-3.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="259" column="57" selection-start="11852" selection-end="11852" vertical-scroll-proportion="-58.375">
+            <state line="51" column="2" selection-start="2688" selection-end="2870" vertical-scroll-proportion="0.47408345">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_edit_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_edit_form.html.erb">
+      <file leaf-file-name="competency.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/competency.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="101.833336">
+            <state line="5" column="12" selection-start="210" selection-end="220" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profesores.js.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/profesores.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="230" selection-end="250" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,25 +186,25 @@
       <file leaf-file-name="asignaturas.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/asignaturas.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="230" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
+      <file leaf-file-name="asignatura.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/asignatura.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="36" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+            <state line="37" column="39" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/profesores/_form.html.erb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/asignaturas/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="11" selection-start="5475" selection-end="5475" vertical-scroll-proportion="2.6298702">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="26.25">
               <folding />
             </state>
           </provider>
@@ -222,22 +232,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/profesores/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/profesor_pertenece_asignaturas/_edit_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/profesor_pertenece_asignaturas_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/profesor_pertenece_asignatura.rb" />
-        <option value="$PROJECT_DIR$/app/views/profesor_pertenece_asignaturas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/competency_pertenece_asignaturas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/asignaturas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/asignaturas_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/login/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/login/logout,html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/login.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/competencies_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/competencies/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/ability.rb" />
+        <option value="$PROJECT_DIR$/app/views/competencies/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/profesore.rb" />
+        <option value="$PROJECT_DIR$/app/views/competencies/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/competencies.js.coffee" />
+        <option value="$PROJECT_DIR$/app/views/asignaturas/_edit_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/asignaturas.js.coffee" />
+        <option value="$PROJECT_DIR$/app/models/asignatura.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/profesores.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/asignaturas/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/competency_pertenece_pruebas.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/profesores/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/profesores.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/competencies.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/asignaturas.html.erb" />
       </list>
     </option>
   </component>
@@ -300,7 +310,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -369,117 +378,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="profesores" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profesor_pertenece_asignaturas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="competency_pertenece_pruebas" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="competency_pertenece_asignaturas" />
+              <option name="myItemId" value="competencies" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -518,22 +417,8 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activerecord" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -548,10 +433,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,28 +451,25 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fasttest/prueba-activedirectory" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -910,18 +788,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914287" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24921136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="868" y="80" width="316" height="891" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21474878" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30226904" sideWeight="0.672" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49270484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291536" sideWeight="0.671199" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.014857143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.39085713" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.57942855" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -984,7 +862,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/models/asignatura.rb</url>
-          <line>37</line>
+          <line>38</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb</url>
@@ -1005,110 +883,114 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/ability.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="96" vertical-scroll-proportion="-0.0" />
+        <state line="28" column="19" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/login/logout,html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="47" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.22250316" />
+        <state line="19" column="81" selection-start="736" selection-end="736" vertical-scroll-proportion="-8.583333">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/competencies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="27" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.7987013">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="20" selection-start="2027" selection-end="2029" vertical-scroll-proportion="0.6068268">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/competencies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="189" selection-end="189" vertical-scroll-proportion="0.09057971">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/competencies/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/profesor_pertenece_asignaturas_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/competencies/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="28" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+        <state line="4" column="18" selection-start="72" selection-end="72" vertical-scroll-proportion="0.07462686">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/competencies/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/asignaturas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="66" selection-start="1078" selection-end="1140" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/competency_pertenece_pruebas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="1" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-17.708334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/competency_pertenece_pruebas.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="51" selection-start="168" selection-end="168" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/profesores.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="214" selection-end="258" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/competencies.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="290" selection-end="290" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/asignaturas.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="56" selection-start="221" selection-end="240" vertical-scroll-proportion="-3.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="57" selection-start="11852" selection-end="11852" vertical-scroll-proportion="-58.375">
+        <state line="5" column="18" selection-start="121" selection-end="121" vertical-scroll-proportion="0.09328358">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_edit_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="101.833336">
+        <state line="166" column="49" selection-start="7630" selection-end="7630" vertical-scroll-proportion="0.8723135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/competency.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="210" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/asignatura.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="39" selection-start="1722" selection-end="1722" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/competencies.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="30" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/profesore.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="105" selection-start="427" selection-end="470" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/profesores.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="230" selection-end="250" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/asignaturas.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="4" column="0" selection-start="230" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/profesores/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/asignaturas/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="11" selection-start="5475" selection-end="5475" vertical-scroll-proportion="2.6298702">
+        <state line="51" column="2" selection-start="2688" selection-end="2870" vertical-scroll-proportion="0.47408345">
           <folding />
         </state>
       </provider>

@@ -48,6 +48,11 @@
       $(document).ready(function(){
           $('form').formToWizard({ submitButton: 'SaveAccount' })
       });
+
+/*      $(document).ready(function(){
+      $("#asignatura_nombre").validate
+      expression: "if(VAL != '') return true; else return false;"
+      message: "Nombre requerido." })*/
   </script>
 
 
@@ -160,13 +165,13 @@
                   <div class="control-group">
                     <%= f.label :duracion,"Duración", :class => "control-label" %><br />
                     <div class="controls">
-                      <%= f.text_field :duracion, :type => "number", :placeholder => "Introduce nº de créditos" %>
+                      <%= f.text_field :duracion, :type => "number", :placeholder => "Introduce duración" %>
                     </div>
                   </div>
                   <div class="control-group">
-                    <%= f.label :creditos, :class => "control-label" %><br />
+                    <%= f.label :creditos, "Cŕeditos", :class => "control-label" %><br />
                     <div class="controls">
-                      <%= f.number_field :creditos, :type => "text", :placeholder => "Introduce duración" %>
+                      <%= f.number_field :creditos, :type => "number", :placeholder => "Introduce nº de créditos" %>
                     </div>
                   </div>
                 </div>

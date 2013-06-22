@@ -13,10 +13,10 @@
     <th>Descripción</th>
     <th>Tipo</th>
     <th></th>
-    <% if can? :edit, @competency %>
+    <% if can? :edit, Competency %>
         <th></th>
     <% end %>
-    <% if can? :destroy, @competency %>
+    <% if can? :destroy, Competency %>
         <th></th>
     <% end %>
   </tr>
@@ -28,10 +28,10 @@
     <td><%= competency.descripcion %></td>
     <td><%= competency.tipo %></td>
     <td><%= link_to 'Mostrar', competency, :class => "btn"  %></td>
-    <% if can? :new, @competency %>
+    <% if can? :edit, Competency %>
         <td><%= link_to 'Editar', edit_competency_path(competency), :class => "btn" %></td>
     <% end %>
-    <% if can? :destroy, @competency %>
+    <% if can? :destroy, Competency %>
         <td><%= link_to 'Borrar', competency, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>
@@ -39,7 +39,7 @@
 </table>
 
 <br />
-<% if can? :new, @competency %>
+<% if can? :new, Competency %>
       <div class="btn">
     <%= link_to 'Nueva Competencia', new_competency_path %>
       </div>

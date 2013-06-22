@@ -4,6 +4,9 @@
   <title>SGGA-ULL</title>
   <%= stylesheet_link_tag    "bootstrap", "bootstrap-responsive", :media => "all" %>
   <%= javascript_include_tag "bootstrap", "jquery", "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head)%>
+</head>
 <body>
 <%= yield %>
 </body>

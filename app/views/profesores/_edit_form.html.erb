@@ -134,6 +134,7 @@
                   </div>
                 </div>
               </div>
+              <% if @profesore.rol == "admin" %>
               <div class="control-group">
                 <div class="field">
                   <%= f.label :rol, "Rol" +  mark_required(@profesore, :rol), :class => "control-label"  %><br />
@@ -142,7 +143,7 @@
                   </div>
                 </div>
               </div>
-
+              <% end %>
             </div>
           </div>
         </div>

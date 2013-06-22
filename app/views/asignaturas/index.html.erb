@@ -17,21 +17,6 @@
       <th text-align="left">Código</th>
       <th text-align="left">Nombre</th>
       <th text-align="left">Titulación</th>
-      <!--    <th>Rama</th>
-          <th>Itinerario</th>
-          <th>Departamento</th>
-          <th>Area</th>
-          <th>Curso</th>
-          <th>Caracter</th>
-          <th>Duracion</th>
-          <th>Creditos</th>
-          <th>Horario</th>
-          <th>Web</th>
-          <th>Idioma</th>
-          <th>Bloque</th>
-          <th>Perfil</th>
-          <th>Bibliografia</th>
-          <th>Resultados</th> -->
       <th></th>
       <% if can? :edit, Asignatura %>
           <th></th>
@@ -62,7 +47,7 @@
 
     <% end %>
 
-    <% if @p.rol == "profesor" %>
+    <% if @p.rol == "profesor" || @p.rol == "gestor"  %>
         <%= "ENTRNADO POR EL profe" %>
         <% @asignaturas.each do |asignatura| %>
             <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
