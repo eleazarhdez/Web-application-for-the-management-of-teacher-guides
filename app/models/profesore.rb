@@ -5,7 +5,9 @@ class Profesore < ActiveRecord::Base
   has_many :profesorPerteneceAsignaturas
   has_many :asignaturas, :through => :profesorPerteneceAsignaturas
 
-  validates_presence_of :name, :rol, :password, { :message => ": El campo no puede ser vacío" }
+  validates :name, :presence => { :message => "Nombre requerido" }
+  validates :rol, :presence => { :message => "Rol requerido" }
+  validates :password, :presence => { :message => "Contraseña requerida" }
   #validates :mail, :presence => false, :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :message=> "Formato inválido"}
 
 end

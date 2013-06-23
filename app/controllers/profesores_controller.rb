@@ -59,7 +59,7 @@ class ProfesoresController < ApplicationController
 
     respond_to do |format|
       if @profesore.save
-        format.html { redirect_to @profesore, notice: 'Profesore was successfully created.' }
+        format.html { redirect_to @profesore, notice: 'El usuario ' + @profesore.name + ' fue creado correctamente.' }
         format.json { render json: @profesore, status: :created, location: @profesore }
       else
         format.html { render action: "new" }
@@ -77,7 +77,7 @@ class ProfesoresController < ApplicationController
 
     respond_to do |format|
       if @profesore.update_attributes(params[:profesore])
-        format.html { redirect_to @profesore, notice: 'Profesore was successfully updated.' }
+        format.html { redirect_to @profesore, notice: 'El usuario ' + @profesore.name + ' fue actualizado correctamente.'  }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

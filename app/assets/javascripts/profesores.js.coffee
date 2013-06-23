@@ -4,14 +4,13 @@
 
 $(document).ready ->
   $("#profesore_name").validate
-    expression: "if(VAL != 'admin' && VAL != 'profesor' && VAL != 'gestor') return false; else return true;"
-    message: "Nombre requerido"
+    expression: "if(VAL != '') return true; else return false;"
+    message: "Nombre requerido."
 
 $(document).ready ->
   $("#profesore_password").validate
-    expression: "if(VAL != 'admin' && VAL != 'profesor' && VAL != 'gestor') return false; else return true;"
-    message: "Contraseña requerida."
-
+    expression: "if(VAL != '') return true; else return false;"
+    message: "Nombre requerido."
 
 $(document).ready ->
   $("#profesore_rol").validate

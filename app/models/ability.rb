@@ -18,7 +18,8 @@ class Ability
           prof.try(:profesore_id) ==  user.id
       end
       can [:update, :create], Prueba
-      can :edit, Profesore do |prof|
+      cannot :index, Profesore
+      can :update, Profesore do |prof|
           prof.try(:id) ==  user.id
       end
       end

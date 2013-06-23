@@ -49,7 +49,7 @@ class CompetenciesController < ApplicationController
 
     respond_to do |format|
       if @competency.save
-        format.html { redirect_to @competency, notice: 'Competency was successfully created.' }
+        format.html { redirect_to @competency, notice: 'Competencia ' + @competency.name + ' fue creada correctamente.' }
         format.json { render json: @competency, status: :created, location: @competency }
       else
         format.html { render action: "new" }
@@ -66,7 +66,7 @@ class CompetenciesController < ApplicationController
 
     respond_to do |format|
       if @competency.update_attributes(params[:competency])
-        format.html { redirect_to @competency, notice: 'Competency was successfully updated.' }
+        format.html { redirect_to @competency, notice: 'Competencia ' + @competency.name + ' fue actualizada correctamente.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

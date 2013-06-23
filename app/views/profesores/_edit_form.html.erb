@@ -1,3 +1,8 @@
+<% @extra_attributes = session[:cas_extra_attributes] %>
+<% @identifier = @extra_attributes["id"]  %>
+
+<% @p = Profesore.find(@identifier) %>
+
 <head>
   <title>Turn plain webform into a powerful wizard with jQuery</title>
   <style type="text/css">
@@ -43,17 +48,18 @@
 </div>
 
 <%= form_for @profesore, :html => {:class => "form-horizontal"} do |f| %>
-    <% if @profesore.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@profesore.errors.count, "error") %> El profesor no ha podido ser guardado:</h2>
+      <% if @profesore.errors.any? %>
+          <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4><%= pluralize(@profesore.errors.count, "error") %> ha impedido salvar los cambios:</h4>
 
-          <ul>
-            <% @profesore.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+            <ul>
+              <% @profesore.errors.each_with_index do |msg, i| %>
+                  <li><%= msg[1] %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
       <div class="row">
         <div class="span10">
           <div class="row">
@@ -76,7 +82,7 @@
               </div>
               <div class="control-group">
                 <div class="field">
-                  <%= f.label :area, :class => "control-label" %><br />
+                  <%= f.label :area, "Área", :class => "control-label" %><br />
                   <div class="controls">
                     <%= f.text_field :area %>
                   </div>
@@ -84,7 +90,7 @@
               </div>
               <div class="control-group">
                 <div class="field">
-                  <%= f.label :lugar_tutoria, :class => "control-label" %><br />
+                  <%= f.label :lugar_tutoria, "Lugar Tutoría", :class => "control-label" %><br />
                   <div class="controls">
                     <%= f.text_field :lugar_tutoria %>
                   </div>
@@ -92,7 +98,7 @@
               </div>
               <div class="control-group">
                 <div class="field">
-                  <%= f.label :horario_tutoria, :class => "control-label" %><br />
+                  <%= f.label :horario_tutoria, "Horario Tutoría", :class => "control-label" %><br />
                   <div class="controls">
                     <%= f.text_field :horario_tutoria %>
                   </div>
@@ -104,7 +110,7 @@
 
               <div class="control-group">
                 <div class="field">
-                  <%= f.label :telefono, :class => "control-label" %><br />
+                  <%= f.label :telefono, "Teléfono", :class => "control-label" %><br />
                   <div class="controls">
                     <%= f.number_field :telefono %>
                   </div>
@@ -134,7 +140,7 @@
                   </div>
                 </div>
               </div>
-              <% if @profesore.rol == "admin" %>
+              <% if @p.rol == "admin" %>
               <div class="control-group">
                 <div class="field">
                   <%= f.label :rol, "Rol" +  mark_required(@profesore, :rol), :class => "control-label"  %><br />
