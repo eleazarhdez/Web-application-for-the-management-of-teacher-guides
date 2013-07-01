@@ -1,6 +1,6 @@
 <div class="container">
   <div id="header">
-    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" width=50% height=50% />
     <div class="page-header">
       <h1>Profesores de las asignaturas <small>Índice</small></h1>
     </div>
@@ -9,14 +9,14 @@
   <table class="table table-bordered">
   <tr>
     <th>ID</th>
-    <th>Código</th>
+    <th>Asignatura</th>
     <th>Profesor</th>
     <th>Rol</th>
     <th></th>
-    <% if can? :edit, @profesor_pertenece_asignatura %>
+    <!--    <% if can? :edit, @profesor_pertenece_asignatura %>
     <th></th>
         <% end %>
-<!--        <% if can? :destroy, @profesor_pertenece_asignatura %>
+        <% if can? :destroy, @profesor_pertenece_asignatura %>
     <th></th>
     <% end %>-->
   </tr>
@@ -24,14 +24,18 @@
 <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
   <tr>
     <td><%= profesor_pertenece_asignatura.id %></td>
-    <td><%= profesor_pertenece_asignatura.asignatura_id %></td>
-    <td><%= profesor_pertenece_asignatura.profesore_id %></td>
+    <!--<%= @asig = Asignatura.find(profesor_pertenece_asignatura.asignatura_id)%>-->
+    <td><%= @asig.nombre %></td>
+    <!--<td><%= profesor_pertenece_asignatura.asignatura_id %></td>-->
+    <!--<%= @profe = Profesore.find(profesor_pertenece_asignatura.profesore_id)%>-->
+    <td><%= @profe.name %></td>
+    <!--<td><%= profesor_pertenece_asignatura.profesore_id %></td>-->
     <td><%= profesor_pertenece_asignatura.rol %></td>
     <td><%= link_to 'Mostrar', profesor_pertenece_asignatura, :class => "btn" %></td>
-    <% if can? :edit, @profesor_pertenece_asignatura %>
+    <!--   <% if can? :edit, @profesor_pertenece_asignatura %>
         <td><%= link_to 'Editar', edit_profesor_pertenece_asignatura_path(profesor_pertenece_asignatura), :class => "btn" %></td>
     <% end %>
-<!--    <% if can? :destroy, @profesor_pertenece_asignatura %>
+    <% if can? :destroy, @profesor_pertenece_asignatura %>
         <td><%= link_to 'Borrar', profesor_pertenece_asignatura, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
     <% end %>
   </tr>-->

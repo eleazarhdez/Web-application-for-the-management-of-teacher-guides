@@ -5,7 +5,7 @@
 
 <div class="container">
   <div id="header">
-    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" width=50% height= 50% />
     <div class="page-header">
       <h1>Asignaturas <small>Índice</small></h1>
     </div>
@@ -26,7 +26,7 @@
       <% end %>
     </tr>
     <% if @p.rol == "admin" %>
-        <%= "ENTRNADO POR EL ADMIN" %>
+
         <% @asignaturas.each do |asignatura| %>
             <tr>
               <td border="1"><%= asignatura.codigo %></td>
@@ -48,7 +48,6 @@
     <% end %>
 
     <% if @p.rol == "profesor" || @p.rol == "gestor"  %>
-        <%= "ENTRNADO POR EL profe" %>
         <% @asignaturas.each do |asignatura| %>
             <% @profesor_pertenece_asignaturas.each do |profesor_pertenece_asignatura| %>
 
@@ -78,7 +77,6 @@
 
   <br />
 
-  <%= "Esto es el rol = " + @p.rol.to_s %>
   <% if can? :new, Asignatura %>
       <div class="btn">
         <%= link_to 'Nueva Asignatura', new_asignatura_path %>

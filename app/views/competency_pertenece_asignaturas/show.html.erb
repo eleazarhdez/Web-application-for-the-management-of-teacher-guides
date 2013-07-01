@@ -1,6 +1,6 @@
 <div class="container">
   <div id="header">
-    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura" />
+    <img src="/assets/ull_color_horizontal2.jpg" class="img-rounded" alt="Asignatura"width=50% height=50% />
     <div class="page-header">
       <h1>Asignatura-Competencia <small><%= @competency_pertenece_asignatura.id %></small></h1>
     </div>
@@ -10,12 +10,16 @@
 
 <p>
   <b>Asignatura:</b>
-  <%= @competency_pertenece_asignatura.asignatura_id %>
+  <!--<%= @asig = Asignatura.find(@competency_pertenece_asignatura.asignatura_id)%>-->
+  <td><%= @asig.nombre %></td>
+  <%#= @competency_pertenece_asignatura.asignatura_id %>
 </p>
 
 <p>
   <b>Competencia:</b>
-  <%= @competency_pertenece_asignatura.competency_id %>
+  <!--<%= @com = Competency.find(@competency_pertenece_asignatura.asignatura_id)%>-->
+  <td><%= @com.name %></td>
+  <%#= @competency_pertenece_asignatura.competency_id %>
 </p>
 
   <div class="btn">

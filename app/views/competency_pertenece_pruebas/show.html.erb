@@ -10,13 +10,22 @@
 
 <p>
   <b>Competencia:</b>
-  <%= @competency_pertenece_prueba.competency_id %>
+  <!--<%= @com = Competency.find(@competency_pertenece_prueba.competency_id) %> -->
+  <td><%= @com.name %> </td>
+  <%#= @competency_pertenece_prueba.competency_id %>
 </p>
 
 <p>
   <b>Evaluación:</b>
   <%= @competency_pertenece_prueba.prueba_id %>
 </p>
+
+  <p>
+    <b>Asignatura:</b>
+    <!--<%= @aux = Prueba.find(@competency_pertenece_prueba.prueba_id) %> -->
+    <!--<%= @asig = Asignatura.find(@aux.asignatura.id) %> -->
+  <td><%= @asig.nombre %> </td>
+  </p>
 
 <div class="btn">
   <%= link_to 'Editar', edit_competency_pertenece_prueba_path(@competency_pertenece_prueba) %>
