@@ -1,3 +1,9 @@
+==Attention
+
+The last app version its in testeo branch
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
